@@ -57,6 +57,7 @@ public class ROMControlActivity extends PreferenceActivity implements ButtonBarH
     @Override
     public void onCreate(Bundle savedInstanceState) {
         hasNotificationLed = getResources().getBoolean(R.bool.has_notification_led);
+        hasSPen = getResources().getBoolean(R.bool.config_stylusGestures);
         defaultLocale = Locale.getDefault();
         Log.i(TAG, "defualt locale: " + defaultLocale.getDisplayName());
         setLocale();
