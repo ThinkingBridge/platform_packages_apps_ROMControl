@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:thinkingbridge="http://schemas.android.com/apk/res/com.thinkingbridge.customized">
+    xmlns:aokp="http://schemas.android.com/apk/res/com.aokp.romcontrol">
 
-    <com.thinkingbridge.customized.preferences.ImageListPreference
+    <com.aokp.romcontrol.preferences.ImageListPreference
         android:key="battery_icon_list"
         android:title="@string/battery_icon"
         android:entries="@array/battery_icon_entries"

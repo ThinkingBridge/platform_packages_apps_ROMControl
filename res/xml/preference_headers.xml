@@ -5,28 +5,28 @@
 
     <header
         android:id="@+id/user_interface"
-        android:fragment="com.thinkingbridge.customized.fragments.UserInterface"
+        android:fragment="com.aokp.romcontrol.fragments.UserInterface"
         android:title="@string/general_ui"
         android:icon="@drawable/ic_thinkingbridge_general_ui"
         android:summary="@string/header_summary_general_ui" />
 
     <header
         android:id="@+id/power_menu"
-        android:fragment="com.thinkingbridge.customized.fragments.PowerMenu"
+        android:fragment="com.aokp.romcontrol.fragments.PowerMenu"
         android:title="@string/power_menu"
         android:icon="@drawable/ic_thinkingbridge_power_menu"
         android:summary="@string/header_summary_power_menu" />
 
      <header
         android:id="@+id/nav_bar"
-        android:fragment="com.thinkingbridge.customized.fragments.Navbar"
+        android:fragment="com.aokp.romcontrol.fragments.Navbar"
         android:title="@string/nav_bar"
         android:icon="@drawable/ic_thinkingbridge_navigation_bar"
         android:summary="@string/header_summary_navigation_bar" />
      
      <header
         android:id="@+id/hardware_keys"
-        android:fragment="com.thinkingbridge.customized.fragments.HardwareKeys"
+        android:fragment="com.aokp.romcontrol.fragments.HardwareKeys"
         android:title="@string/hardware_keys_title"
         android:icon="@drawable/ic_thinkingbridge_hardware_keys"
         android:summary="@string/header_summary_hardware_keys" />
@@ -34,7 +34,7 @@
      <header
          android:id="@+id/pie_control"
          android:icon="@drawable/ic_thinkingbridge_pie"
-         android:fragment="com.thinkingbridge.customized.fragments.Pie"
+         android:fragment="com.aokp.romcontrol.fragments.Pie"
          android:title="@string/pie_controls_title"
          android:summary="@string/pie_controls_summary" />
      
@@ -45,21 +45,21 @@
      
      <header
         android:id="@+id/lockscreen"
-        android:fragment="com.thinkingbridge.customized.fragments.Lockscreens"
+        android:fragment="com.aokp.romcontrol.fragments.Lockscreens"
         android:title="@string/lockscreen_options"
         android:icon="@drawable/ic_thinkingbridge_lockscreens"
         android:summary="@string/header_summary_lockscreens" />
      
      <header
         android:id="@+id/lockscreen_targets"
-        android:fragment="com.thinkingbridge.customized.fragments.LockscreenTargets"
+        android:fragment="com.aokp.romcontrol.fragments.LockscreenTargets"
         android:summary="@string/lockscreen_target_summary"
         android:icon="@drawable/ic_thinkingbridge_lockscreen_targets"
         android:title="@string/lockscreen_target_title" />
      
      <header
         android:id="@+id/lockscreen_shortcuts"
-        android:fragment="com.thinkingbridge.customized.fragments.Shortcuts"
+        android:fragment="com.aokp.romcontrol.fragments.Shortcuts"
         android:summary="@string/lock_screen_shortcuts_summary"
         android:icon="@drawable/ic_thinkingbridge_lockscreen_shortcuts"
         android:title="@string/lock_screen_shortcuts_title" />
@@ -82,20 +82,20 @@
     <header
         android:id="@+id/statusbar_toggles"
         android:title="@string/toggles_layout"
-        android:fragment="com.thinkingbridge.customized.fragments.StatusBarToggles"
+        android:fragment="com.aokp.romcontrol.fragments.StatusBarToggles"
         android:icon="@drawable/ic_thinkingbridge_quick_settings"
         android:summary="@string/header_summary_signal" />
     
     <header
         android:id="@+id/statusbar_battery"
         android:title="@string/battery"
-        android:fragment="com.thinkingbridge.customized.fragments.StatusBarBattery"
+        android:fragment="com.aokp.romcontrol.fragments.StatusBarBattery"
         android:icon="@drawable/ic_thinkingbridge_battery"
         android:summary="@string/header_summary_battery" />
 
     <header
         android:id="@+id/statusbar_clock"
-        android:fragment="com.thinkingbridge.customized.fragments.StatusBarClock"
+        android:fragment="com.aokp.romcontrol.fragments.StatusBarClock"
         android:summary="@string/header_summary_clock"
         android:icon="@drawable/ic_thinkingbridge_clock"
         android:title="@string/clock" />
@@ -103,7 +103,7 @@
     <header
         android:id="@+id/statusbar_signal"
         android:title="@string/signal"
-        android:fragment="com.thinkingbridge.customized.fragments.StatusBarSignal"
+        android:fragment="com.aokp.romcontrol.fragments.StatusBarSignal"
         android:icon="@drawable/ic_thinkingbridge_signal"
         android:summary="@string/header_summary_signal" />
 
@@ -113,14 +113,14 @@
 
     <!--<header
         android:id="@+id/led"
-        android:fragment="com.thinkingbridge.customized.fragments.LEDControl"
+        android:fragment="com.aokp.romcontrol.fragments.LEDControl"
         android:title="@string/led_options"
         android:icon="@drawable/ic_thinkingbridge_led"
         android:summary="@string/header_summary_led" />-->
 
     <header
         android:id="@+id/sound"
-        android:fragment="com.thinkingbridge.customized.fragments.Sound"
+        android:fragment="com.aokp.romcontrol.fragments.Sound"
         android:title="@string/sound"
         android:icon="@drawable/ic_thinkingbridge_sound"
         android:summary="@string/header_summary_sound" />

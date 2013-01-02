@@ -25,7 +25,7 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
 
-import com.thinkingbridge.customized.R;
+import com.aokp.romcontrol.R;
 
 public class DragGripView extends View {
     private static final int[] ATTRS = new int[]{

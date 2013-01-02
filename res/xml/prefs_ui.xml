@@ -54,13 +54,13 @@
         <Preference
             android:key="transparency_dialog"
             android:title="@string/transparency_dialog_title" />
-        
+
     </PreferenceCategory>
 
     <PreferenceCategory
         android:key="navbar"
         android:title="@string/navbar_cat">
-        
+
         <ListPreference
             android:key="user_mode_ui"
             android:title="@string/user_mode_ui"
@@ -102,20 +102,6 @@
             android:title="@string/wakeup_when_plugged_unplugged_title"
             android:summary="@string/wakeup_when_plugged_unplugged_summary"
             android:defaultValue="true" />
-
-        <CheckBoxPreference
-            android:key="system_power_crt_screen_off"
-            android:summary="@string/system_power_crt_screen_off_summary"
-            android:title="@string/system_power_crt_screen_off_title" />
-
-        <CheckBoxPreference
-            android:key="system_power_crt_screen_on"
-            android:summary="@string/system_power_crt_screen_on_summary"
-            android:title="@string/system_power_crt_screen_on_title" />
-        
-        <Preference
-            android:key="set_recent_shortcut"
-            android:title="@string/appshortcut" />
 
     </PreferenceCategory>
 
