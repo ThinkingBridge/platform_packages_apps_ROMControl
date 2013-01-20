@@ -216,7 +216,8 @@
     <string name="navbar_height_dialog_summary">정상적인 높이를 바꿀려면 재부팅하십시오!</string>
     <string name="navbar_height_dialog_button_later">나중에 다시 부팅</string>
     <string name="navbar_height_dialog_button_reboot">지금 다시 부팅!</string>
-    <string name="navigation_bar_tint_title">네비게이션 바 색상</string>
+    <string name="navigation_bar_tint_title">네비게이션 바 버튼색상</string>
+    <string name="navigation_bar_color_title">네비게이션 바 색상</string>
     <string name="navigation_bar_glow_tint_title">네비게이션 바 효과 색상 설정</string>
     <string name="navigation_bar_glow_tint_summary">네비게이션 바를 눌렀을때 나타나는 효과의 색상을 지정합니다.</string>
     <string name="glow_times_title">버튼 효과 애니메이션</string>

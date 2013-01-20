@@ -23,6 +23,11 @@
                 android:key="navbar_qty"
                 android:title="@string/navbar_qty_title"
                 android:summary="@string/navbar_qty_summary" />
+        
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+                android:key="nav_bar_color"
+                android:title="@string/navigation_bar_color_title"
+                android:defaultValue="#000000" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
                 android:key="nav_button_color"
