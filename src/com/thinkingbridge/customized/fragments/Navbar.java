@@ -207,7 +207,7 @@ public class Navbar extends SettingsPreferenceFragment implements
 
         mMenuArrowKeysCheckBox = (CheckBoxPreference) findPreference(PREF_MENU_ARROWS);
         mMenuArrowKeysCheckBox.setChecked(Settings.System.getBoolean(getContentResolver(),
-                Settings.System.NAVIGATION_BAR_MENU_ARROW_KEYS, true));
+                Settings.System.NAVIGATION_BAR_MENU_ARROW_KEYS, false));
 
         refreshSettings();
         setHasOptionsMenu(true);
