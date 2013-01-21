@@ -91,6 +91,8 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
     private static final int SELECT_WALLPAPER = 5;
 
     private static final String WALLPAPER_NAME = "notification_wallpaper.jpg";
+    private static final String BOOTANIMATION_USER_PATH = "/data/local/bootanimation.zip";
+    private static final String BOOTANIMATION_SYSTEM_PATH = "/system/media/bootanimation.zip";
 
     CheckBoxPreference mAllow180Rotation;
     CheckBoxPreference mDisableBootAnimation;
@@ -119,7 +121,7 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
     private int height;
     private int width;
     private String errormsg;
-    private String bootAniPath;
+    private String mBootAnimationPath;
 
     private Random randomGenerator = new Random();
     // previous random; so we don't repeat
@@ -150,13 +152,6 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
                 Settings.System.STATUSBAR_NOTIF_COUNT, false));
 
         mDisableBootAnimation = (CheckBoxPreference)findPreference("disable_bootanimation");
-        mDisableBootAnimation.setChecked(!new File("/system/media/bootanimation.zip").exists());
-        if (mDisableBootAnimation.isChecked()) {
-            Resources res = mContext.getResources();
-            String[] insults = res.getStringArray(R.array.disable_bootanimation_insults);
-            int randomInt = randomGenerator.nextInt(insults.length);
-            mDisableBootAnimation.setSummary(insults[randomInt]);
-        }
 
         mCustomBootAnimation = findPreference("custom_bootanimation");
 
@@ -208,6 +203,7 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
         }
 
         setHasOptionsMenu(true);
+        resetBootAnimation();
     }
 
     @Override
@@ -219,6 +215,36 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
                     1.0f);
             mNavBarAlpha.setInitValue(Math.round(defaultNavAlpha * 100));
         }
+        if(mDisableBootAnimation != null) {
+            if (mDisableBootAnimation.isChecked()) {
+                Resources res = mContext.getResources();
+                String[] insults = res.getStringArray(R.array.disable_bootanimation_insults);
+                int randomInt = randomGenerator.nextInt(insults.length);
+                mDisableBootAnimation.setSummary(insults[randomInt]);
+            } else {
+                mDisableBootAnimation.setSummary(null);
+            }
+        }
+    }
+
+    /**
+     * Resets boot animation path. Essentially clears temporary-set boot animation
+     * set by the user from the dialog.
+     * @return returns true if a boot animation exists (user or system). false otherwise.
+     */
+    private boolean resetBootAnimation() {
+        boolean bootAnimationExists = false;
+        if(new File(BOOTANIMATION_USER_PATH).exists()) {
+            mBootAnimationPath = BOOTANIMATION_USER_PATH;
+            bootAnimationExists = true;
+        } else if (new File(BOOTANIMATION_SYSTEM_PATH).exists()) {
+            mBootAnimationPath = BOOTANIMATION_SYSTEM_PATH;
+            bootAnimationExists = true;
+        } else {
+            mBootAnimationPath = "";
+        }
+        mCustomBootAnimation.setEnabled(!mDisableBootAnimation.isChecked());
+        return bootAnimationExists;
     }
 
     private void updateCustomLabelTextSummary() {
@@ -259,20 +285,7 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
                     ((CheckBoxPreference) preference).isChecked());
             return true;
         } else if (preference == mCustomBootAnimation) {
-            PackageManager packageManager = getActivity().getPackageManager();
-            Intent test = new Intent(Intent.ACTION_GET_CONTENT);
-            test.setType("file/*");
-            List<ResolveInfo> list = packageManager.queryIntentActivities(test,
-                    PackageManager.GET_ACTIVITIES);
-            if (list.size() > 0) {
-                Intent intent = new Intent(Intent.ACTION_GET_CONTENT, null);
-                intent.setType("file/*");
-                startActivityForResult(intent, REQUEST_PICK_BOOT_ANIMATION);
-            } else {
-                //No app installed to handle the intent - file explorer required
-                Toast.makeText(mContext, R.string.install_file_manager_error,
-                        Toast.LENGTH_SHORT).show();
-            }
+            openBootAnimationDialog();
             return true;
         } else if (preference == mNotificationWallpaper) {
             Display display = getActivity().getWindowManager().getDefaultDisplay();
@@ -461,50 +474,94 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
                     //Nothing returned by user, probably pressed back button in file manager
                     return;
                 }
+                mBootAnimationPath = data.getData().getPath();
+                openBootAnimationDialog();
+            }
+        }
+    }
 
-                bootAniPath = data.getData().getEncodedPath();
+    private void openBootAnimationDialog() {
+        Log.e(TAG, "boot animation path: " + mBootAnimationPath);
+        if(mCustomBootAnimationDialog != null) {
+            mCustomBootAnimationDialog.cancel();
+            mCustomBootAnimationDialog = null;
+        }
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle(R.string.bootanimation_preview);
+        if (!mBootAnimationPath.isEmpty()
+                && (!BOOTANIMATION_SYSTEM_PATH.equalsIgnoreCase(mBootAnimationPath) && !BOOTANIMATION_USER_PATH
+                        .equalsIgnoreCase(mBootAnimationPath))) {
+            builder.setPositiveButton(R.string.apply, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    new InstallBootAnimTask(dialog).execute();
+                    resetBootAnimation();
+                }
+            });
+        } else if (new File(BOOTANIMATION_USER_PATH).exists()) {
+            builder.setPositiveButton(R.string.clear_custom_bootanimation, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    new AbstractAsyncSuCMDProcessor() {
+                        @Override
+                        protected void onPostExecute(String result) {
+                            resetBootAnimation();
+                        }
+                    }.execute("rm '" + BOOTANIMATION_USER_PATH + "'", "rm '/data/media/bootanimation.backup'");
+                }
+            });
+        }
+        builder.setNeutralButton(R.string.set_custom_bootanimation, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                PackageManager packageManager = getActivity().getPackageManager();
+                Intent test = new Intent(Intent.ACTION_GET_CONTENT);
+                test.setType("file/*");
+                List<ResolveInfo> list = packageManager.queryIntentActivities(test,
+                        PackageManager.GET_ACTIVITIES);
+                if (list.size() > 0) {
+                    Intent intent = new Intent(Intent.ACTION_GET_CONTENT, null);
+                    intent.setType("file/*");
+                    startActivityForResult(intent, REQUEST_PICK_BOOT_ANIMATION);
+                } else {
+                    //No app installed to handle the intent - file explorer required
+                    Toast.makeText(mContext, R.string.install_file_manager_error,
+                            Toast.LENGTH_SHORT).show();
+                }
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setTitle(R.string.bootanimation_preview);
-                builder.setPositiveButton(R.string.apply, new DialogInterface.OnClickListener() {
+            }
+        });
+        builder.setNegativeButton(com.android.internal.R.string.cancel,
+                new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        new InstallBootAnimTask(dialog).execute();
-
-
-                    }
-                });
-                builder.setNegativeButton(com.android.internal.R.string.cancel, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
+                        resetBootAnimation();
                         dialog.dismiss();
                     }
                 });
-                LayoutInflater inflater =
-                        (LayoutInflater) getActivity()
-                        .getSystemService(getActivity().LAYOUT_INFLATER_SERVICE);
-                View layout = inflater.inflate(R.layout.dialog_bootanimation_preview,
-                        (ViewGroup) getActivity()
+        LayoutInflater inflater =
+                (LayoutInflater) getActivity()
+                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View layout = inflater.inflate(R.layout.dialog_bootanimation_preview,
+                (ViewGroup) getActivity()
                         .findViewById(R.id.bootanimation_layout_root));
-                error = (TextView) layout.findViewById(R.id.textViewError);
-                view = (ImageView) layout.findViewById(R.id.imageViewPreview);
-                view.setVisibility(View.GONE);
-                Display display = getActivity().getWindowManager().getDefaultDisplay();
-                Point size = new Point();
-                display.getSize(size);
-                view.setLayoutParams(new LinearLayout.LayoutParams(size.x/2, size.y/2));
-                error.setText(R.string.creating_preview);
-                builder.setView(layout);
-                AlertDialog dialog = builder.create();
-                dialog.setOwnerActivity(getActivity());
-                dialog.show();
-                Thread thread = new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        createPreview(bootAniPath);
-                    }
-                });
-                thread.start();
+        error = (TextView) layout.findViewById(R.id.textViewError);
+        view = (ImageView) layout.findViewById(R.id.imageViewPreview);
+        view.setVisibility(View.GONE);
+        Display display = getActivity().getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        view.setLayoutParams(new LinearLayout.LayoutParams(size.x / 2, size.y / 2));
+        error.setText(R.string.creating_preview);
+        builder.setView(layout);
+        mCustomBootAnimationDialog = builder.create();
+        mCustomBootAnimationDialog.setOwnerActivity(getActivity());
+        mCustomBootAnimationDialog.show();
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                createPreview(mBootAnimationPath);
             }
-        }
+        });
+        thread.start();
     }
 
     public void copy(File src, File dst) throws IOException {
@@ -656,15 +713,19 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
      * @return script to turn bootanimations on/off
      */
     private String[] getBootAnimationCommand(boolean checked) {
-        String[] cmds = new String[2];
+        String[] cmds = new String[3];
         String storedLocation = "/system/media/bootanimation.backup";
+        String storedUserLocation = "/data/local/bootanimation.backup";
         String activeLocation = "/system/media/bootanimation.zip";
+        String activeUserLocation = "/data/local/bootanimation.zip";
         if (checked) {
             /* make backup */
             cmds[0] = "mv " + activeLocation + " " + storedLocation + "; ";
+            cmds[1] = "mv " + activeUserLocation + " " + storedUserLocation + "; ";
         } else {
             /* apply backup */
             cmds[0] = "mv " + storedLocation + " " + activeLocation + "; ";
+            cmds[1] = "mv " + activeUserLocation + " " + storedUserLocation + "; ";
         }
         /*
          * use sed to replace build.prop property
@@ -673,7 +734,7 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
          * without we get the Android shine animation when
          * /system/media/bootanimation.zip is not found
          */
-        cmds[1] = "busybox sed -i \"/debug.sf.nobootanimation/ c "
+        cmds[2] = "busybox sed -i \"/debug.sf.nobootanimation/ c "
                 + "debug.sf.nobootanimation=" + String.valueOf(checked ? 1 : 0)
                 + "\" " + "/system/build.prop";
         return cmds;
@@ -713,14 +774,9 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
 
         @Override
         protected Void doInBackground(Void... voids) {
-            Helpers.getMount("rw");
-            //backup old boot animation
-            new CMDProcessor().su.runWaitFor("mv /system/media/bootanimation.zip /system/media/bootanimation.backup");
-
             //Copy new bootanimation, give proper permissions
-            new CMDProcessor().su.runWaitFor("cp "+ bootAniPath +" /system/media/bootanimation.zip");
-            new CMDProcessor().su.runWaitFor("chmod 644 /system/media/bootanimation.zip");
-            Helpers.getMount("ro");
+            new CMDProcessor().su.runWaitFor("cp "+ mBootAnimationPath +" /data/local/bootanimation.zip");
+            new CMDProcessor().su.runWaitFor("chmod 644 /data/local/bootanimation.zip");
             return null;
         }
     }
@@ -751,8 +807,9 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
                     mLastRandomInsultIndex = newInsult;
                     mDisableBootAnimation.setSummary(mInsults[newInsult]);
                 } else {
-                    mDisableBootAnimation.setSummary("");
+                    mDisableBootAnimation.setSummary(null);
                 }
+                resetBootAnimation();
             }
         };
         processor.execute(getBootAnimationCommand(mDisableBootAnimation.isChecked()));
