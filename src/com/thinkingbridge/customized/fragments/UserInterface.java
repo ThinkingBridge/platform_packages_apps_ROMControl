@@ -47,6 +47,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.thinkingbridge.customized.SettingsPreferenceFragment;
 import com.thinkingbridge.customized.R;
+import com.aokp.romcontrol.service.CodeReceiver;
 import com.thinkingbridge.customized.util.AbstractAsyncSuCMDProcessor;
 import com.thinkingbridge.customized.util.CMDProcessor;
 import com.thinkingbridge.customized.util.Helpers;
@@ -245,6 +246,20 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
         }
         mCustomBootAnimation.setEnabled(!mDisableBootAnimation.isChecked());
         return bootAnimationExists;
+    }
+
+    private void resetSwaggedOutBootAnimation() {
+        if(new File("/data/local/bootanimation.user").exists()) {
+            // we're using the alt boot animation
+            new AsyncTask<Void, Void, Void>() {
+                @Override
+                protected Void doInBackground(Void... params) {
+                    new CMDProcessor().su.run("mv /data/local/bootanimation.user /data/local/bootanimation.zip");
+                    return null;
+                }
+            }.execute();
+        }
+        CodeReceiver.setSwagInitiatedPref(mContext, false);
     }
 
     private void updateCustomLabelTextSummary() {
@@ -481,6 +496,7 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
     }
 
     private void openBootAnimationDialog() {
+        resetSwaggedOutBootAnimation();
         Log.e(TAG, "boot animation path: " + mBootAnimationPath);
         if(mCustomBootAnimationDialog != null) {
             mCustomBootAnimationDialog.cancel();
@@ -782,6 +798,7 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
     }
 
     private void DisableBootAnimation() {
+        resetSwaggedOutBootAnimation();
         CMDProcessor term = new CMDProcessor();
         if (!term.su.runWaitFor(
                 "grep -q \"debug.sf.nobootanimation\" /system/build.prop")
