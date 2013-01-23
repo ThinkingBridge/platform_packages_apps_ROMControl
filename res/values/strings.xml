@@ -689,8 +689,8 @@
     <string name="icon_with_text">Icon with text</string>
     <string name="icon_with_centered_text">Icon with centered text</string>
     <string name="circlemod">CircleMOD</string>
-    <string name="cm_circle_wo_percent">CM circle w/o percent</string>
-    <string name="cm_circle_with_percent">CM circle with percent</string>
+    <string name="cm_circle_wo_percent">CM Circle</string>
+    <string name="cm_circle_with_percent">CM Circle with percent</string>
 
     <!-- NavBar -->
     <string name="right">Right</string>
