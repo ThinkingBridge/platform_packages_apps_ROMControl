@@ -101,9 +101,9 @@
         <item>아이콘과 텍스트</item>
         <item>아이콘과 텍스트 중앙</item>
         <item>원형모드</item>
-        <item>숨김</item>
         <item>CM Circle</item>
         <item>CM Circle with percent</item>
+        <item>숨김</item>
     </string-array>
     <string-array name="battery_icon_values">
         <item>0</item>
