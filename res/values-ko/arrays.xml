@@ -101,8 +101,9 @@
         <item>아이콘과 텍스트</item>
         <item>아이콘과 텍스트 중앙</item>
         <item>원형모드</item>
-        <item>CM Circle</item>
-        <item>CM Circle with percent</item>
+        <item>Xoom 원형모드</item>
+        <item>CM 원형모드</item>
+        <item>CM 퍼센트 원형모드</item>
         <item>숨김</item>
     </string-array>
     <string-array name="battery_icon_values">
@@ -114,6 +115,7 @@
         <item>5</item>
         <item>6</item>
         <item>7</item>
+        <item>8</item>
     </string-array>
     <string-array name="pref_navigation_menu_entries">
         <item>오른쪽</item>

@@ -141,6 +141,7 @@
         <item>@string/icon_with_text</item>
         <item>@string/icon_with_centered_text</item>
         <item>@string/circlemod</item>
+        <item>@string/icon_xoom</item>
         <item>@string/cm_circle_wo_percent</item>
         <item>@string/cm_circle_with_percent</item>
         <item>@string/dont_show</item>
@@ -155,6 +156,7 @@
         <item>5</item>
         <item>6</item>
         <item>7</item>
+        <item>8</item>
     </string-array>
 
     <!-- NavBar -->
