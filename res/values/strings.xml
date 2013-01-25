@@ -21,6 +21,7 @@
     <string name="header_system">System</string>
     <string name="sound">Sound</string>
     <string name="lockscreen_options">Lockscreen</string>
+    <string name="header_lock_clock_title">Lock Clock Widget</string>
     <string name="weather">Weather</string>
     <string name="tools">Tools</string>
 
@@ -50,6 +51,7 @@
     <string name="header_summary_led">@null</string>
     <string name="header_summary_sound">@null</string>
     <string name="header_summary_lockscreens">@null</string>
+    <string name="header_lock_clock_summary">@null</string>
     <string name="header_summary_weather">@null</string>
 
     <!-- Menu Strings -->

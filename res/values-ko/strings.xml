@@ -18,6 +18,7 @@
     <string name="header_system">시스템</string>
     <string name="sound">사운드</string>
     <string name="lockscreen_options">잠금화면 옵션</string>
+    <string name="header_lock_clock_title">시계 위젯</string>
     <string name="weather">날씨</string>
     <string name="tools">도구</string>
     <string name="title_ui">일반 유저 인터페이스</string>
@@ -41,6 +42,7 @@
     <string name="header_summary_led">@null</string>
     <string name="header_summary_sound">@null</string>
     <string name="header_summary_lockscreens">@null</string>
+    <string name="header_lock_clock_summary">@null</string>
     <string name="header_summary_weather">@null</string>
     <string name="menu_nav_bar_reset">네비바 초기화</string>
     <string name="menu_user_interface_reset">알림바 배경화면 재설정</string>

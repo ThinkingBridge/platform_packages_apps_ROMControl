@@ -15,6 +15,12 @@
         android:title="@string/lockscreen_options"
         android:icon="@drawable/ic_thinkingbridge_lockscreens"
         android:summary="@string/header_summary_lockscreens" />-->
+        
+    <header
+        android:id="@+id/lockscreen_lock_clock"
+        android:summary="@string/header_lock_clock_summary"
+        android:icon="@drawable/ic_thinkingbridge_lockclock_widget"
+        android:title="@string/header_lock_clock_title" />
 
     <header
         android:id="@+id/power_menu"
