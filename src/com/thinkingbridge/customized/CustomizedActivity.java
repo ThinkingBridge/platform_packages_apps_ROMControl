@@ -186,23 +186,12 @@ public class CustomizedActivity extends PreferenceActivity implements ButtonBarH
      * Populate the activity with the top-level headers.
      */
     @Override
-    public void onBuildHeaders(List<Header> target) {
-        loadHeadersFromResource(R.xml.preference_headers, target);
-        for (int i=0; i<target.size(); i++) {
-            Header header = target.get(i);
-            if (header.id == R.id.lockscreen_lock_clock) {
-                Intent launchPref = new Intent(Intent.ACTION_MAIN);
-                launchPref.setClassName("com.cyanogenmod.lockclock", "com.cyanogenmod.lockclock.preference.Preferences");
-                ResolveInfo launcherPreferences = getPackageManager().resolveActivity(launchPref, 0);
-                if (launcherPreferences != null) {
-                    header.intent = launchPref;
-                } else {
-                    target.remove(i);
-                }
-            }
-        }
-        updateHeaderList(target);
-        mHeaders = target;
+    public void onBuildHeaders(List<Header> headers) {
+        loadHeadersFromResource(R.xml.preference_headers, headers);
+
+        updateHeaderList(headers);
+
+        mHeaders = headers;
     }
 
     /**
