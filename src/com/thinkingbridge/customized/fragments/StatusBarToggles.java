@@ -36,7 +36,6 @@ import com.thinkingbridge.customized.SettingsPreferenceFragment;
 import com.thinkingbridge.customized.R;
 import com.thinkingbridge.customized.widgets.TouchInterceptor;
 import com.thinkingbridge.customized.widgets.SeekBarPreference;
-import com.scheffsblend.smw.Preferences.ImageListPreference;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 import java.util.Arrays;
