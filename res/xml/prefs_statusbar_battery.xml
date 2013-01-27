@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:thinkingbridge="http://schemas.android.com/apk/res/com.thinkingbridge.customized">
 
-    <ListPreference
-            android:key="battery_icon_list"
-            android:title="@string/battery_icon"
-            android:entries="@array/battery_icon_entries"
-            android:entryValues="@array/battery_icon_values" />
+    <com.thinkingbridge.customized.preferences.ImageListPreference
+        android:key="battery_icon_list"
+        android:title="@string/battery_icon"
+        android:entries="@array/battery_icon_entries"
+        android:entryValues="@array/battery_icon_values"
+        thinkingbridge:entryImages="@array/battery_icon_images" />
 
     <PreferenceCategory
         android:key="battery_bar_cat"

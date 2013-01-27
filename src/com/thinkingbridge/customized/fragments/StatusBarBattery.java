@@ -10,6 +10,7 @@ import android.provider.Settings;
 
 import com.thinkingbridge.customized.SettingsPreferenceFragment;
 import com.thinkingbridge.customized.R;
+import com.thinkingbridge.customized.preferences.ImageListPreference;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
@@ -23,7 +24,7 @@ public class StatusBarBattery extends SettingsPreferenceFragment implements
     private static final String PREF_BATT_BAR_WIDTH = "battery_bar_thickness";
     private static final String PREF_BATT_ANIMATE = "battery_bar_animate";
 
-    ListPreference mBatteryIcon;
+    ImageListPreference mBatteryIcon;
     ListPreference mBatteryBar;
     ListPreference mBatteryBarStyle;
     ListPreference mBatteryBarThickness;
@@ -37,7 +38,7 @@ public class StatusBarBattery extends SettingsPreferenceFragment implements
         // Load the preferences from an XML resource
         addPreferencesFromResource(R.xml.prefs_statusbar_battery);
 
-        mBatteryIcon = (ListPreference) findPreference(PREF_BATT_ICON);
+        mBatteryIcon = (ImageListPreference) findPreference(PREF_BATT_ICON);
         mBatteryIcon.setOnPreferenceChangeListener(this);
         mBatteryIcon.setValue((Settings.System.getInt(getActivity()
                 .getContentResolver(), Settings.System.STATUSBAR_BATTERY_ICON,
