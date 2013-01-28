@@ -51,12 +51,16 @@
             android:title="@string/brightness_slider_title"
             android:summary="@string/brightness_slider_summary" />
 
-        <com.thinkingbridge.customized.widgets.SeekBarPreference
-            android:key="navigation_bar_alpha"
-            android:title="@string/navigation_bar_alpha_title" />
-
+        <Preference
+            android:key="transparency_dialog"
+            android:title="@string/transparency_dialog_title" />
+        
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="navbar"
+        android:title="@string/navbar_cat">
+        
         <ListPreference
             android:key="user_mode_ui"
             android:title="@string/user_mode_ui"
