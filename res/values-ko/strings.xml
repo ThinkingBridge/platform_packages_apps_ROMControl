@@ -397,5 +397,4 @@ Examples: New York,NY // New York, NY // 10033 // London, England"</string>
     <string name="direction_west">서</string>
     <string name="direction_north_west">북서</string>
     <string name="clipboard_notification">클립보드에 복사.</string>
-    <string name="clockwithram">램 여유량을 표시</string>
 </resources>

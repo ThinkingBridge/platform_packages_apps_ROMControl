@@ -8,10 +8,6 @@
         android:key="clock_style"
         android:title="@string/clock_title_enable" />
 
-        <CheckBoxPreference
-            android:key="clock_with_ram"
-            android:title="@string/clockwithram" android:defaultValue="false" />
-
     <ListPreference
         android:entries="@array/clock_ampm_entries"
         android:entryValues="@array/clock_ampm_values"

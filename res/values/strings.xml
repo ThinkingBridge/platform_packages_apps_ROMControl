@@ -834,6 +834,5 @@
     <!-- haptic feedback on toggle press -->
     <string name="toggles_enable_haptic_feedback_title">Enable haptic feedback</string>
     <string name="toggles_enable_haptic_feedback_summary">Use haptic feedback when pressing toggles</string>
-    <string name="clockwithram">Clock with Ram available</string>
 
 </resources>
