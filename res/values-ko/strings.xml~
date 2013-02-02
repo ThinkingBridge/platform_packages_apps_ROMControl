@@ -412,11 +412,6 @@ Examples: New York,NY // New York, NY // 10033 // London, England"</string>
     <string name="vibrate_notif_expand_summary">노티피케이션을 자세히 볼때 진동 울림 (설정시 시스템UI 재시작)</string>
     <string name="brightness_slider_title">상단바 밝기 조절</string>
     <string name="brightness_slider_summary">밝기를 조정하실하려면 상태바 상단에 손가락을 슬라이드 하시면 됩니다. 자동 밝기 기능을 사용 하실경우 이 기능을 활성화를 하셔도 작동이 안됩니다.</string>
-	
-   <string name="user_mode_ui">UI 모드</string>
-   <string name="phone_mode_ui">폰 - NavBar to side in landscape</string>
-   <string name="tablet_mode_ui">태블릿 - Combined NavBar and SystemBar</string>	
-    <string name="phablet_mode_ui">패블릿 - NavBar stays at bottom in landscape</string>
     <string name="navigation_bar_alpha_title">상단바 및 네비바 투명화 조절</string>
     <string name="navigation_bar_menu_arrow_keys_title">메뉴 화살표 키</string>
     <string name="navigation_bar_menu_arrow_keys_summary">입력하는 동안 네비바에 화살표 키 표시</string>
