@@ -49,21 +49,15 @@ public class CustomizedActivity extends PreferenceActivity implements ButtonBarH
     private Header mCurrentHeader;
     boolean mInLocalHeaderSwitch;
 
-    Locale defaultLocale;
-
     protected boolean isShortcut;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         hasNotificationLed = getResources().getBoolean(R.bool.has_notification_led);
-        defaultLocale = Locale.getDefault();
-        Log.i(TAG, "defualt locale: " + defaultLocale.getDisplayName());
-        setLocale();
 
         mInLocalHeaderSwitch = true;
         super.onCreate(savedInstanceState);
         mInLocalHeaderSwitch = false;
-
         if (!onIsHidingHeaders() && onIsMultiPane()) {
             highlightHeader();
             // Force the title so that it doesn't get overridden by a direct
@@ -120,65 +114,6 @@ public class CustomizedActivity extends PreferenceActivity implements ButtonBarH
             finish();
         } else {
             super.onBackPressed();
-        }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_activity, menu);
-
-        MenuItem locale = menu.findItem(R.id.change_locale);
-
-        if (Locale.getDefault().getLanguage().equals(Locale.ENGLISH.getLanguage())) {
-            menu.removeItem(R.id.change_locale);
-        } else {
-            Configuration config = getBaseContext().getResources().getConfiguration();
-            locale.setTitle("Locale (" + config.locale.getDisplayLanguage() + ")");
-        }
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
-        switch (item.getItemId()) {
-            case R.id.change_locale:
-                Log.e(TAG, "change_locale clicked");
-                SharedPreferences p = getPreferences(MODE_PRIVATE);
-                boolean useEnglishLocale = p.getBoolean(KEY_USE_ENGLISH_LOCALE, false);
-                p.edit().putBoolean(KEY_USE_ENGLISH_LOCALE, !useEnglishLocale).apply();
-                recreate();
-                return true;
-            case android.R.id.home:
-                onBackPressed();
-                return true;
-            default:
-                return super.onContextItemSelected(item);
-        }
-    }
-
-    private void setLocale() {
-        SharedPreferences p = getPreferences(MODE_PRIVATE);
-        boolean useEnglishLocale = p.getBoolean(KEY_USE_ENGLISH_LOCALE, false);
-
-        if (useEnglishLocale) {
-            Locale locale = null;
-            Configuration config = null;
-            config = getBaseContext().getResources().getConfiguration();
-            locale = Locale.ENGLISH;
-            config.locale = locale;
-            getBaseContext().getResources().updateConfiguration(config,
-                    getBaseContext().getResources().getDisplayMetrics());
-        } else {
-            Locale locale = null;
-            Configuration config = null;
-            config = getBaseContext().getResources().getConfiguration();
-            locale = defaultLocale;
-            config.locale = locale;
-            getBaseContext().getResources().updateConfiguration(config,
-                    getBaseContext().getResources().getDisplayMetrics());
-
         }
     }
 
@@ -251,18 +186,6 @@ public class CustomizedActivity extends PreferenceActivity implements ButtonBarH
                 mHeaderIndexMap.put(id, i);
                 i++;
             }
-        }
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-
-        setLocale();
-
-        ListAdapter listAdapter = getListAdapter();
-        if (listAdapter instanceof HeaderAdapter) {
-            ((HeaderAdapter) listAdapter).resume();
         }
     }
 
