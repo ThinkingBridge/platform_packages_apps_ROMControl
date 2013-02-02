@@ -70,8 +70,6 @@
             android:summary= "@string/hide_extras_summary"
             android:defaultValue="false" />
 
-     </PreferenceCategory>
-
      <PreferenceCategory
             android:key="misc"
             android:title="@string/misc_short">
