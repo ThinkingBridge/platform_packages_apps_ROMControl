@@ -52,27 +52,27 @@
         <item>1</item>
     </string-array>
     <string-array name="available_toggles_entries">
-        <item>유저</item>
-        <item>단축주소록</item>
-        <item>밝기</item>
-        <item>설정</item>
-        <item>와이파이</item>
-        <item>신호</item>
-        <item>회전</item>
-        <item>시계</item>
+        <item>USER</item>
+        <item>FAVCONTACT</item>
+        <item>BRIGHTNESS</item>
+        <item>SETTINGS</item>
+        <item>WIFI</item>
+        <item>SIGNAL</item>
+        <item>ROTATE</item>
+        <item>CLOCK</item>
         <item>GPS</item>
-        <item>키보드</item>
-        <item>배터리</item>
-        <item>비행기모드</item>
-        <item>블루트스</item>
-        <item>진동</item>
-        <item>무음</item>
-        <item>동기화</item>
-        <item>빠른충전</item>
+        <item>IME</item>
+        <item>BATTERY</item>
+        <item>AIRPLANE_MODE</item>
+        <item>BLUETOOTH</item>
+        <item>VIBRATE</item>
+        <item>SILENT</item>
+        <item>SYNC</item>
+        <item>FCHARGE</item>
         <item>NFC</item>
-        <item>와이파이테더링</item>
-        <item>USB테더링</item>
-        <item>전등</item>
+        <item>WIFITETHER</item>
+        <item>USBTETHER</item>
+        <item>TORCH</item>
         <item>2G</item>
         <item>LTE</item>
     </string-array>
