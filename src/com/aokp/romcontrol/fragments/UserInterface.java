@@ -99,6 +99,7 @@ public class UserInterface extends AOKPPreferenceFragment implements OnPreferenc
     private static final CharSequence PREF_DISPLAY = "display";
     private static final CharSequence PREF_POWER_CRT_MODE = "system_power_crt_mode";
     private static final CharSequence PREF_POWER_CRT_SCREEN_OFF = "system_power_crt_screen_off";
+    private static final CharSequence PREF_STATUSBAR_HIDDEN = "statusbar_hidden";
 
     private static final int REQUEST_PICK_WALLPAPER = 201;
     //private static final int REQUEST_PICK_CUSTOM_ICON = 202; //unused
@@ -129,6 +130,7 @@ public class UserInterface extends AOKPPreferenceFragment implements OnPreferenc
     CheckBoxPreference mDualpane;
     ListPreference mCrtMode;
     CheckBoxPreference mCrtOff;
+    CheckBoxPreference mStatusBarHide;
 
     private AnimationDrawable mAnimationPart1;
     private AnimationDrawable mAnimationPart2;
@@ -203,6 +205,10 @@ public class UserInterface extends AOKPPreferenceFragment implements OnPreferenc
         mHideExtras.setChecked(Settings.System.getBoolean(mContentResolver,
                         Settings.System.HIDE_EXTRAS_SYSTEM_BAR, false));
 
+        mStatusBarHide = (CheckBoxPreference) findPreference(PREF_STATUSBAR_HIDDEN);
+        mStatusBarHide.setChecked(Settings.System.getBoolean(mContentResolver,
+                Settings.System.STATUSBAR_HIDDEN, false));
+
         mUserModeUI = (ListPreference) findPreference(PREF_USER_MODE_UI);
         int uiMode = Settings.System.getInt(mContentResolver,
                 Settings.System.CURRENT_UI_MODE, 0);
@@ -239,6 +245,7 @@ public class UserInterface extends AOKPPreferenceFragment implements OnPreferenc
 
         if (isTablet(mContext)) {
             mStatusbarSliderPreference.setEnabled(false);
+            mStatusBarHide.setEnabled(false);
         } else {
             mHideExtras.setEnabled(false);
         }
@@ -467,6 +474,10 @@ public class UserInterface extends AOKPPreferenceFragment implements OnPreferenc
             Settings.System.putBoolean(mContentResolver,
                     Settings.System.SYSTEM_POWER_ENABLE_CRT_OFF,
                     ((TwoStatePreference) preference).isChecked());
+        } else if (preference == mStatusBarHide) {
+            boolean checked = ((CheckBoxPreference)preference).isChecked();
+            Settings.System.putBoolean(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_HIDDEN, checked ? true : false);
             return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
@@ -882,6 +893,7 @@ public class UserInterface extends AOKPPreferenceFragment implements OnPreferenc
             Settings.System.putInt(mContentResolver,
                     Settings.System.USER_UI_MODE, val);
             mStatusbarSliderPreference.setEnabled(val == 1 ? false : true);
+            mStatusBarHide.setEnabled(val == 1 ? false : true);
             mHideExtras.setEnabled(val == 1 ? true : false);
             Helpers.restartSystemUI();
             return true;
