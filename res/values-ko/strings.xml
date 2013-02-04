@@ -379,7 +379,7 @@
     <string name="weather_use_custom_location">사용자 지정위치 사용</string>
     <string name="weather_use_custom_location_summary">위치를 직접 설정하는 것은 배터리 절약에 좋습니다.</string>
     <string name="weather_custom_location_dialog_title">위치 설정</string>
-    <string name="weather_custom_location_dialog_message">"예시를 잘 따라해 주십시오! 잘못된 위치의 설정은 날씨 정보를 가져오는 겻을 막게 되고, 예상치 못한 일을 일으키게 됩니다.
+    <string name="weather_custom_location_dialog_message">"예시를 잘 따라해 주십시오! 잘못된 위치의 설정은 날씨 정보를 가져오는 것을 막게 되고, 예상치 못한 일을 일으키게 됩니다.
 
 Examples: New York,NY // New York, NY // 10033 // London, England"</string>
     <string name="weather_custom_location_title">사용자 지정위치</string>
