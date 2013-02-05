@@ -39,6 +39,13 @@
         android:title="@string/nav_bar"
         android:icon="@drawable/ic_thinkingbridge_navigation_bar"
         android:summary="@string/header_summary_navigation_bar" />
+     
+     <header
+        android:id="@+id/hardware_keys"
+        android:fragment="com.thinkingbridge.customized.fragments.HardwareKeys"
+        android:title="@string/hardware_keys_title"
+        android:icon="@drawable/ic_thinkingbridge_navigation_bar"
+        android:summary="@string/header_summary_hardware_keys" />
 
     <header
         android:id="@+id/statusbar"
