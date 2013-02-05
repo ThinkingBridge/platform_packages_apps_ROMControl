@@ -17,7 +17,7 @@
     <string-array name="clock_ampm_entries">
         <item>보이지 않음</item>
         <item>작은 AM/PM</item>
-        <item>일반적인 AM/PM</item>
+        <item>큰 AM/PM</item>
     </string-array>
     <string-array name="clock_ampm_values">
         <item>2</item>
@@ -78,6 +78,7 @@
         <item>LTE</item>
         <item>QUIETHOURS</item>
         <item>NAVBARHIDE</item>
+        <item>QUICKRECORD</item>
     </string-array>
     <array name="available_toggles_values">
         <item>@string/toggle_user</item>
@@ -106,6 +107,7 @@
         <item>@string/toggle_lte</item>
         <item>@string/toggle_quiethours</item>
         <item>@string/toggle_navbar_hide</item>
+        <item>@string/toggle_quickrecord</item>
     </array>
     <string-array name="brightness_location_entries">
         <item>위로</item>
