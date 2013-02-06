@@ -16,11 +16,7 @@
 
 package com.thinkingbridge.customized.fragments;
 
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -30,9 +26,7 @@ import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.widget.Toast;
 
-import com.android.internal.widget.multiwaveview.GlowPadView;
 import com.thinkingbridge.customized.R;
-import com.thinkingbridge.customized.util.ShortcutPickerHelper;
 import com.thinkingbridge.customized.SettingsPreferenceFragment;
 
 public class HardwareKeys extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
@@ -79,6 +73,7 @@ public class HardwareKeys extends SettingsPreferenceFragment implements OnPrefer
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         final int deviceKeys = getResources().getInteger(
                 com.android.internal.R.integer.config_deviceHardwareKeys);
         final boolean hasHomeKey = (deviceKeys & KEY_MASK_HOME) != 0;
