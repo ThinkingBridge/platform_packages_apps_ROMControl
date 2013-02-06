@@ -54,17 +54,15 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.internal.widget.LockPatternUtils;
 import com.android.internal.widget.multiwaveview.GlowPadView;
 import com.android.internal.widget.multiwaveview.TargetDrawable;
 import com.thinkingbridge.customized.R;
 import com.thinkingbridge.customized.SettingsPreferenceFragment;
 import com.thinkingbridge.customized.Utils;
-import com.thinkingbridge.customized.fragments.IconPicker;
-import com.thinkingbridge.customized.fragments.ShortcutPickHelper;
+import com.thinkingbridge.customized.fragments.IconPicker.OnIconPickListener;
 
 public class LockscreenTargets extends SettingsPreferenceFragment implements ShortcutPickHelper.OnPickListener,
-    GlowPadView.OnTriggerListener, IconPicker.OnIconPickListener {
+    GlowPadView.OnTriggerListener, OnIconPickListener {
 
     private GlowPadView mWaveView;
     private ImageButton mDialogIcon;
@@ -426,9 +424,8 @@ public class LockscreenTargets extends SettingsPreferenceFragment implements Sho
             mDialogLabel.setText(EMPTY_LABEL);
             mDialogLabel.setTag(GlowPadView.EMPTY_TARGET);
             mDialogIcon.setImageResource(R.drawable.ic_empty);
-        } else if (requestCode == IconPicker.REQUEST_PICK_SYSTEM ||
-                    requestCode == IconPicker.REQUEST_PICK_GALLERY ||
-                    requestCode == IconPicker.REQUEST_PICK_ICON_PACK) {
+        } else if (requestCode == IconPicker.REQUEST_PICK_SYSTEM || requestCode == IconPicker.REQUEST_PICK_GALLERY
+                || requestCode == IconPicker.REQUEST_PICK_ICON_PACK) {
             mIconPicker.onActivityResult(requestCode, resultCode, data);
         } else if (requestCode != Activity.RESULT_CANCELED && resultCode != Activity.RESULT_CANCELED) {
             mPicker.onActivityResult(requestCode, resultCode, data);
@@ -443,11 +440,14 @@ public class LockscreenTargets extends SettingsPreferenceFragment implements Sho
     public void onReleased(View v, int handle) {
     }
 
+	@Override
+	public void onTargetChange(View view, final int target) {
+	}
+
     @Override
     public void onTrigger(View v, final int target) {
         mTargetIndex = target;
-        if ((target != 0 && (mIsScreenLarge || !mIsLandscape)) ||
-                    (target != 2 && !mIsScreenLarge && mIsLandscape)) {
+        if ((target != 0 && (mIsScreenLarge || !mIsLandscape)) || (target != 2 && !mIsScreenLarge && mIsLandscape)) {
             AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
             builder.setTitle(R.string.lockscreen_target_edit_title);
             builder.setMessage(R.string.lockscreen_target_edit_msg);
@@ -532,7 +532,7 @@ public class LockscreenTargets extends SettingsPreferenceFragment implements Sho
                 if (mImageTmp.exists()) {
                     mImageTmp.renameTo(mImage);
                 }
-                mImage.setReadable(true, false);
+                mImage.setReadOnly();
                 iconType = GlowPadView.ICON_FILE;
                 iconSource = mImage.toString();
                 ic = new BitmapDrawable(getResources(), BitmapFactory.decodeFile(mImage.toString()));
