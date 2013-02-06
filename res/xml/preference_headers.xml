@@ -1,5 +1,6 @@
 <preference-headers xmlns:android="http://schemas.android.com/apk/res/android" >
 
+    <!-- System -->   
     <header android:title="@string/user_interface" />
 
     <header
@@ -8,23 +9,6 @@
         android:title="@string/general_ui"
         android:icon="@drawable/ic_thinkingbridge_general_ui"
         android:summary="@string/header_summary_general_ui" />
-
-    <!--<header
-        android:id="@+id/lockscreen"
-        android:fragment="com.thinkingbridge.customized.fragments.Lockscreens"
-        android:title="@string/lockscreen_options"
-        android:icon="@drawable/ic_thinkingbridge_lockscreens"
-        android:summary="@string/header_summary_lockscreens" />-->
-        
-    <header
-        android:id="@+id/lockscreen_lock_clock"
-        android:summary="@string/header_lock_clock_summary"
-        android:icon="@drawable/ic_thinkingbridge_lockclock"
-        android:title="@string/header_lock_clock_title" >
-        <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.cyanogenmod.lockclock"
-                    android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
-            </header>
 
     <header
         android:id="@+id/power_menu"
@@ -46,7 +30,30 @@
         android:title="@string/hardware_keys_title"
         android:icon="@drawable/ic_thinkingbridge_navigation_bar"
         android:summary="@string/header_summary_hardware_keys" />
+     
+     <!-- LockScreen -->
+     <header
+        android:id="@+id/lockscreen"
+        android:title="@string/header_lockscreen" />
+     
+     <header
+        android:id="@+id/lockscreen"
+        android:fragment="com.thinkingbridge.customized.fragments.Lockscreens"
+        android:title="@string/lockscreen_options"
+        android:icon="@drawable/ic_thinkingbridge_lockscreens"
+        android:summary="@string/header_summary_lockscreens" />
+        
+    <header
+        android:id="@+id/lockscreen_lock_clock"
+        android:summary="@string/header_lock_clock_summary"
+        android:icon="@drawable/ic_thinkingbridge_lockclock"
+        android:title="@string/header_lock_clock_title" >
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.cyanogenmod.lockclock"
+            android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
+    </header>
 
+    <!-- Statusbar -->   
     <header
         android:id="@+id/statusbar"
         android:title="@string/header_statusbar" />

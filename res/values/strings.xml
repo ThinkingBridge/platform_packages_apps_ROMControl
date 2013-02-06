@@ -25,6 +25,7 @@
     <string name="header_lock_clock_title">Lock Clock Widget</string>
     <string name="weather">Weather</string>
     <string name="tools">Tools</string>
+    <string name="header_lockscreen">LockScreen</string>
 
     <!-- Activity titles defined in AndroidManifest.xml -->
     <string name="title_ui">General User Interface</string>
