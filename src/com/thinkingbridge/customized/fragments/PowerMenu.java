@@ -19,12 +19,20 @@ public class PowerMenu extends SettingsPreferenceFragment {
     //private static final String PREF_TORCH_TOGGLE = "show_torch_toggle";
     //private static final String PREF_AIRPLANE_TOGGLE = "show_airplane_toggle";
     private static final String PREF_NAVBAR_HIDE = "show_navbar_hide";
+    private static final String PREF_SCREENSHOT = "show_screenshot";
+    private static final String PREF_AIRPLANE_TOGGLE = "show_airplane_toggle";
+    private static final String KEY_REBOOT = "power_menu_reboot";
+    private static final String KEY_SILENT = "power_menu_silent";
 
     //CheckBoxPreference mShowPowerSaver;
     //CheckBoxPreference mShowScreenShot;
     //CheckBoxPreference mShowTorchToggle;
     //CheckBoxPreference mShowAirplaneToggle;
     CheckBoxPreference mShowNavBarHide;
+    CheckBoxPreference mShowScreenShot;
+    CheckBoxPreference mShowAirplaneToggle;
+    CheckBoxPreference mRebootPref;
+    CheckBoxPreference mSilentPref;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -64,6 +72,26 @@ public class PowerMenu extends SettingsPreferenceFragment {
         mShowNavBarHide.setChecked(Settings.System.getBoolean(getActivity()
                 .getContentResolver(), Settings.System.POWER_DIALOG_SHOW_NAVBAR_HIDE,
                 false));
+                
+        mShowScreenShot = (CheckBoxPreference) findPreference(PREF_SCREENSHOT);
+        mShowScreenShot.setChecked(Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.POWER_MENU_SCREENSHOT_ENABLED,
+                0) == 1);
+
+        mShowAirplaneToggle = (CheckBoxPreference) findPreference(PREF_AIRPLANE_TOGGLE);
+        mShowAirplaneToggle.setChecked(Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.POWER_MENU_AIRPLANE_ENABLED,
+                1) == 1);
+        
+        mRebootPref = (CheckBoxPreference) findPreference(KEY_REBOOT);
+        mRebootPref.setChecked(Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.POWER_MENU_REBOOT_ENABLED,
+                1) == 1);
+                
+        mSilentPref = (CheckBoxPreference) findPreference(KEY_SILENT);
+        mSilentPref.setChecked(Settings.System.getInt(getActivity()
+        		.getContentResolver(), Settings.System.POWER_MENU_SILENT_ENABLED,
+        		1) == 1);
     }
 
     @Override
@@ -97,6 +125,26 @@ public class PowerMenu extends SettingsPreferenceFragment {
                     Settings.System.POWER_DIALOG_SHOW_NAVBAR_HIDE,
                     ((CheckBoxPreference)preference).isChecked());
             return true;
+        } else if (preference == mShowScreenShot) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.POWER_MENU_SCREENSHOT_ENABLED,
+                    ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mShowAirplaneToggle) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.POWER_MENU_AIRPLANE_ENABLED,
+                    ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mRebootPref) {
+        	Settings.System.putInt(getActivity().getContentResolver(),
+        			Settings.System.POWER_MENU_REBOOT_ENABLED,
+        			((CheckBoxPreference)preference).isChecked() ? 1 : 0);
+        	return true;
+        } else if (preference == mSilentPref) {
+        	Settings.System.putInt(getActivity().getContentResolver(),
+        			Settings.System.POWER_MENU_SILENT_ENABLED,
+        			((CheckBoxPreference)preference).isChecked() ? 1 : 0);
+        	return true;
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
