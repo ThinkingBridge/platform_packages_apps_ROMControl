@@ -520,5 +520,21 @@ Examples: New York,NY // New York, NY // 10033 // London, England"</string>
     <string name="icon_picker_search">검색</string>
     <string name="icon_picker_sms">메시지</string>
     <string name="icon_picker_twitter">Twitter</string>
+    
+    <!-- Paranoid Lockscreen -->
+    <string name="icon_picker_type">아이콘 스타일 선택:</string>
+    <string name="icon_default">기본</string>
+    <string name="icon_presets">Presets</string>
+    <string name="icon_custom">Custom</string>
+    <string name="lock_screen_shortcuts_title">잠금화면 타겟</string>
+    <string name="lock_screen_shortcuts_reset_message">잠금화면 바로 가기를 재설정 하시겠습니까?</string>
+    <string name="lock_screen_shortcuts_add">추가</string>
+    <string name="lock_screen_shortcuts_reset">초기화</string>
+    <string name="lock_screen_shortcuts_limit">6개의 바로가기만 허용되어있습니다.!</string>
+
+    <!-- Lock screen shortcuts -->
+    <string name="choose_app">애플리케이션 선택</string>
+    <string name="dialog_delete_title">삭제</string>
+    <string name="dialog_delete_message">이 아이템을 삭제하시겠습니까?</string>
 
 </resources>
