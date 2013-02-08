@@ -30,6 +30,7 @@ public class PowerMenu extends SettingsPreferenceFragment {
     //CheckBoxPreference mShowTorchToggle;
     //CheckBoxPreference mShowAirplaneToggle;
     CheckBoxPreference mShowNavBarHide;
+    CheckBoxPreference mExpandedDesktopPref;
     CheckBoxPreference mShowScreenShot;
     CheckBoxPreference mShowAirplaneToggle;
     CheckBoxPreference mRebootPref;
