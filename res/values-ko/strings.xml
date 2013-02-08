@@ -56,6 +56,7 @@
     <string name="title_show_torch_toggle">손전등 토글 표시</string>
     <string name="title_show_airplane_toggle">비행기모드 토글 표시</string>
     <string name="title_show_navbar_hide">네비게이션 바 토글 표시</string>
+    <string name="power_menu_expanded_desktop">바탕화면 확장 표시</string>
     <string name="title_pref_powersaving_pref_mode">전원 절약 활성화</string>
     <string name="power_menu_reboot_title">리부팅 메뉴</string>
     <string name="power_menu_silent_title">사운드 패널</string>

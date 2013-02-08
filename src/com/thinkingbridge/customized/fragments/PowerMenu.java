@@ -19,6 +19,7 @@ public class PowerMenu extends SettingsPreferenceFragment {
     //private static final String PREF_TORCH_TOGGLE = "show_torch_toggle";
     //private static final String PREF_AIRPLANE_TOGGLE = "show_airplane_toggle";
     private static final String PREF_NAVBAR_HIDE = "show_navbar_hide";
+    private static final String PREF_EXPANDED_DESKTOP = "power_menu_expanded_desktop";
     private static final String PREF_SCREENSHOT = "show_screenshot";
     private static final String PREF_AIRPLANE_TOGGLE = "show_airplane_toggle";
     private static final String KEY_REBOOT = "power_menu_reboot";
@@ -72,6 +73,11 @@ public class PowerMenu extends SettingsPreferenceFragment {
         mShowNavBarHide.setChecked(Settings.System.getBoolean(getActivity()
                 .getContentResolver(), Settings.System.POWER_DIALOG_SHOW_NAVBAR_HIDE,
                 false));
+        
+        mExpandedDesktopPref = (CheckBoxPreference) findPreference(PREF_EXPANDED_DESKTOP);
+        mExpandedDesktopPref.setChecked(Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 
+                1) == 1);
                 
         mShowScreenShot = (CheckBoxPreference) findPreference(PREF_SCREENSHOT);
         mShowScreenShot.setChecked(Settings.System.getInt(getActivity()
@@ -145,6 +151,11 @@ public class PowerMenu extends SettingsPreferenceFragment {
         			Settings.System.POWER_MENU_SILENT_ENABLED,
         			((CheckBoxPreference)preference).isChecked() ? 1 : 0);
         	return true;
+        } else if (preference == mExpandedDesktopPref) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED,
+                    ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
+            return true;
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
