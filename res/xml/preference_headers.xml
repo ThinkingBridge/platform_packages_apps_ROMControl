@@ -49,6 +49,13 @@
         android:summary="@string/lockscreen_target_summary"
         android:icon="@drawable/ic_thinkingbridge_lockscreen_targets"
         android:title="@string/lockscreen_target_title" />
+     
+     <header
+        android:id="@+id/lockscreen_shortcuts"
+        android:fragment="com.thinkingbridge.customized.fragments.Shortcuts"
+        android:summary="@string/lock_screen_shortcuts_summary"
+        android:icon="@drawable/ic_thinkingbridge_lockscreen_shortcuts"
+        android:title="@string/lock_screen_shortcuts_title" />
         
     <header
         android:id="@+id/lockscreen_lock_clock"
