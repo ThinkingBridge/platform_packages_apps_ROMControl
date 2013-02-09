@@ -20,7 +20,7 @@
     <PreferenceScreen
             android:key="pie_color"
             android:title="@string/pie_color_title"
-            android:fragment="com.thinkingbridge.customized.PieColor" />
+            android:fragment="com.thinkingbridge.customized.fragments.PieColor" />
 
     <PreferenceCategory
         android:key="pie_control"
