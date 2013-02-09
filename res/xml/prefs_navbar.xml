@@ -122,10 +122,6 @@
             android:key="width_land"
             android:title="@string/width_land_title" />
 
-        <com.thinkingbridge.customized.widgets.SeekBarPreference
-            android:key="button_transparency"
-            android:title="@string/button_transparency_title" />
-
         </PreferenceCategory>
         <PreferenceCategory
             android:key="navbar_widgets_cat"
