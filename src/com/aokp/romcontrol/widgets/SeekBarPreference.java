@@ -19,6 +19,8 @@ public class SeekBarPreference extends Preference
     public static int maximum = 100;
     public static int interval = 5;
 
+    private String property;
+
     private TextView monitorBox;
     private SeekBar bar;
 
@@ -67,6 +69,19 @@ public class SeekBarPreference extends Preference
 
         monitorBox.setText(progress + "%");
         changer.onPreferenceChange(this, Integer.toString(progress));
+    }
+
+    public void setValue(int progress){
+        if (bar!=null)
+        {
+            bar.setProgress(progress);
+            monitorBox.setText(progress + "%");
+            changer.onPreferenceChange(this, Integer.toString(progress));
+        }
+    }
+
+    public void setProperty(String property){
+        this.property = property;
     }
 
     @Override
