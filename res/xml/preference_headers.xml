@@ -31,6 +31,13 @@
         android:icon="@drawable/ic_thinkingbridge_hardware_keys"
         android:summary="@string/header_summary_hardware_keys" />
      
+     <header
+         android:id="@+id/pie_control"
+         android:icon="@drawable/ic_thinkingbridge_pie"
+         android:fragment="com.thinkingbridge.customized.fragments.Pie"
+         android:title="@string/pie_controls_title"
+         android:summary="@string/pie_controls_summary" />
+     
      <!-- LockScreen -->
      <header
         android:id="@+id/lockscreen"

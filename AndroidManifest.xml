@@ -56,6 +56,13 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".fragments.Pie"
+            android:label="@string/pie_controls_title" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".fragments.StatusBarClock"
             android:label="@string/title_statusbar_clock" >
             <intent-filter>
@@ -150,6 +157,8 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+        
+        <activity android:name=".fragments.PieColor" />
 
         <activity
             android:name=".CreateShortcut"
