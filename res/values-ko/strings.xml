@@ -527,8 +527,8 @@ Examples: New York,NY // New York, NY // 10033 // London, England"</string>
     <!-- Paranoid Lockscreen -->
     <string name="icon_picker_type">아이콘 스타일 선택:</string>
     <string name="icon_default">기본</string>
-    <string name="icon_presets">Presets</string>
-    <string name="icon_custom">Custom</string>
+    <string name="icon_presets">프리셋</string>
+    <string name="icon_custom">커스텀</string>
     <string name="lock_screen_shortcuts_title">잠금화면 타겟</string>
     <string name="lock_screen_shortcuts_reset_message">잠금화면 바로 가기를 재설정 하시겠습니까?</string>
     <string name="lock_screen_shortcuts_add">추가</string>
@@ -539,5 +539,58 @@ Examples: New York,NY // New York, NY // 10033 // London, England"</string>
     <string name="choose_app">애플리케이션 선택</string>
     <string name="dialog_delete_title">삭제</string>
     <string name="dialog_delete_message">이 아이템을 삭제하시겠습니까?</string>
+    
+        <!-- Pie controls -->
+    <string name="pie_controls_title">파이 컨트롤</string>
+    <string name="pie_targets_title">타겟</string>
+    <string name="pie_gravity_title">파이 위치</string>
+    <string name="pie_gravity_summary">파이가 어디에 놓일지 설정</string>
+    <string name="pie_gravity_top">위</string>
+    <string name="pie_gravity_bottom">아래</string>
+    <string name="pie_gravity_right">오른쪽</string>
+    <string name="pie_gravity_left">왼</string>
+    <string name="pie_mode_title">파이 스타일</string>
+    <string name="pie_mode_summary">애니메이션과 상태가 어떻게 나타날지 설정</string>
+    <string name="pie_mode_bare">간단한</string>
+    <string name="pie_mode_quick">빠른</string>
+    <string name="pie_mode_default">기본</string>
+    <string name="pie_mode_slow">느린</string>
+    <string name="pie_size_title">파이 크기</string>
+    <string name="pie_size_summary">파이 크기를 설정</string>
+    <string name="pie_size_small">작은</string>
+    <string name="pie_size_default">기본</string>
+    <string name="pie_size_large">큰</string>
+    <string name="pie_size_gigantic">거대한</string>
+    <string name="pie_color_title">색상 설정</string>
+    <string name="pie_color_style_title">색상 사용</string>
+    <string name="pie_background_title">배경 색</string>
+    <string name="pie_select_title">선택 색</string>
+    <string name="pie_outlines_title">선 색</string>
+    <string name="pie_status_clock_title">시계 색</string>
+    <string name="pie_status_title">상태 색</string>
+    <string name="pie_chevron_left_title">왼쪽 곡선 색</string>
+    <string name="pie_chevron_right_title">오른쪽 곡선 색</string>
+    <string name="pie_juice_title">배터리 바 색</string>
+    <string name="pie_button_color_title">버튼 색</string>
+    <string name="pie_gap_title">파이 간격</string>
+    <string name="pie_gap_summary">파이 버튼들이 떨어질 간격 조정</string>
+    <string name="pie_gap_none">없음</string>
+    <string name="pie_gap_small">조금 (기본)</string>
+    <string name="pie_gap_big">큰</string>
+    <string name="pie_gap_huge">매우 큰</string>
+    <string name="pie_trigger_title">트리거 크기</string>
+    <string name="pie_trigger_summary">파이 컨트롤이 시작될 구역 크기를 설정</string>
+    <string name="pie_trigger_small">작음</string>
+    <string name="pie_trigger_normal">보통 (기본)</string>
+    <string name="pie_trigger_big">큰</string>선
+    <string name="pie_trigger_huge">매우 큰</string>
+    <string name="pie_notifications_title">Chevron Targets 사용</string>
+    <string name="pie_notifications_summary">알림 패널과 퀵세팅 패널이 스와이프 하면 나타납니다.</string>
+    <string name="pie_menu_title">메뉴 버튼을 항상 보기</string>
+    <string name="pie_menu_summary">메뉴 버튼이 필요하든 않든 항상 나오게 설정</string>
+    <string name="pie_search_title">검색 버튼 사용</string>
+    <string name="pie_search_summary">파이를 통해 Google Now 를 실행</string>
+    <string name="pie_lastapp_title">최근 앱 보기</string>
+    <string name="pie_lastapp_summary">파이에서 최근 앱 보기 사용</string>
 
 </resources>
