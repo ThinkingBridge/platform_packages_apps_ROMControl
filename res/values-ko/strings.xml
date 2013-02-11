@@ -582,7 +582,7 @@ Examples: New York,NY // New York, NY // 10033 // London, England"</string>
     <string name="pie_trigger_summary">파이 컨트롤이 시작될 구역 크기를 설정</string>
     <string name="pie_trigger_small">작음</string>
     <string name="pie_trigger_normal">보통 (기본)</string>
-    <string name="pie_trigger_big">큰</string>선
+    <string name="pie_trigger_big">큰</string>
     <string name="pie_trigger_huge">매우 큰</string>
     <string name="pie_notifications_title">Chevron Targets 사용</string>
     <string name="pie_notifications_summary">알림 패널과 퀵세팅 패널이 스와이프 하면 나타납니다.</string>
