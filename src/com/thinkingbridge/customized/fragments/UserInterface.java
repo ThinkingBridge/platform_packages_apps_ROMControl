@@ -57,6 +57,7 @@ import com.thinkingbridge.customized.service.CodeReceiver;
 import com.thinkingbridge.customized.util.AbstractAsyncSuCMDProcessor;
 import com.thinkingbridge.customized.util.CMDProcessor;
 import com.thinkingbridge.customized.util.Helpers;
+import com.thinkingbridge.customized.widgets.AlphaSeekBar;
 import com.thinkingbridge.customized.widgets.SeekBarPreference;
 
 import java.io.BufferedReader;
