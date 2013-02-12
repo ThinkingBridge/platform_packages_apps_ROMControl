@@ -927,6 +927,8 @@
     <string name="pie_trigger_normal">Normal (Default)</string>
     <string name="pie_trigger_big">Big</string>
     <string name="pie_trigger_huge">Huge</string>
+    <string name="pie_center_title">Center pie</string>
+    <string name="pie_center_summary">If un-checked, pie will appear where your fingers trigger it</string>
     <string name="pie_notifications_title">Enable Chevron Targets</string>
     <string name="pie_notifications_summary">Enabling, will let the Notification panels and QuickSettings active when swipe.</string>
     <string name="pie_menu_title">Show menu button always</string>
