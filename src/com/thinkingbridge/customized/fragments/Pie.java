@@ -48,7 +48,6 @@ public class Pie extends SettingsPreferenceFragment
     private static final String PIE_GAP = "pie_gap";
     private static final String PIE_CENTER = "pie_center";
     private static final String PIE_NOTIFICATIONS = "pie_notifications";
-    private static final String PIE_LASTAPP = "pie_lastapp";
     private static final String PIE_MENU = "pie_menu";
     private static final String PIE_SEARCH = "pie_search";
 
@@ -60,7 +59,6 @@ public class Pie extends SettingsPreferenceFragment
     private CheckBoxPreference mPieCenter;
     private CheckBoxPreference mPieNotifi;
     private CheckBoxPreference mPieControls;
-    private CheckBoxPreference mPieLastApp;
     private CheckBoxPreference mPieMenu;
     private CheckBoxPreference mPieSearch;
 
@@ -122,10 +120,6 @@ public class Pie extends SettingsPreferenceFragment
         mPieNotifi.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.PIE_NOTIFICATIONS, 0) == 1));
 
-        mPieLastApp = (CheckBoxPreference) prefSet.findPreference(PIE_LASTAPP);
-        mPieLastApp.setChecked(Settings.System.getInt(mContext.getContentResolver(),
-                Settings.System.PIE_LAST_APP, 0) == 1);
-
         mPieMenu = (CheckBoxPreference) prefSet.findPreference(PIE_MENU);
         mPieMenu.setChecked(Settings.System.getInt(mContext.getContentResolver(),
                 Settings.System.PIE_MENU, 0) == 1);
@@ -157,9 +151,6 @@ public class Pie extends SettingsPreferenceFragment
         } else if (preference == mPieNotifi) {
             Settings.System.putInt(mContext.getContentResolver(),
                     Settings.System.PIE_NOTIFICATIONS, mPieNotifi.isChecked() ? 1 : 0);
-        } else if (preference == mPieLastApp) {
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.PIE_LAST_APP, mPieLastApp.isChecked() ? 1 : 0);
         } else if (preference == mPieMenu) {
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.PIE_MENU, mPieMenu.isChecked() ? 1 : 0);
