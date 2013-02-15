@@ -121,12 +121,24 @@ public class CustomizedActivity extends PreferenceActivity implements ButtonBarH
      * Populate the activity with the top-level headers.
      */
     @Override
-    public void onBuildHeaders(List<Header> headers) {
-        loadHeadersFromResource(R.xml.preference_headers, headers);
-
-        updateHeaderList(headers);
-
-        mHeaders = headers;
+    public void onBuildHeaders(List<Header> target) {
+        loadHeadersFromResource(R.xml.preference_headers, target);
+        for (int i=0; i<target.size(); i++) {
+            Header header = target.get(i);
+            final int deviceKeys = getResources().getInteger(
+                    com.android.internal.R.integer.config_deviceHardwareKeys);
+            final boolean hasHardwareKeys = getResources().getBoolean(
+                    R.bool.has_hardware_buttons);
+            if (header.id == R.id.hardware_keys) {
+                if (deviceKeys == 0 || hasHardwareKeys == false) {
+                    target.remove(i);
+                } else {
+                    target.get(i);
+                }
+            }
+        }
+        updateHeaderList(target);
+        mHeaders = target;
     }
 
     /**
