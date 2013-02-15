@@ -71,12 +71,12 @@
     <string name="custom_app_icon_successfully">"'s icon set successfully"</string>
 
     <!-- Power Menu -->
-    <string name="title_show_power_saver">Show power saver</string>
-    <string name="title_show_screenshot">Show screenshot</string>
-    <string name="title_show_torch_toggle">Show torch toggle</string>
-    <string name="title_show_airplane_toggle">Show airplane toggle</string>
-    <string name="title_show_navbar_hide">Show navigation bar toggle</string>
-    <string name="power_menu_expanded_desktop">Show expanded desktop</string>
+    <string name="title_show_power_saver">Power saver</string>
+    <string name="title_show_screenshot">Screenshot</string>
+    <string name="title_show_torch_toggle">Torch toggle</string>
+    <string name="title_show_airplane_toggle">Airplane toggle</string>
+    <string name="title_show_navbar_hide">Navigation bar toggle</string>
+    <string name="power_menu_expanded_desktop">Expanded desktop</string>
     <string name="power_menu_reboot_title">Reboot menu</string>
     <string name="power_menu_silent_title">Sound panel</string>
 
@@ -927,8 +927,8 @@
     <string name="pie_trigger_normal">Normal (Default)</string>
     <string name="pie_trigger_big">Big</string>
     <string name="pie_trigger_huge">Huge</string>
-    <string name="pie_center_title">Center pie</string>
-    <string name="pie_center_summary">If un-checked, pie will appear where your fingers trigger it</string>
+    <string name="pie_center_title">Middle alignment</string>
+    <string name="pie_center_summary">Align pie in the middle of the screen, regardless of the activation position</string>
     <string name="pie_notifications_title">Enable Chevron Targets</string>
     <string name="pie_notifications_summary">Enabling, will let the Notification panels and QuickSettings active when swipe.</string>
     <string name="pie_menu_title">Show menu button always</string>
