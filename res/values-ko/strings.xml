@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">커스터마이징 설정</string>
+
+    <!-- Header Strings -->
     <string name="user_interface">사용자 인터페이스</string>
     <string name="cancel">취소</string>
     <string name="ok">확인</string>
-    <string name="menu_main_activity_change_locale">빈 공간</string>
+    <string name="save">저장</string>
     <string name="header_statusbar">상단바</string>
     <string name="header_navbar">네비게이션 바</string>
     <string name="toggles_layout">토글</string>
@@ -13,6 +16,7 @@
     <string name="battery">배터리</string>
     <string name="signal">신호</string>
     <string name="nav_bar">네비게이션 바</string>
+    <string name="title_hardwarekeys">하드웨어 키</string>
     <string name="power_menu">전원 메뉴</string>
     <string name="led_options">LED 옵션</string>
     <string name="header_system">시스템</string>
@@ -22,6 +26,8 @@
     <string name="weather">날씨</string>
     <string name="tools">도구</string>
     <string name="header_lockscreen">잠금화면</string>
+
+    <!-- Activity titles defined in AndroidManifest.xml -->
     <string name="title_ui">일반 유저 인터페이스</string>
     <string name="title_statusbar_clock">상태바 시계</string>
     <string name="title_statusbar_toggles">상태바 토글</string>
@@ -30,9 +36,13 @@
     <string name="title_power_menu">전원 메뉴</string>
     <string name="title_led">LED 제어</string>
     <string name="title_lockscreens">잠금화면 옵션</string>
+    <string name="title_lockscreens_targets">잠금화면 타겟</string>
+    <string name="title_navring">네비바 링</string>
     <string name="title_sound">사운드 세팅</string>
     <string name="title_weather">날씨 세팅</string>
     <string name="title_clipboard_share">클립보드 공유</string>
+
+    <!-- Header Summaries -->
     <string name="header_summary_clock">@null</string>
     <string name="header_summary_toggles">@null</string>
     <string name="header_summary_general_ui">@null</string>
@@ -43,32 +53,54 @@
     <string name="header_summary_led">@null</string>
     <string name="header_summary_sound">@null</string>
     <string name="header_summary_lockscreens">@null</string>
+    <string name="lockscreen_target_summary">@null</string>
+    <string name="lock_screen_shortcuts_summary">@null</string>
     <string name="header_lock_clock_summary">@null</string>
     <string name="header_summary_weather">@null</string>
+    <string name="header_summary_hardware_keys">@null</string>
+    <string name="pie_controls_summary">@null</string>
+
+    <!-- Menu Strings -->
     <string name="menu_nav_bar_reset">네비바 초기화</string>
     <string name="menu_user_interface_reset">알림바 배경화면 재설정</string>
     <string name="menu_lockscreens_reset">잠금화면 배경화면 재설정</string>
+	
+    <!-- General Strings -->
     <string name="advanced_settings">고급설정</string>
     <string name="misc_short">기타</string>
     <string name="custom_app_icon_successfully">"'의 아이콘이 성공적으로 설정되었습니다."</string>
+
+    <!-- Power Menu -->
     <string name="title_show_power_saver">배터리 절약</string>
     <string name="title_show_screenshot">스크린샷</string>
     <string name="title_show_torch_toggle">손전등 토글</string>
     <string name="title_show_airplane_toggle">비행기모드 토글</string>
     <string name="title_show_navbar_hide">네비게이션 바 토글</string>
     <string name="power_menu_expanded_desktop">데스크탑 확장</string>
-    <string name="title_pref_powersaving_pref_mode">전원 절약 활성화</string>
     <string name="power_menu_reboot_title">리부팅 메뉴</string>
     <string name="power_menu_silent_title">사운드 패널</string>
+
+    <!-- Power Saving -->
+    <string name="title_pref_powersaving_pref_mode">배터리 절약 사용</string>
     <string name="summary_pref_powersaving_pref_mode">@null</string>
+
     <string name="title_pref_powersaving_data_screen_off">화면이 꺼졌을 때 데이터 활동</string>
     <string name="summary_pref_powersaving_data_screen_off">화면이 꺼졌을 때 데이터의 활동을 설정합니다.</string>
+
     <string name="title_pref_powersaving_data_screen_off_delay">데이터 활동 딜레이</string>
-    <string name="summary_pref_powersaving_data_screen_off_delay">데이터 활동을 적용하기전에 얼마나 기다려야합니까?</string>
+    <string name="summary_pref_powersaving_data_screen_off_delay">데이터 활동을 적용하기전에 얼마나 기다리겠습니까?</string>
+
+    <!-- Shortcut picker -->
     <string name="use_custom_app_title">사용자 어플리케이션 사용</string>
     <string name="use_custom_app_summary">최근 앱을 보는곳에 커스텀 앱을 놓습니다.</string>
     <string name="select_custom_app_title">사용자 어플리케이션을 선택</string>
     <string name="group_applications">어플리케이션</string>
+    
+    <!-- General UI -->
+    <string name="navbar_cat">네비바</string>
+    <string name="bootani_cat">부트 애니메이션</string>
+    <string name="notification_cat">알림바</string>
+    <string name="tabletUI_cat">테블릿 UI</string>
     <string name="enable_volume_options">볼륨 패널 활성화</string>
     <string name="status_bar_notif_count_title">알림 개수 표시</string>
     <string name="status_bar_notif_count_summary">상태바에서 알림 개수를 표시</string>
@@ -76,7 +108,7 @@
     <string name="vibrate_notif_expand_summary">알림을 자세히 볼때 진동 울림 (설정시 시스템UI 재시작)</string>
     <string name="disable_bootanimation_title">부팅 애니메이션 비활성화</string>
     <string name="custom_bootanimation_title">사용자 부팅 애니메이션</string>
-    <string name="custom_bootanimation_summary">sdcard에서 부팅 애니메이션을 선택합니다.이전 부팅애니메이션은 /system/media에 백업됩니다..</string>
+    <string name="custom_bootanimation_summary">sdcard에서 부팅 애니메이션을 선택합니다.이전 부팅애니메이션은 /system/media에 백업됩니다.</string>
     <string name="install_file_manager_error">선택한 zip파일로 부터 어플리케이션을 찾을수 없습니다.파일관리자에서 설치하십시오.</string>
     <string name="notification_wallpaper_title">알림바 배경화면 선택</string>
     <string name="notification_wallpaper_summary">이 창의 메뉴에서 배경화면을 삭제할 수 있습니다.</string>
@@ -89,26 +121,38 @@
     <string name="ime_switcher_summary">키보드를 사용할때 상단바에 표시 (다시 부팅이필요)</string>
     <string name="wakeup_when_plugged_unplugged_title">충전 연결및 분리시 화면 설정</string>
     <string name="wakeup_when_plugged_unplugged_summary">충전기 연결및 분리시 화면 켜짐 설정</string>
+    <string name="lefty_mode_title">왼손 모드</string>
+    <string name="lefty_mode_summary">네비바 위치 전환(시스템 UI 재시작)</string>
     <string name="rotate_180_title">180° 회전 활성화</string>
-    <string name="rotate_180_summary">당신의 폰을 거꾸로 들고 사용할 수 있도록 허용!</string>
+    <string name="rotate_180_summary">폰을 거꾸로 들고 사용할 수 있도록 허용!</string>
     <string name="kill_app_longpress_back">백투킬</string>
     <string name="kill_app_longpress_back_summary">뒤로 키를 길게 눌러 활동화는 어플을 킬 합니다.</string>
     <string name="tablet_ui">강제 태블릿UI</string>
     <string name="tablet_ui_summary">태블릿UI로 전환됩니다. (다시부팅 필요)</string>
+    <string name="hide_extras">부가 기능 숨김</string>
+    <string name="hide_extras_summary">Hide some systembar stuff i.e. the compat. mode button(시스템 UI 재시작)</string>
     <string name="bootanimation_preview">부팅애니메이션 미리보기</string>
     <string name="apply">적용</string>
+    <string name="clear_custom_bootanimation">부트애니메이션 삭제</string>
+    <string name="set_custom_bootanimation">설정중...</string>
     <string name="creating_preview">미리보기 생성중...</string>
     <string name="error_reading_zip_file">zip파일 읽는중 오류</string>
     <string name="error_creating_preview">미리보기 생성중 오류</string>
     <string name="multipane_ui">듀얼 패널 설정</string>
     <string name="multipane_ui_summary">듀얼 패널 사용및 사용중지 (다시부팅 필요)</string>
-    <string name="brightness_slider_title">상단바 밝기 조절</string>
-    <string name="brightness_slider_summary">밝기를 조정하실하려면 상태바 상단에 손가락을 슬라이드 하시면 됩니다. 자동 밝기 기능을 사용 하실경우 이 기능을 활성화를 하셔도 작동이 안됩니다.</string>
+    <string name="show_overflow_title">메뉴 UI 표시</string>
+    <string name="show_overflow_summary">3점 오버플로 메뉴 버튼을 표시</string>
+    <string name="show_overflow_toast_enable">애플리케이션을 다시 시작할 때까지 작업 오버플로 버튼이 표시되지 않을 수 있습니다</string>
+    <string name="show_overflow_toast_disable">애플리케이션을 다시 시작할 때까지 작업 오버플로 버튼이 숨겨되지 않을 수 있습니다</string>
+    <string name="notification_show_wifi_ssid_title">와이파이 네트워크 이름 표시</string>
+    <string name="notification_show_wifi_ssid_summary">현재 연결된 Wi-Fi 네트워크 이름 표시</string>
+    <string name="brightness_slider_title">상단바 자동밝기 슬라이더</string>
+    <string name="brightness_slider_summary">상단 바 부근을 손가락으로 좌-우 로 슬라이딩하면 화면이 밝아지고 어두워집니다.</string>
     <string name="user_mode_ui">UI 모드</string>
-    <string name="user_mode_ui_summary">"네비바 스타일을 변경할경우 SystemUI 재시작"</string>
-    <string name="phone_mode_ui">폰 - NavBar to side in landscape</string>
-    <string name="tablet_mode_ui">태블릿 - Combined NavBar and SystemBar</string>
-    <string name="phablet_mode_ui">패블릿 - NavBar stays at bottom in landscape</string>
+    <string name="user_mode_ui_summary">어떤 스타일의 네비바 및 상태 바를 표시하시겠습니까</string>
+    <string name="phone_mode_ui">폰 - 기본 네비바 모드</string>
+    <string name="tablet_mode_ui">태블릿 - 상단바,네비바 통합 모드</string>
+    <string name="phablet_mode_ui">패블릿 - 세로모드일때 하단에 네비바 표시 모드</string>
     <string name="transparency_dialog_title">투명도 설정</string>
     <string name="transparency_dialog_linked_transparency">상단바 &amp; 네비바</string>
     <string name="transparency_dialog_transparency_sb_and_nv">상단바 및 네비바</string>
@@ -117,6 +161,8 @@
     <string name="transparency_dialog_match_keyguard_alpha">잠금화면 투명화 설정</string>
     <string name="transparency_dialog_transparency">홈 화면 투명화 설정</string>
     <string name="transparency_dialog_transparency_keyguard">잠금화면 투명화 설정</string>
+
+    <!-- LCD Density -->
     <string name="lcd_density_title">LCD 밀도</string>
     <string name="lcd_density_summary">알 수 없음</string>
     <string name="current_lcd_density">"현재 LCD 밀도: "</string>
@@ -131,6 +177,7 @@
     <string name="clear_market_data_title">3. 마켓의 데이터를 삭제합니다</string>
     <string name="clear_market_data_cleared">마켓의 데이터가 삭제되었습니다.</string>
     <string name="clear_market_data_donot_cleared">마켓데이타가 지워지지 않습니다.직접 삭제하십시오!</string>
+    <string name="dpi">DPI</string>
     <string name="open_market_title">4. 마켓을 연뒤, 동의버튼을 클릭합니다.</string>
     <string name="open_market_summary">완료했다면 다시 이 곳으로 돌아옵니다.</string>
     <string name="open_market_summary_could_not_open">마켓을 열수 없습니다! 그것이 설치된것이 맞다면,런처에서 여십시오.</string>
@@ -144,17 +191,25 @@
     <string name="custom_density_dialog_summary">LCD 밀도를 변경하면 예기치못한 오류가 발생할수 있습니다.마켓어플이 호환되지 않는다면 1단계 프로세스로 돌아가서 다시시작하십시오.</string>
     <string name="custom_density_dialog_button_got">알았어요!</string>
     <string name="custom_density_dialog_button_reboot">지금 다시부팅</string>
+
+    <!-- Statusbar | Toggles -->
+    <string name="toggle_default_entries">USER|BRIGHTNESS|SETTINGS|WIFI|SIGNAL|ROTATE|BATTERY|AIRPLANE_MODE|BLUETOOTH</string>
     <string name="toggle_style_title">토글 스타일</string>
-    <string name="toggle_style_summary">아이콘 또는 텍스트 스타일의 토글을 설정합니다.</string>
+    <string name="toggle_style_summary">토글 버튼에 아이콘 또는 텍스트를 표시 할 수 있는지 여부입니다.</string>
     <string name="toggles_layout_title">토글 레이아웃</string>
     <string name="enabled_toggles_title">토글 활성화</string>
-    <string name="enabled_toggles_summary">선택한 토글을 표시</string>
+    <string name="enabled_toggles_summary">밝기 설정 위치</string>
     <string name="toggles_display_dialog">사용할 토글을 선택</string>
     <string name="toggles_per_row_title">토글 행/열</string>
     <string name="toggles_per_row_summary">토글 행과 열을 설정합니다.</string>
     <string name="toggles_display_close">닫기</string>
     <string name="toggles_order_title">토글 순서</string>
     <string name="toggles_order_summary">토글의 순서를 표시합니다.</string>
+    <string name="title_settings_behavior">기본 설정 동작을 사용</string>
+    <string name="summary_settings_behavior_default">짧게 누를시 설정, 길게 누를시 토글</string>
+    <string name="summary_settings_behavior_reverse">짧게 누를시 토글, 길게 누를시 설정</string>
+    <string name="title_toggles_autohide">자동 숨김 토글</string>
+    <string name="summary_toggles_autohide">토글을 숨긴후 서랍이 닫힙니다.</string>
     <string name="brightness_location_title">밝기 설정 위치</string>
     <string name="reset_toggles_title">토글 초기화</string>
     <string name="reset_toggles_summary">모든 토글 및 순서 초기화</string>
@@ -169,22 +224,25 @@
     <string name="toggle_choose_fasttoggle_side_title">토글 위치 선정</string>
     <string name="toggle_choose_fasttoggle_side_summary">토글 설정 위치를 선정합니다.</string>
     <string name="toggle_favcontact_title">즐겨찾기 할 주소록</string>
+
+    <!-- Statusbar | Clock -->
     <string name="clock_title_enable">시계 스타일</string>
     <string name="title_clock_ampm_entries">AM/PM 스타일</string>
     <string name="enable_clock_weekday">요일 표시 설정</string>
     <string name="enable_clock_weekday_summary">시계 앞부분에 오늘의 요일을 표시합니다.</string>
-    <string name="nothing">비워둠</string>
+    <string name="colors">색상</string>
+    <string name="clock_color_title">시계 색상</string>
     <string name="alarm">알람</string>
     <string name="clock_options">날짜 및 시간 설정</string>
+    <string name="nothing">비워둠</string>
     <string name="today">오늘의 일정</string>
     <string name="event">새 일정</string>
     <string name="voiceassist">음성 명령</string>
-    <string name="custom_app">커스텀 앱</string>
-    <string name="colors">색상</string>
-    <string name="clock_color_title">시계 색상</string>
     <string name="title_clock_doubleclick">시계를 두번 눌렀을때 설정</string>
     <string name="title_clock_longclick">시계를 길게 눌렀을때 설정</string>
     <string name="title_clock_shortclick">시계를 짧게 눌렀을때 설정</string>
+
+    <!-- Toggle Strings to be called from device overlays -->
     <string name="toggle_airplane_mode">비행기모드</string>
     <string name="toggle_auto_rotate">자동회전</string>
     <string name="toggle_bluetooth">블루투스</string>
@@ -209,6 +267,11 @@
     <string name="toggle_ime">키보드</string>
     <string name="toggle_battery">배터리</string>
     <string name="toggle_brightness">밝기</string>
+    <string name="toggle_sound_state">소리/진동/무음</string>
+    <string name="toggle_quiethours">무음 시간</string>
+    <string name="toggle_navbar_hide">네비바 자동 숨김</string>
+    
+    <!-- Statusbar | Battery -->
     <string name="battery_icon">배터리 아이콘 스타일</string>
     <string name="battery_not_title">알림바안에 배터리아이콘 표시</string>
     <string name="battery_not_summary">배터리아이콘을 어디에서나 표시</string>
@@ -219,6 +282,8 @@
     <string name="battery_bar_thickness_title">배터리 바 두께</string>
     <string name="battery_bar_animate_title">충전중 애니메이션</string>
     <string name="battery_bar_animate_summary">충전중 애니메이션 사용은 성능을 떨어뜨릴 수 있습니다. 신중히 선택하세요.</string>
+
+    <!-- Statusbar | Signal -->
     <string name="signal_style">신호 텍스트 스타일</string>
     <string name="signal_color_title">신호 색상</string>
     <string name="hide_signal_title">신호 바 숨기기</string>
@@ -227,15 +292,20 @@
     <string name="wifi_signal_color_title">와이파이 신호 색상</string>
     <string name="alt_signal_title">대체 신호 레이아웃</string>
     <string name="alt_signal_summary">(진저 스타일) 신호 사용</string>
+
+    <!-- Color Picker -->
     <string name="dialog_color_picker">색상 선택기</string>
     <string name="press_color_to_apply">색상을 클릭하여 적용합니다.</string>
     <string name="arrow_right">→</string>
     <string name="arrow_down">↓</string>
     <string name="hex">Hex:</string>
-    <string name="hex_hint">\#FF000000</string>
-    <string name="set">설정</string>
-    <string name="ics_color">기본값</string>
+    <string name="hex_hint">#FF000000</string>
+    <string name="set">Set</string>
+    <string name="ics_color">Holo</string>
+
+    <!-- Navigation Bar -->
     <string name="navigation_bar">네비게이션 바</string>
+    <string name="navbar_hide">네비바 숨김 설정</string>
     <string name="navbar_button_cat">네비게이션 바 버튼</string>
     <string name="title_pref_menu_display">메뉴 위치</string>
     <string name="summary_pref_menu_display">큰 메뉴버튼을 사용중이라면 메뉴버튼을 삭제해주세요.</string>
@@ -250,34 +320,18 @@
     <string name="navbar_action_home">홈</string>
     <string name="navbar_action_back">뒤로</string>
     <string name="navbar_action_recents">최근 앱 보기</string>
+    <string name="navbar_action_recents_gb">최근 앱 보기 (진저 스타일)</string>
     <string name="navbar_action_search">검색</string>
+    <string name="navbar_action_screenshot">캡쳐</string>
     <string name="navbar_action_menu">메뉴</string>
+    <string name="open_ime_switcher">입력 방법 선택</string>
     <string name="navbar_action_kill">앱 종료</string>
     <string name="navbar_action_lastapp">마지막으로 사용한 앱</string>
-    <string name="take_screenshot">캡쳐</string>
-    <string name="open_ime_switcher">입력 방법 선택</string>
-    <string name="ring_vib">소리/진동</string>
-    <string name="ring_silent">소리/무음</string>
-    <string name="ring_vib_silent">소리/진동/무음</string>
-    <string name="kill_app">앱 종료</string>
-    <string name="screen_off">화면끄기</string>
-    <string name="google_now">구글 나우</string>
-    <string name="select_application">어플 선택</string>
-    <string name="interface_softkeys_pref_default_1_title"> 첫번째 타겟을 짧게 눌렀을때 작동</string>
-    <string name="interface_softkeys_pref_long_1_title">첫번째 타겟을 길게 눌렀을때 작동</string>
-    <string name="interface_softkeys_pref_default_2_title">두번째 타겟을 짧게 눌렀을때 작동</string>
-    <string name="interface_softkeys_pref_long_2_title"> 두번째 타겟을 길게 눌렀을때 작동</string>
-    <string name="interface_softkeys_pref_default_3_title">세번재 타겟을 짧게 눌렀을때 작동</string>
-    <string name="interface_softkeys_pref_long_3_title">세번재 타겟을 길게 눌렀을때 작동</string>
-    <string name="interface_softkeys_pref_default_4_title">네번째 타겟을 짧게 눌렀을때 작동</string>
-    <string name="interface_softkeys_pref_long_4_title">네번째 타겟을 길게 눌렀을때 작동</string>
-    <string name="interface_softkeys_pref_default_5_title">다섯번째 타겟을 짧게 눌렀을때 작동</string>
-    <string name="interface_softkeys_pref_long_5_title">다섯번째 타겟을 길게 눌렀을때 작동</string>
     <string name="navbar_action_power">전원</string>
     <string name="navbar_action_notifications">알림바</string>
     <string name="navbar_action_none">없음</string>
     <string name="navbar_widgets">네비게이션 바 위젯</string>
-    <string name="navbar_enable_bar">바 활성화</string>
+    <string name="navbar_enable_bar">네비바 활성화</string>
     <string name="navigation_bar_height_title">네비게이션 바 높이</string>
     <string name="navigation_bar_height_summary">세로시 네비게이션 바 높이</string>
     <string name="navigation_bar_height_landscape_title">전환시 네비게이션 바 높이</string>
@@ -303,7 +357,14 @@
     <string name="glow_times_superquick">매우 빠른</string>
     <string name="glow_times_quick">빠른</string>
     <string name="glow_times_normal">일반</string>
-    <string name="navbar_widgets_title">네비바 위젯 설정</string>
+    <string name="navbar_widgets_instructions">옆으로 밀어 보기가능 - 위젯을 고르시오</string>
+    <string name="navbar_widgets_reset">위젯 리셋</string>
+    <string name="navbar_widget_summary">위젯 %1$s 으로 %2$s</string>
+    <string name="navbar_widget_summary_add">위젯을 추가하려면 클릭</string>
+    <string name="navbar_widgets_title">위젯 구성</string>
+    <string name="navbar_widgets_shiftLeft">왼쪽</string>
+    <string name="navbar_widgets_shiftRight">오른쪽</string>
+    <string name="navbar_widgets_delete">위젯 삭제</string>
     <string name="navigation_bar_menu_arrow_keys_title">메뉴 화살표 키</string>
     <string name="navigation_bar_menu_arrow_keys_summary">입력하는 동안 네비바에 화살표 키 표시</string>
     <string name="navigation_bar_alpha_title">상단바 및 네비바 투명화 조절</string>
@@ -312,11 +373,43 @@
     <string name="drag_handle_width_title">넓이 설정</string>
     <string name="title_navbar_timeout">숨긴 네비바 시간 제한</string>
     <string name="summary_navbar_timeout">숨긴 네비바 시간 제한 설정</string>
-    <string name="interface_navring_settings_title">네비바 링 타겟 설정</string>
+
+    <!-- Nav Ring Targets -->
+    <string name="navbar_ring_cat">네비게이션 바 링 타겟</string>
+    <string name="interface_softkey_settings">소프트키 설정</string>
+    <string name="interface_softkeys_pref_default_1_title"> 첫번째 타겟을 짧게 눌렀을때 작동</string>
+    <string name="interface_softkeys_pref_long_1_title">첫번째 타겟을 길게 눌렀을때 작동</string>
+    <string name="interface_softkeys_pref_default_2_title">두번째 타겟을 짧게 눌렀을때 작동</string>
+    <string name="interface_softkeys_pref_long_2_title"> 두번째 타겟을 길게 눌렀을때 작동</string>
+    <string name="interface_softkeys_pref_default_3_title">세번재 타겟을 짧게 눌렀을때 작동</string>
+    <string name="interface_softkeys_pref_long_3_title">세번재 타겟을 길게 눌렀을때 작동</string>
+    <string name="interface_softkeys_pref_default_4_title">네번째 타겟을 짧게 눌렀을때 작동</string>
+    <string name="interface_softkeys_pref_long_4_title">네번째 타겟을 길게 눌렀을때 작동</string>
+    <string name="interface_softkeys_pref_default_5_title">다섯번째 타겟을 짧게 눌렀을때 작동</string>
+    <string name="interface_softkeys_pref_long_5_title">다섯번째 타겟을 길게 눌렀을때 작동</string>
+
+    <string name="interface_softkeys_activity_dialog_title">작업 선택</string>
+    <string name="interface_softkeys_reboot_title">재부팅 메뉴</string>
+    <string name="interface_softkeys_screenshot_title">스크린 샷</string>
+    <string name="interface_softkeys_screenoff_title">화면 꺼짐</string>
+    <string name="interface_softkeys_ime_switcher_title">입력 방법 선택</string>
+    <string name="interface_softkeys_ring_vib_title">토글 소리/진동</string>
+    <string name="interface_softkeys_ring_silent_title">토글 소리/무음</string>
+    <string name="interface_softkeys_ring_vib_silent_title">토글 소리/진동/무음</string>
+    <string name="interface_softkeys_kill_process_title">앱 종료</string>
+    <string name="interface_softkey_package_removed">이전에 선택한 패키지를 찾을 수 없습니다</string>
+    <string name="interface_navring_settings_title">네비게이션 바 링</string>
     <string name="interface_navring_settings_summary">링 타겟 사용자 앱 설정</string>
     <string name="title_navring_amount">링 타겟 갯수</string>
     <string name="summary_navring_amount">링 타겟을 몇개 설정하시겠습니까? *링 타켓 수를 변경후 시스템UI 재시작*</string>
+
+    <string name="interface_navring_pref_default_summary">사용자 링 활동을 선택하려면 누르세요</string>
+    <string name="interface_navring_assist_title">Google Now</string>
+    <string name="interface_navring">소리 타겟</string>
+    <string name="navbar_ring">사용자 소리 타겟</string>
     <string name="navring_enable_long">링 타겟에서 길게 눌렀을때 작동</string>
+
+    <!-- LED -->
     <string name="led_on">LED 켜기</string>
     <string name="led_time_on">라이트 켜지는 시간</string>
     <string name="led_off">LED 끄기</string>
@@ -339,6 +432,8 @@
     <string name="title_charging_led_on">충전중 LED활성화(다시부팅 필요)</string>
     <string name="led_change_brightness">밝기 변경</string>
     <string name="led_brightness_default">기본 밝기: 31</string>
+
+    <!-- Sound -->
     <string name="less_notification_sounds_title">알림소리 주기</string>
     <string name="less_notification_sounds_summary">각 어플의 알림소리가 설정한 값으로 재생</string>
     <string name="title_headphone_audio_mode">헤드폰 연결시 행동</string>
@@ -360,24 +455,32 @@
     <string name="flip_dialog_msg">당신이 어떻게 선택하냐에 따라서 휴대전화가 뒤집히면 진동이나 무음 모드로 전환됩니다. 뒤집힌 다음 모드가 변하기 까지 1.5초(기본값일 경우)가 걸립니다. 그리고 나서 한번 켜진후로부터 15초(기본값일 경우)간 뒤집힘을 감지하지 않습니다. 참고: **뒤집혀서 화면이 꺼진경우 다시 화면을 켜야만 소리 모드가 원래대로 돌아옵니다**</string>
     <string name="summary_phone_flip_mode">전화를 받을때 폰을 뒤집으면 무음이 될것입니다.</string>
     <string name="title_phone_flip_mode">전화받기 무음 모드</string>
+
+    <!-- Lockscreen -->
+    <string name="lock_widgets_short">잠금화면 위젯</string>
+    <string name="lockscreen_security_cat">보안</string>
+    <string name="lockscreen_layout_cat">레이아웃</string>
+    <string name="lockscreen_music_cat">음악</string>
     <string name="lockscreen_weather_cat">날씨</string>
-    <string name="lockscreen_calendar_cat">달력</string>
+    <string name="lockscreen_calendar_cat">일정</string>
     <string name="lockscreen_quick_unlock_control_title">빠른 pin 잠금해제</string>
     <string name="lockscreen_quick_unlock_control_summary">엔터 버튼을 누르지 않고 pin/비밀번호 잠금해제를 수행합니다.</string>
     <string name="lockscreen_menu_unlock_title">메뉴 잠금해제</string>
     <string name="lockscreen_menu_unlock_summary">화면 잠금해제하려면 메뉴 키를 사용합니다.</string>
-    <string name="lockscreen_battery_title">잠금화면 배터리 퍼센트</string>
-    <string name="lockscreen_battery_summary">잠금화면에 항상 배터리 퍼센트가 보이게 설정</string>
+    <string name="lockscreen_auto_rotate_title">잠금화면 회전 허용</string>
+    <string name="lockscreen_auto_rotate_summary">잠금화면는 장치 방향을 통해 회전 할 수있게 됩니다.</string>
     <string name="lockscreen_all_widgets_title">모든 위젯을 허용</string>
     <string name="lockscreen_all_widgets_summary">*경고* 일부 위젯은 잠금화면에 사용되지 않을수있고, Thinkingbridge가 잠금화면 위젯 선택에 대한 책임을지지 않습니다.</string>
     <string name="lockscreen_unlimited_widgets_title">위젯 무제한 허용</string>
     <string name="lockscreen_unlimited_widgets_summary">*경고* 너무 많은 위젯을 추가하면 잠금화면 지연되는 문제가 발생할 수 있습니다</string>
+    <string name="lockscreen_battery_title">잠금화면 배터리 퍼센트</string>
+    <string name="lockscreen_battery_summary">잠금화면에 항상 배터리 퍼센트가 보이게 설정</string>
     <string name="volume_rocker_wake_title">볼륨키로 깨어나기</string>
     <string name="volume_rocker_wake_summary">화면이 꺼진 상태에서 볼륨키를 눌러서 화면을 켤수 있습니다.</string>
     <string name="volume_music_controls_title">볼륨키로 음악 컨트롤</string>
     <string name="volume_music_controls_summary">볼륨키를 길게 눌러 음악 트랙을 넘깁니다. 이 기능이 작동중일때는 볼륨버튼으로 잠금해제가 되지 않습니다.</string>
     <string name="lockscreen_stock_music_layout_title">기본 뮤직플레이어 레이아웃</string>
-    <string name="lockscreen_stock_music_layout_summary">Use the stock layout when playing music.</string>
+    <string name="lockscreen_stock_music_layout_summary">음악을 재생할 때 기본 레이아웃을 사용합니다.</string>
     <string name="lockscreen_wallpaper_title">잠금화면 배경 선택</string>
     <string name="lockscreen_wallpaper_summary">이 창의 메뉴에서 배경화면을 삭제할 수 있습니다.</string>
     <string name="lockscreen_text_color_title">잠금화면 텍스트 색상</string>
@@ -401,6 +504,57 @@
     <string name="lockscreen_calendar_flip_summary">이것이 활성화되면, 24시간후까지의 일정들을 넘겨 볼수 있습니다.</string>
     <string name="lockscreen_calendar_interval_title">넘김 간격 설정</string>
     <string name="lockscreen_calendar_interval_summary">초 간격으로 효과의 속도를 지정합니다.</string>
+    <string name="circles_lock_cat_title">잠금화면 설정</string>
+    <string name="circles_lock_bg_color_title">배경 색</string>
+    <string name="circles_lock_ring_color_title">링 색상</string>
+    <string name="circles_lock_ring_alpha_title">링 설정</string>
+    <string name="circles_lock_halo_color_title">후광 색상</string>
+    <string name="circles_lock_halo_alpha_title">후광 설정</string>
+    <string name="circles_lock_wave_color_title">웨이브 색상</string>
+    <string name="circles_lock_wave_alpha_title">웨이브 설정</string>
+
+    <!-- Lockscreen Shortcuts -->
+    <string name="lockscreen_target_info">대상으로 단축키를 지정하려면 슬라이더를 드래그</string>
+    <string name="lockscreen_target_title">잠금화면 바로가기</string>
+    <string name="lockscreen_target_reset">화면 잠금 단축키 기본값으로 재설정</string>
+    <string name="lockscreen_target_save">잠금 화면 바로 가기 저장</string>
+    <string name="lockscreen_target_reset_title">리셋</string>
+    <string name="lockscreen_target_reset_message">기본값으로 복원 하기겠습니까?</string>
+    <string name="lockscreen_target_empty">비움</string>
+    <string name="lockscreen_target_edit_title">편집 단축기 및 아이콘</string>
+    <!-- Lockscreen shortcuts strings for IconPicker -->
+    <string name="wifi_save">저장</string>
+    <string name="profile_applist_title">애플리케이션</string>
+    <string name="profile_reset_title">초기화</string>
+    <string name="picker_activities">액티비티</string>
+    <string name="select_custom_activity_title">사용자 작업 선택</string>
+    <string name="icon_picker_choose_icon_title">아이콘 선택</string>
+    <string name="icon_picker_title">아이콘 원본을 선택</string>
+    <string name="icon_picker_system_icons_title">시스템 아이콘</string>
+    <string name="icon_picker_gallery_title">갤러리</string>
+    <string name="icon_picker_pack_title">아이콘 팩</string>
+    <!-- string for System Icon -->
+    <string name="icon_picker_alarm">알람</string>
+    <string name="icon_picker_browser">브라우져</string>
+    <string name="icon_picker_calendar">달력</string>
+    <string name="icon_picker_camera">카메라</string>
+    <string name="icon_picker_chrome">Chrome</string>
+    <string name="icon_picker_email">이메일</string>
+    <string name="icon_picker_email2">이메일 Holo</string>
+    <string name="icon_picker_facebook">Facebook</string>
+    <string name="icon_picker_gallery">앨범</string>
+    <string name="icon_picker_maps">지도</string>
+    <string name="icon_picker_movie">영화</string>
+    <string name="icon_picker_music">음악</string>
+    <string name="icon_picker_nav_normal">네비게이션</string>
+    <string name="icon_picker_phone">휴대전화</string>
+    <string name="icon_picker_podcast">팟캐스트</string>
+    <string name="icon_picker_rss">Rss</string>
+    <string name="icon_picker_search">검색</string>
+    <string name="icon_picker_sms">메시지</string>
+    <string name="icon_picker_twitter">Twitter</string>
+
+    <!-- Weather -->
     <string name="weather_enable">날씨 활성화</string>
     <string name="weather_enable_summary">날씨 정보를 가져오고, 그것을 표시합니다.</string>
     <string name="weather_use_custom_location">사용자 지정위치 사용</string>
@@ -416,13 +570,22 @@ Examples: New York,NY // New York, NY // 10033 // London, England"</string>
     <string name="weather_refresh_interval_minutes">" 분"</string>
     <string name="weather_use_celcius">미터법 사용</string>
     <string name="weather_use_celcius_summary">화씨 대신 섭씨를, mph대신에 km/h 로 표시합니다.</string>
-    <string name="weather_statusbar_style">알림바 날씨 스타일</string>
+    <string name="weather_statusbar_style">림바 날씨 스타일</string>
+    <string name="title_weather_longclick">날씨 패널 길게 눌렀을때 동작</string>
+    <string name="title_weather_shortclick">날씨 패널 짧게 눌렀을때 동작</string>
+    <string name="update">날시 업데이트 패널</string>
     <string name="weather_refreshing">날씨 정보를 동기화합니다!</string>
     <string name="weather_loc_warning_title">위치를 검색할 수 없습니다!</string>
     <string name="weather_loc_warning_msg">네트워크로 위치를 검색할 수 없습니다. 네트워크로 위치를 검색할 수 있도록 하거나, 사용자 지정위치를 설정하십시오.</string>
     <string name="weather_loc_warning_positive">네트워크 위치 활성화</string>
     <string name="weather_loc_warning_negative">사용하지 마십시오.</string>
     <string name="menu_weather_get_weather">날씨 가져오기</string>
+    <string name="weather_statusbar_hide">날씨 패널 숨김 옵션</string>
+    <string name="always_on">항상 표시</string>
+    <string name="same_toggles">토글 버튼 숨기기</string>
+    <string name="opposite_toggles">토글 버튼의 정반대 숨기기</string>
+
+    <!-- Weather Codes -->
     <string name="weather_0">폭풍</string>
     <string name="weather_1">열대 폭풍</string>
     <string name="weather_2">허리케인</string>
@@ -450,13 +613,20 @@ Examples: New York,NY // New York, NY // 10033 // London, England"</string>
     <string name="weather_24">바람</string>
     <string name="weather_25">한랭</string>
     <string name="weather_26">흐림</string>
+    <!-- mostly cloudy (night) -->
     <string name="weather_27">대체로 흐림</string>
+    <!-- mostly cloudy (day) -->
     <string name="weather_28">대체로 흐림</string>
-    <string name="weather_29">가끔 흐림</string>
+    <!-- partly cloudy (night) -->
+    <string name="weather_29">Partly Cloudy</string>
+    <!-- partly cloudy (day) -->
     <string name="weather_30">가끔 흐림</string>
+    <!-- clear (night) -->
     <string name="weather_31">맑음</string>
     <string name="weather_32">햇빛이 강함</string>
+    <!-- fair (night) -->
     <string name="weather_33">맑고 깨끗함</string>
+    <!-- fair (day) -->
     <string name="weather_34">맑고 깨끗함</string>
     <string name="weather_35">많은 비와 바람</string>
     <string name="weather_36">더움</string>
@@ -471,8 +641,13 @@ Examples: New York,NY // New York, NY // 10033 // London, England"</string>
     <string name="weather_45">천둥을 동반한 강한비</string>
     <string name="weather_46">비와 눈</string>
     <string name="weather_47">한때 천둥을 동반한 강한 비</string>
-    <string name="weather_3200" />
+    <!-- Forecase unavailable -->
+    <string name="weather_3200"></string>
+
+    <!-- Miscellaneous -->
     <string name="location_unavailable">날씨 업데이트에 대한 위치 정보를 검색할 수 없습니다.</string>
+
+    <!-- cardinal directions -->
     <string name="direction_north">북</string>
     <string name="direction_north_east">북동</string>
     <string name="direction_east">동</string>
@@ -481,21 +656,154 @@ Examples: New York,NY // New York, NY // 10033 // London, England"</string>
     <string name="direction_south_west">남서</string>
     <string name="direction_west">서</string>
     <string name="direction_north_west">북서</string>
-    <string name="clipboard_notification">클립보드에 복사.</string>
+
+    <!-- Share to clipboard -->
+    <string name="clipboard_notification">클립보드에 복사</string>
+
+    <!-- toggle style -->
+    <string name="icon_only">아이콘</string>
+    <string name="text_only">텍스트</string>
+
+    <!-- Brightness slider -->
+    <string name="on_top">맨 위</string>
+    <string name="on_the_bottom">하단</string>
+
+
+    <!-- NavBar -->
     <string name="right">오른쪽</string>
     <string name="left">왼쪽</string>
-    <string name="lastapp">마지막으로 사용한 앱</string>
-    <string name="title_lockscreen_user_timeout_override">잠금화면 나오기 까지 시간</string>
-    <string name="summary_lockscreen_user_timeout_override">화면을 임의로 끈 뒤에 안드로이드의 시간 제한 설정을 사용합니다. 기본 설정은 자동으로 화면이 꺼졌을 때에만 사용하는 것입니다.</string>
-    <string name="lockscreen_vibrate_enabled_title">잠금화면 진동</string>
-    <string name="lockscreen_vibrate_enabled_head">잠금해제시 진동이 됩니다.</string>
-    <string name="lockscreen_target_info">Drag the unlock icon to targets to assign targets</string>
-    <string name="lockscreen_target_title">잠금화면 바로가기</string>
-    <string name="weather_start_custom_app">사용자 앱을 시작</string>
-    <string name="weather_start_custom_app_summary">날씨 이미지를 선택할 때 사용자 앱을 실행합니다.</string>
-    <string name="weather_custom_app_title">사용자 앱</string>
-    <string name="weather_custom_app_dialog_title">사용자 앱을 선택</string>
-    <string name="weather_custom_app_dialog_message">이 패키지이름입니다.</string>
+    <string name="both">양쪽</string>
+    <string name="default_jb_behavior">기본 JB 동작</string>
+    <string name="always_show_invincible_icons">항상 보이지 않는 아이콘 표시</string>
+    <string name="always_show">항상표시</string>
+    <string name="home">홈</string>
+    <string name="back">뒤로</string>
+    <string name="recents">최근 앱</string>
+    <string name="search">검색</string>
+    <string name="screenshot">스크린샷</string>
+    <string name="menu">메뉴</string>
+    <string name="toggle_widgets">토글 위젯</string>
+    <string name="open_ime_switcher">입력 방법 선택</string>
+    <string name="kill_app">앱 종료</string>
+    <string name="lastapp">마지막 앱</string>
+    <string name="power">종료</string>
+    <string name="notifications">노플리케이션</string>
+    <string name="recents_gb">최근 앱 (진저 스타일)</string>
+    <string name="custom_app">사용자 앱</string>
+    <string name="menu_power">종료 메뉴</string>
+    <string name="blank">검정색</string>
+    <string name="none">없음</string>
+    <string name="take_screenshot">화면 캡쳐</string>
+    <string name="ring_vib">소리/진동</string>
+    <string name="ring_silent">소리/무음</string>
+    <string name="ring_vib_silent">소리/진동/무음</string>
+    <string name="screen_off">화면 꺼짐</string>
+    <string name="google_now">Google Now</string>
+    <string name="select_application">선택할 앱</string>
+    <string name="one_target">1 타겟</string>
+    <string name="two_targets">2 타겟</string>
+    <string name="three_targets">3 타겟</string>
+    <string name="four_targets">4 타겟</string>
+    <string name="five_targets">5 타겟</string>
+    <string name="size_42_dp_default">42 dp (기본값)</string>
+    <string name="size_36_dp">36 dp</string>
+    <string name="size_30_dp">30 dp</string>
+    <string name="size_24_dp">24 dp</string>
+    <string name="size_48_dp_default">48 dp (기본값)</string>
+    <string name="size_44_dp">44 dp</string>
+    <string name="size_40_dp">40 dp</string>
+    <string name="size_42_dp">42 dp</string>
+    <string name="statusbar">상단바</string>
+    <string name="top_of_navbar">메뉴 바의 위에</string>
+    <string name="bottom_of_navbar">네비바 맨 아래</string>
+    <string name="regular">일반</string>
+    <string name="center_mirrored">Center-mirrored</string>
+    <string name="size_0_dp">0 dp (off)</string>
+    <string name="size_1_dp">1 dp</string>
+    <string name="size_2_dp">2 dp</string>
+    <string name="size_3_dp">3 dp</string>
+    <string name="size_4_dp">4 dp</string>
+
+    <!-- LED Values -->
+    <string name="time_0_seconds_off">Off</string>
+    <string name="time_0_2_seconds">.2 초</string>
+    <string name="time_0_5_seconds">.5 초</string>
+    <string name="time_1_second">1 초</string>
+    <string name="time_1_5_seconds">1.5 초</string>
+    <string name="time_2_seconds">2 초</string>
+    <string name="time_2_5_seconds">2.5 초</string>
+    <string name="time_3_seconds">3 초</string>
+    <string name="time_3_5_seconds">3.5 초</string>
+    <string name="time_4_seconds">4 초</string>
+    <string name="time_4_5_seconds">4.5 초</string>
+    <string name="time_5_seconds">5 초</string>
+    <string name="time_5_5_seconds">5.5 초</string>
+    <string name="time_6_seconds">6 초</string>
+    <string name="time_7_seconds">7 초</string>
+    <string name="time_8_seconds">8 초</string>
+    <string name="time_9_seconds">9 초</string>
+    <string name="time_10_seconds">10 초</string>
+
+    <!-- Flip phone entries -->
+    <string name="disabled">사용 안 함</string>
+    <string name="enabled">사용</string>
+    <string name="time_0_seconds_instant_off">0 초 (Instant Off)</string>
+    <string name="time_15_seconds">15 초</string>
+    <string name="time_30_seconds">30 초</string>
+    <string name="time_45_seconds">45 초</string>
+    <string name="time_1_minute">1 분</string>
+    <string name="time_1_5_minutes">1.5 분</string>
+    <string name="time_2_minutes">2 분</string>
+    <string name="time_2_5_minutes">2.5 분</string>
+    <string name="time_3_minutes">3 분</string>
+    <string name="time_3_5_minutes">3.5 분</string>
+    <string name="time_4_minutes">4 분</string>
+    <string name="time_5_minutes">5 분</string>
+
+    <!-- weather arrays -->
+    <string name="off">Off</string>
+    <string name="time_10_minutes">10 분</string>
+    <string name="time_30_minutes">30 분</string>
+    <string name="time_45_minutes">45 분</string>
+    <string name="time_60_minutes">60 분</string>
+    <string name="time_2_hours">2 시간</string>
+    <string name="time_3_hours">3 시간</string>
+    <string name="time_4_hours">4 시간</string>
+    <string name="time_6_hours">6 시간</string>
+    <string name="time_8_hours">8 시간</string>
+    <string name="above_carrier_text"> 통신사 텍스트</string>
+    <string name="weather_panel">날씨 패널</string>
+    <string name="text">글씨</string>
+
+    <!-- lockscreen calendar arrays -->
+    <string name="time_1_day">1 일</string>
+    <string name="time_2_days">2 일</string>
+    <string name="time_3_days">3 일</string>
+    <string name="time_4_days">4 일</string>
+    <string name="time_5_days">5 일</string>
+    <string name="time_6_days">6 일</string>
+    <string name="time_1_week">1 주</string>
+
+    <!-- minfree -->
+    <string name="size_25_mb">25mb</string>
+    <string name="size_50_mb">50mb</string>
+    <string name="size_75_mb">75mb</string>
+    <string name="size_80_mb">80mb</string>
+    <string name="size_100_mb">100mb</string>
+
+    <!-- less notification sounds -->
+    <string name="default_behavior">Default behavior</string>
+
+    <!-- signal style -->
+    <string name="show_signal_bars">Show signal bars</string>
+    <string name="show_signal_text">Show signal text</string>
+    <string name="show_with_dbm">Show with dBm</string>
+
+    <!-- haptic feedback on toggle press -->
+    <string name="toggles_enable_haptic_feedback_title">Enable haptic feedback</string>
+    <string name="toggles_enable_haptic_feedback_summary">Use haptic feedback when pressing toggles</string>
+    
+    <!-- Hardware keys -->
     <string name="hardware_keys_title">하드웨어 키</string>
     <string name="hardware_keys_bindings_title">하드웨어키 동작</string>
     <string name="hardware_keys_enable_custom_title">동작 활성화</string>
@@ -517,35 +825,6 @@ Examples: New York,NY // New York, NY // 10033 // London, England"</string>
     <string name="hardware_keys_action_voice_search">음성 검색</string>
     <string name="hardware_keys_action_in_app_search">인앱 검색</string>
     <string name="hardware_keys_additional_options_title">추가 옵션</string>
-    <!-- LockScreen Shortcuts -->
-    <string name="wifi_save">저장</string>
-    <string name="profile_applist_title">애플리케이션</string>
-    <string name="profile_reset_title">초기화</string>
-    <string name="picker_activities">액티비티</string>
-    <string name="icon_picker_choose_icon_title">아이콘 선택</string>
-    <string name="icon_picker_title">아이콘 선택</string>
-    <string name="icon_picker_system_icons_title">시스템 아이콘</string>
-    <string name="icon_picker_gallery_title">갤러리</string>
-    <string name="icon_picker_pack_title">아이콘 팩</string>
-    <!-- string for System Icon -->
-    <string name="icon_picker_alarm">알람</string>
-    <string name="icon_picker_browser">브라우져</string>
-    <string name="icon_picker_calendar">달력</string>
-    <string name="icon_picker_camera">카메라</string>
-    <string name="icon_picker_chrome">Chrome</string>
-    <string name="icon_picker_email">이메일</string>
-    <string name="icon_picker_facebook">Facebook</string>
-    <string name="icon_picker_gallery">앨범</string>
-    <string name="icon_picker_maps">지도</string>
-    <string name="icon_picker_movie">영화</string>
-    <string name="icon_picker_music">음악</string>
-    <string name="icon_picker_nav_normal">네비게이션</string>
-    <string name="icon_picker_phone">휴대전화</string>
-    <string name="icon_picker_podcast">팟캐스트</string>
-    <string name="icon_picker_rss">Rss</string>
-    <string name="icon_picker_search">검색</string>
-    <string name="icon_picker_sms">메시지</string>
-    <string name="icon_picker_twitter">Twitter</string>
     
     <!-- Paranoid Lockscreen -->
     <string name="icon_picker_type">아이콘 스타일 선택:</string>
@@ -563,7 +842,7 @@ Examples: New York,NY // New York, NY // 10033 // London, England"</string>
     <string name="dialog_delete_title">삭제</string>
     <string name="dialog_delete_message">이 아이템을 삭제하시겠습니까?</string>
     
-        <!-- Pie controls -->
+    <!-- Pie controls -->
     <string name="pie_controls_title">파이 컨트롤</string>
     <string name="pie_targets_title">타겟</string>
     <string name="pie_gravity_title">파이 위치</string>
@@ -617,5 +896,5 @@ Examples: New York,NY // New York, NY // 10033 // London, England"</string>
     <string name="pie_lastapp_summary">파이에서 최근 앱 보기 사용</string>
     <string name="all_color">사용자 설정 색상</string>
     <string name="stock_color">기본 색상</string>
-
+    
 </resources>
