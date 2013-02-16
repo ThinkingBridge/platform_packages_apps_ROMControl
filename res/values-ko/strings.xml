@@ -895,5 +895,6 @@ Examples: New York,NY // New York, NY // 10033 // London, England"</string>
     <string name="pie_lastapp_summary">파이에서 최근 앱 보기 사용</string>
     <string name="all_color">사용자 설정 색상</string>
     <string name="stock_color">기본 색상</string>
+    <string name="appshortcut">최근 앱 보기 바로가기</string>
     
 </resources>

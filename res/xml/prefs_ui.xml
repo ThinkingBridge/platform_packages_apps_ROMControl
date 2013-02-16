@@ -103,6 +103,10 @@
             android:summary="@string/wakeup_when_plugged_unplugged_summary"
             android:defaultValue="true" />
 
+        <Preference
+            android:key="set_recent_shortcut"
+            android:title="@string/appshortcut" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

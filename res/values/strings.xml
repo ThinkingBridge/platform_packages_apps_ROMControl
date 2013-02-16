@@ -939,5 +939,6 @@
     <string name="pie_lastapp_summary">Enable last app button on Pie</string>
     <string name="all_color">Custom Colors</string>
     <string name="stock_color">Default Colors</string>
+    <string name="appshortcut">RecentView shortcut</string>
     
 </resources>

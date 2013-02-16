@@ -9,6 +9,8 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Parcelable;
+import android.content.ComponentName;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
@@ -91,6 +93,7 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
     private static final String PREF_HIDE_EXTRAS = "hide_extras";
     private static final String PREF_WAKEUP_WHEN_PLUGGED_UNPLUGGED = "wakeup_when_plugged_unplugged";
     private static final String PREF_FORCE_DUAL_PANEL = "force_dualpanel";
+    private static final String PREF_RECENTSH = "set_recent_shortcut";
 
     private static final int REQUEST_PICK_WALLPAPER = 201;
     private static final int REQUEST_PICK_CUSTOM_ICON = 202;
@@ -109,6 +112,7 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
     Preference mWallpaperAlpha;
     Preference mCustomLabel;
     Preference mCustomBootAnimation;
+    Preference mRecentShortcut;
     ImageView view;
     TextView error;
     CheckBoxPreference mVibrateOnExpand;
@@ -119,6 +123,7 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
     CheckBoxPreference mHideExtras;
     CheckBoxPreference mWakeUpWhenPluggedOrUnplugged;
     CheckBoxPreference mDualpane;
+    
 
     private AnimationDrawable mAnimationPart1;
     private AnimationDrawable mAnimationPart2;
@@ -200,6 +205,8 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
         mWakeUpWhenPluggedOrUnplugged = (CheckBoxPreference) findPreference(PREF_WAKEUP_WHEN_PLUGGED_UNPLUGGED);
         mWakeUpWhenPluggedOrUnplugged.setChecked(Settings.System.getBoolean(mContext.getContentResolver(),
                         Settings.System.WAKEUP_WHEN_PLUGGED_UNPLUGGED, true));
+       mRecentShortcut = (Preference) findPreference(PREF_RECENTSH);
+       mRecentShortcut.setOnPreferenceChangeListener(this);
 
         // hide option if device is already set to never wake up
         if(!mContext.getResources().getBoolean(
@@ -430,6 +437,12 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
             // getFragmentManager().beginTransaction().add(new
             // TransparencyDialog(), null).commit();
             openTransparencyDialog();
+            return true;
+        }else if(preference == mRecentShortcut) {
+Intent i = new Intent();
+i.setComponent(new ComponentName("com.android.systemui", "com.android.systemui.recent.RecentShortcut"));
+i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+startActivity(i);
             return true;
         }
 
