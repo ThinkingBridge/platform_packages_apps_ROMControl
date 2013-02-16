@@ -158,9 +158,9 @@
     <string name="transparency_dialog_transparency_sb_and_nv">상단바 및 네비바</string>
     <string name="transparency_dialog_statusbar">상단바</string>
     <string name="transparency_dialog_navbar">네비바</string>
-    <string name="transparency_dialog_match_keyguard_alpha">잠금화면 투명화 설정</string>
-    <string name="transparency_dialog_transparency">홈 화면 투명화 설정</string>
-    <string name="transparency_dialog_transparency_keyguard">잠금화면 투명화 설정</string>
+    <string name="transparency_dialog_match_keyguard_alpha">잠금화면 투명도 설정</string>
+    <string name="transparency_dialog_transparency">홈 화면 투명도 설정</string>
+    <string name="transparency_dialog_transparency_keyguard">잠금화면 투명도 설정</string>
 
     <!-- LCD Density -->
     <string name="lcd_density_title">LCD 밀도</string>
@@ -195,10 +195,10 @@
     <!-- Statusbar | Toggles -->
     <string name="toggle_default_entries">USER|BRIGHTNESS|SETTINGS|WIFI|SIGNAL|ROTATE|BATTERY|AIRPLANE_MODE|BLUETOOTH</string>
     <string name="toggle_style_title">토글 스타일</string>
-    <string name="toggle_style_summary">토글 버튼에 아이콘 또는 텍스트를 표시 할 수 있는지 여부입니다.</string>
+    <string name="toggle_style_summary">아이콘 또는 텍스트 스타일의 토글을 설정합니다.</string>
     <string name="toggles_layout_title">토글 레이아웃</string>
     <string name="enabled_toggles_title">토글 활성화</string>
-    <string name="enabled_toggles_summary">밝기 설정 위치</string>
+    <string name="enabled_toggles_summary">선택한 토글을 표시</string>
     <string name="toggles_display_dialog">사용할 토글을 선택</string>
     <string name="toggles_per_row_title">토글 행/열</string>
     <string name="toggles_per_row_summary">토글 행과 열을 설정합니다.</string>
@@ -324,7 +324,6 @@
     <string name="navbar_action_search">검색</string>
     <string name="navbar_action_screenshot">캡쳐</string>
     <string name="navbar_action_menu">메뉴</string>
-    <string name="open_ime_switcher">입력 방법 선택</string>
     <string name="navbar_action_kill">앱 종료</string>
     <string name="navbar_action_lastapp">마지막으로 사용한 앱</string>
     <string name="navbar_action_power">전원</string>
@@ -367,7 +366,7 @@
     <string name="navbar_widgets_delete">위젯 삭제</string>
     <string name="navigation_bar_menu_arrow_keys_title">메뉴 화살표 키</string>
     <string name="navigation_bar_menu_arrow_keys_summary">입력하는 동안 네비바에 화살표 키 표시</string>
-    <string name="navigation_bar_alpha_title">상단바 및 네비바 투명화 조절</string>
+    <string name="navigation_bar_alpha_title">상단바 및 네비바 투명도 조절</string>
     <string name="navbar_hide_enable_title">네비바 숨김 활성화</string>
     <string name="drag_handle_opacity_title">불투명도 설정</string>
     <string name="drag_handle_width_title">넓이 설정</string>
@@ -570,7 +569,7 @@ Examples: New York,NY // New York, NY // 10033 // London, England"</string>
     <string name="weather_refresh_interval_minutes">" 분"</string>
     <string name="weather_use_celcius">미터법 사용</string>
     <string name="weather_use_celcius_summary">화씨 대신 섭씨를, mph대신에 km/h 로 표시합니다.</string>
-    <string name="weather_statusbar_style">림바 날씨 스타일</string>
+    <string name="weather_statusbar_style">알림바 날씨 스타일</string>
     <string name="title_weather_longclick">날씨 패널 길게 눌렀을때 동작</string>
     <string name="title_weather_shortclick">날씨 패널 짧게 눌렀을때 동작</string>
     <string name="update">날시 업데이트 패널</string>
@@ -618,7 +617,7 @@ Examples: New York,NY // New York, NY // 10033 // London, England"</string>
     <!-- mostly cloudy (day) -->
     <string name="weather_28">대체로 흐림</string>
     <!-- partly cloudy (night) -->
-    <string name="weather_29">Partly Cloudy</string>
+    <string name="weather_29">가끔 흐림</string>
     <!-- partly cloudy (day) -->
     <string name="weather_30">가끔 흐림</string>
     <!-- clear (night) -->
