@@ -122,8 +122,7 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
     ListPreference mUserModeUI;
     CheckBoxPreference mHideExtras;
     CheckBoxPreference mWakeUpWhenPluggedOrUnplugged;
-    CheckBoxPreference mDualpane;
-    
+    CheckBoxPreference mDualpane; 
 
     private AnimationDrawable mAnimationPart1;
     private AnimationDrawable mAnimationPart2;
@@ -439,10 +438,10 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
             openTransparencyDialog();
             return true;
         }else if(preference == mRecentShortcut) {
-Intent i = new Intent();
-i.setComponent(new ComponentName("com.android.systemui", "com.android.systemui.recent.RecentShortcut"));
-i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-startActivity(i);
+            Intent i = new Intent();
+            i.setComponent(new ComponentName("com.android.systemui", "com.android.systemui.recent.RecentShortcut"));
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(i);
             return true;
         }
 
