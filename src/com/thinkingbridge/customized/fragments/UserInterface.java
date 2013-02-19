@@ -206,6 +206,7 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
                         Settings.System.WAKEUP_WHEN_PLUGGED_UNPLUGGED, true));
        mRecentShortcut = (Preference) findPreference(PREF_RECENTSH);
        mRecentShortcut.setOnPreferenceChangeListener(this);
+       mRecentShortcut.setEnabled(false);
 
         // hide option if device is already set to never wake up
         if(!mContext.getResources().getBoolean(
