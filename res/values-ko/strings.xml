@@ -126,7 +126,7 @@
     <string name="rotate_180_title">180° 회전 활성화</string>
     <string name="rotate_180_summary">폰을 거꾸로 들고 사용할 수 있도록 허용!</string>
     <string name="kill_app_longpress_back">백투킬</string>
-    <string name="kill_app_longpress_back_summary">뒤로 키를 길게 눌러 활동화는 앱을 킬 합니다.</string>
+    <string name="kill_app_longpress_back_summary">뒤로 키를 길게 눌러 활동하는 앱을 킬 합니다.</string>
     <string name="tablet_ui">강제 태블릿UI</string>
     <string name="tablet_ui_summary">태블릿UI로 전환됩니다. (다시부팅 필요)</string>
     <string name="hide_extras">부가 기능 숨김</string>
