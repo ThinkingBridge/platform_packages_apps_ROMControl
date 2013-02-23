@@ -80,8 +80,8 @@
     <string name="power_menu_reboot_title">리부팅 메뉴</string>
     <string name="power_menu_silent_title">사운드 패널</string>
     <string name="expanded_desktop_disabled">비활성화</string>
-    <string name="expanded_desktop_status_bar">상단바 표시</string>
-    <string name="expanded_desktop_no_status_bar">상단바 숨김</string>
+    <string name="expanded_desktop_status_bar">Status bar visible</string>
+    <string name="expanded_desktop_no_status_bar">Status bar hidden</string>
 
     <!-- Power Saving -->
     <string name="title_pref_powersaving_pref_mode">배터리 절약 사용</string>
