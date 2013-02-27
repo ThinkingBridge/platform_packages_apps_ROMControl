@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="disable_bootanimation_insults">
-        <item>Jerk!</item>
-        <item>ProTekk!</item>
+        <item>이게</item>
+        <item>뭐시당까!</item>
     </string-array>
     <string-array name="clock_style_entries">
         <item>우측 시계</item>
@@ -79,6 +79,7 @@
         <item>QUIETHOURS</item>
         <item>NAVBARHIDE</item>
         <item>QUICKRECORD</item>
+        <item>MEMORY</item>
     </string-array>
     <array name="available_toggles_values">
         <item>@string/toggle_user</item>
@@ -108,6 +109,7 @@
         <item>@string/toggle_quiethours</item>
         <item>@string/toggle_navbar_hide</item>
         <item>@string/toggle_quickrecord</item>
+        <item>@string/toggle_memory</item>
     </array>
     <string-array name="brightness_location_entries">
         <item>위로</item>

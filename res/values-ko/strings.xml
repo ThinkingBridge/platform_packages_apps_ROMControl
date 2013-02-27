@@ -274,6 +274,7 @@
     <string name="toggle_quiethours">취침 모드</string>
     <string name="toggle_navbar_hide">네비바 자동 숨김</string>
     <string name="toggle_quickrecord">빠른 녹음</string>
+    <string name="toggle_memory">메모리</string>
     
     <!-- Statusbar | Battery -->
     <string name="battery_icon">배터리 아이콘 스타일</string>

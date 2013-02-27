@@ -278,6 +278,7 @@
     <string name="toggle_quiethours">Quiet Hours</string>
     <string name="toggle_navbar_hide">Navbar Auto Hide</string>
     <string name="toggle_quickrecord">Quick Record</string>
+    <string name="toggle_memory">Memory</string>
 
     <!-- Statusbar | Battery -->
     <string name="battery_icon">Battery icon style</string>
