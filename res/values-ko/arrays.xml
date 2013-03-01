@@ -578,7 +578,7 @@
         <item>240</item>
         <item>320</item>
     </string-array>
-    <string-array name="screenshot_delay_entries">
+    <string-array name="pref_screenshot_delay_entries">
         <item>1 초 (기본)</item>
         <item>2 초</item>
         <item>4 초</item>

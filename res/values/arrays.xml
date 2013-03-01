@@ -1021,7 +1021,7 @@
     </string-array>
     
     <!-- Screenshot Settings -->
-    <string-array name="screenshot_delay_entries">
+    <string-array name="pref_screenshot_delay_entries">
         <item>1 second (default)</item>
         <item>2 seconds</item>
         <item>4 seconds</item>
@@ -1032,9 +1032,7 @@
         <item>15 seconds</item>
     </string-array>
 
-    <string-array name="screenshot_delay_values">
-        <item>100</item>
-        <item>500</item>
+    <string-array name="pref_screenshot_delay_values">
         <item>1000</item>
         <item>2000</item>
         <item>4000</item>

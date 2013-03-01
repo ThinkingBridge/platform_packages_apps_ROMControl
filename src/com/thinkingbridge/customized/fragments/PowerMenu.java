@@ -27,8 +27,8 @@ public class PowerMenu extends SettingsPreferenceFragment implements OnPreferenc
     private static final String PREF_AIRPLANE_TOGGLE = "show_airplane_toggle";
     private static final String KEY_REBOOT = "power_menu_reboot";
     private static final String KEY_SILENT = "power_menu_silent";
-    private static final String SCREENSHOT_SOUND = "screenshot_sound";
-    private static final String SCREENSHOT_DELAY = "screenshot_delay";
+    private static final String PREF_SCREENSHOT_SOUND = "pref_screenshot_sound";
+    private static final String PREF_SCREENSHOT_DELAY = "pref_screenshot_delay";
 
     //CheckBoxPreference mShowPowerSaver;
     //CheckBoxPreference mShowScreenShot;
@@ -109,11 +109,11 @@ public class PowerMenu extends SettingsPreferenceFragment implements OnPreferenc
         		.getContentResolver(), Settings.System.POWER_MENU_SILENT_ENABLED,
         		1) == 1);
         
-        mScreenshotSound = (CheckBoxPreference) findPreference(SCREENSHOT_SOUND);
+        mScreenshotSound = (CheckBoxPreference) findPreference(PREF_SCREENSHOT_SOUND);
         mScreenshotSound.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.SCREENSHOT_SOUND, 1) == 1));
 
-        mScreenshotDelay = (ListPreference) findPreference(SCREENSHOT_DELAY);
+        mScreenshotDelay = (ListPreference) findPreference(PREF_SCREENSHOT_DELAY);
         int screenshotDelay = Settings.System.getInt(getContentResolver(),
                 Settings.System.SCREENSHOT_DELAY, 1000);
         mScreenshotDelay.setValue(String.valueOf(screenshotDelay));
