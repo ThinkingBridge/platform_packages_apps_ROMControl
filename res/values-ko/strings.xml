@@ -727,4 +727,10 @@
     <string name="stock_color">기본 색상</string>
     <string name="appshortcut">최근 앱 보기 바로가기</string>
     
+    <!-- Screenshot settings -->
+    <string name="screenshot_sound_title">Screenshot sound</string>
+    <string name="screenshot_sound_summary">Plays sound effect when screenshot is taken</string>
+    <string name="screenshot_delay_title">Screenshot delay</string>
+    <string name="screenshot_delay_summary">Delays shot by number of seconds specified</string>
+    
 </resources>

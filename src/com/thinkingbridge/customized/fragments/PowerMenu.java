@@ -27,6 +27,8 @@ public class PowerMenu extends SettingsPreferenceFragment implements OnPreferenc
     private static final String PREF_AIRPLANE_TOGGLE = "show_airplane_toggle";
     private static final String KEY_REBOOT = "power_menu_reboot";
     private static final String KEY_SILENT = "power_menu_silent";
+    private static final String SCREENSHOT_SOUND = "screenshot_sound";
+    private static final String SCREENSHOT_DELAY = "screenshot_delay";
 
     //CheckBoxPreference mShowPowerSaver;
     //CheckBoxPreference mShowScreenShot;
@@ -37,7 +39,9 @@ public class PowerMenu extends SettingsPreferenceFragment implements OnPreferenc
     CheckBoxPreference mShowAirplaneToggle;
     CheckBoxPreference mRebootPref;
     CheckBoxPreference mSilentPref;
+    CheckBoxPreference mScreenshotSound;
     ListPreference mExpandedDesktopPref;
+    ListPreference mScreenshotDelay;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -104,6 +108,16 @@ public class PowerMenu extends SettingsPreferenceFragment implements OnPreferenc
         mSilentPref.setChecked(Settings.System.getInt(getActivity()
         		.getContentResolver(), Settings.System.POWER_MENU_SILENT_ENABLED,
         		1) == 1);
+        
+        mScreenshotSound = (CheckBoxPreference) findPreference(SCREENSHOT_SOUND);
+        mScreenshotSound.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.SCREENSHOT_SOUND, 1) == 1));
+
+        mScreenshotDelay = (ListPreference) findPreference(SCREENSHOT_DELAY);
+        int screenshotDelay = Settings.System.getInt(getContentResolver(),
+                Settings.System.SCREENSHOT_DELAY, 1000);
+        mScreenshotDelay.setValue(String.valueOf(screenshotDelay));
+        mScreenshotDelay.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -157,9 +171,24 @@ public class PowerMenu extends SettingsPreferenceFragment implements OnPreferenc
         			Settings.System.POWER_MENU_SILENT_ENABLED,
         			((CheckBoxPreference)preference).isChecked() ? 1 : 0);
         	return true;
+        } else if (preference == mScreenshotSound) {
+        	boolean value = mScreenshotSound.isChecked();
+        	Settings.System.putInt(getContentResolver(),
+        			Settings.System.SCREENSHOT_SOUND, value ? 1 : 0);
+        	return true;
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
+    }
+    
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mScreenshotDelay) {
+            int screenshotDelay = Integer.valueOf((String) newValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.SCREENSHOT_DELAY, screenshotDelay);
+            return true;
+        }
+        return false;
     }
     
     public boolean onPreferenceChange(Preference preference, Object newValue) {

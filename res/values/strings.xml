@@ -956,4 +956,10 @@
     <string name="stock_color">Default Colors</string>
     <string name="appshortcut">RecentView shortcut</string>
     
+    <!-- Screenshot settings -->
+    <string name="screenshot_sound_title">Screenshot sound</string>
+    <string name="screenshot_sound_summary">Plays sound effect when screenshot is taken</string>
+    <string name="screenshot_delay_title">Screenshot delay</string>
+    <string name="screenshot_delay_summary">Delays shot by number of seconds specified</string>
+    
 </resources>

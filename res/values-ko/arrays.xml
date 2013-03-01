@@ -578,4 +578,14 @@
         <item>240</item>
         <item>320</item>
     </string-array>
+    <string-array name="screenshot_delay_entries">
+        <item>1 초 (기본)</item>
+        <item>2 초</item>
+        <item>4 초</item>
+        <item>6 초</item>
+        <item>8 초</item>
+        <item>10 초</item>
+        <item>12 초</item>
+        <item>15 초</item>
+    </string-array>
 </resources>
