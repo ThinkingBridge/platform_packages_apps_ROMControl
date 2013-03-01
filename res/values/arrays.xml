@@ -1010,8 +1010,8 @@
     <!-- Expanded desktop options -->
     <string-array name="expanded_desktop_entries" translatable="false">
         <item>@string/expanded_desktop_disabled</item>
-        <item>@string/expanded_desktop_status_bar</item>
         <item>@string/expanded_desktop_no_status_bar</item>
+        <item>@string/expanded_desktop_status_bar</item>
     </string-array>
 
     <string-array name="expanded_desktop_values" translatable="false">
