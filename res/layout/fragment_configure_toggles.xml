@@ -14,7 +14,7 @@
   limitations under the License.
 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.aokp.romcontrol"
+    xmlns:app="http://schemas.android.com/apk/res/com.thinkingbridge.customized"
     android:layout_width="@dimen/list_toggle_width"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"

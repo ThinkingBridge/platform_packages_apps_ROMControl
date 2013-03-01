@@ -196,15 +196,13 @@
     <string name="custom_density_dialog_button_reboot">지금 다시부팅</string>
 
     <!-- Statusbar | Toggles -->
-    <string name="toggle_default_entries">USER|BRIGHTNESS|SETTINGS|WIFI|SIGNAL|ROTATE|BATTERY|AIRPLANE_MODE|BLUETOOTH</string>
     <string name="toggle_style_title">토글 스타일</string>
     <string name="toggle_style_summary">아이콘 또는 텍스트 스타일의 토글을 설정합니다.</string>
     <string name="toggles_layout_title">토글 레이아웃</string>
-    <string name="enabled_toggles_title">토글 활성화</string>
-    <string name="enabled_toggles_summary">선택한 토글을 표시</string>
-    <string name="toggles_display_dialog">사용할 토글을 선택</string>
     <string name="toggles_per_row_title">토글 행/열</string>
     <string name="toggles_per_row_summary">토글 행과 열을 설정합니다.</string>
+    <string name="toggles_style_title">Toggles style</string>
+    <string name="toggles_style_summary">Notification (traditional) or tiles</string>
     <string name="toggles_display_close">닫기</string>
     <string name="toggles_order_title">토글 순서</string>
     <string name="toggles_order_summary">토글의 순서를 표시합니다.</string>
@@ -226,6 +224,12 @@
     <string name="toggle_enable_fasttoggle_summary">기본 설정 무시</string>
     <string name="toggle_choose_fasttoggle_side_title">토글 위치 선정</string>
     <string name="toggle_choose_fasttoggle_side_summary">토글 설정 위치를 선정합니다.</string>
+    <string name="toggle_dialog_arrange_title">Toggle setup</string>
+    <string name="toggle_dialog_add_toggles">Select toggles to add</string>
+    <string name="toggle_style_tile">Tiles</string>
+    <string name="toggle_style_traditional">Traditional</string>
+    <string name="toggle_swap_handle_side">Drag handle on right</string>
+    <string name="add_toggles">Add toggles</string>
     <string name="toggle_favcontact_title">즐겨찾기 할 주소록</string>
 
     <!-- Statusbar | Clock -->
