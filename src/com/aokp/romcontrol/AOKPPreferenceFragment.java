@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.thinkingbridge.customized;
+package com.aokp.romcontrol;
 
 import android.app.ActionBar;
 import android.app.Dialog;
@@ -36,7 +36,7 @@ import android.widget.Button;
 /**
  * Base class for Settings fragments, with some helper functions and dialog management.
  */
-public class SettingsPreferenceFragment extends PreferenceFragment implements DialogCreatable {
+public class AOKPPreferenceFragment extends PreferenceFragment implements DialogCreatable {
 
     private static final String TAG = "SettingsPreferenceFragment";
     protected Context mContext;
@@ -207,9 +207,9 @@ public class SettingsPreferenceFragment extends PreferenceFragment implements Di
                     }
                 }
                 // This dialog fragment could be created from non-SettingsPreferenceFragment
-                if (mParentFragment instanceof SettingsPreferenceFragment) {
+                if (mParentFragment instanceof AOKPPreferenceFragment) {
                     // restore mDialogFragment in mParentFragment
-                    ((SettingsPreferenceFragment) mParentFragment).mDialogFragment = this;
+                    ((AOKPPreferenceFragment) mParentFragment).mDialogFragment = this;
                 }
             }
             return ((DialogCreatable) mParentFragment).onCreateDialog(mDialogId);
@@ -240,10 +240,10 @@ public class SettingsPreferenceFragment extends PreferenceFragment implements Di
             super.onDetach();
 
             // This dialog fragment could be created from non-SettingsPreferenceFragment
-            if (mParentFragment instanceof SettingsPreferenceFragment) {
+            if (mParentFragment instanceof AOKPPreferenceFragment) {
                 // in case the dialog is not explicitly removed by removeDialog()
-                if (((SettingsPreferenceFragment) mParentFragment).mDialogFragment == this) {
-                    ((SettingsPreferenceFragment) mParentFragment).mDialogFragment = null;
+                if (((AOKPPreferenceFragment) mParentFragment).mDialogFragment == this) {
+                    ((AOKPPreferenceFragment) mParentFragment).mDialogFragment = null;
                 }
             }
         }

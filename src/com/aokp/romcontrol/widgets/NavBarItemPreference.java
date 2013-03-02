@@ -1,4 +1,4 @@
-package com.thinkingbridge.customized.widgets;
+package com.aokp.romcontrol.widgets;
 
 import android.content.Context;
 import android.preference.ListPreference;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.thinkingbridge.customized.R;
+import com.aokp.romcontrol.R;
 
 public class NavBarItemPreference extends ListPreference {
 

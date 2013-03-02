@@ -1,4 +1,4 @@
-package com.thinkingbridge.customized.service;
+package com.aokp.romcontrol.service;
 
 import android.app.Notification;
 import android.app.NotificationManager;

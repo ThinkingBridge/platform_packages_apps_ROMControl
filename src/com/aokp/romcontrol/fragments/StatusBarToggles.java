@@ -1,5 +1,5 @@
 
-package com.thinkingbridge.customized.fragments;
+package com.aokp.romcontrol.fragments;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -23,15 +23,15 @@ import android.provider.ContactsContract;
 import android.provider.Settings;
 import android.util.Log;
 
-import com.thinkingbridge.customized.SettingsPreferenceFragment;
-import com.thinkingbridge.customized.R;
-import com.thinkingbridge.customized.objects.EasyPair;
-import com.thinkingbridge.customized.util.Helpers;
+import com.aokp.romcontrol.AOKPPreferenceFragment;
+import com.aokp.romcontrol.R;
+import com.aokp.romcontrol.objects.EasyPair;
+import com.aokp.romcontrol.util.Helpers;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class StatusBarToggles extends SettingsPreferenceFragment implements
+public class StatusBarToggles extends AOKPPreferenceFragment implements
         OnPreferenceChangeListener {
 
     private static final String TAG = "TogglesLayout";

@@ -1,5 +1,5 @@
 
-package com.thinkingbridge.customized.fragments;
+package com.aokp.romcontrol.fragments;
 
 import android.app.Activity;
 import android.content.ComponentName;
@@ -19,12 +19,12 @@ import android.util.TypedValue;
 
 import java.net.URISyntaxException;
 
-import com.thinkingbridge.customized.SettingsPreferenceFragment;
-import com.thinkingbridge.customized.R;
-import com.thinkingbridge.customized.util.ShortcutPickerHelper;
-import com.thinkingbridge.customized.widgets.NavBarItemPreference;
+import com.aokp.romcontrol.AOKPPreferenceFragment;
+import com.aokp.romcontrol.R;
+import com.aokp.romcontrol.util.ShortcutPickerHelper;
+import com.aokp.romcontrol.widgets.NavBarItemPreference;
 
-public class NavRingTargets extends SettingsPreferenceFragment implements
+public class NavRingTargets extends AOKPPreferenceFragment implements
         ShortcutPickerHelper.OnPickListener, OnPreferenceChangeListener {
 
     public static final int NAVRING_ONE = 1;

@@ -1,5 +1,5 @@
 
-package com.thinkingbridge.customized;
+package com.aokp.romcontrol;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -33,11 +33,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
-public class CustomizedActivity extends PreferenceActivity implements ButtonBarHandler {
+public class ROMControlActivity extends PreferenceActivity implements ButtonBarHandler {
 
-    private static final String TAG = "Customized";
+    private static final String TAG = "ROM_Control";
 
     private static boolean hasNotificationLed;
+    private static boolean hasSPen;
     private static String KEY_USE_ENGLISH_LOCALE = "use_english_locale";
 
     protected HashMap<Integer, Integer> mHeaderIndexMap = new HashMap<Integer, Integer>();
@@ -49,15 +50,21 @@ public class CustomizedActivity extends PreferenceActivity implements ButtonBarH
     private Header mCurrentHeader;
     boolean mInLocalHeaderSwitch;
 
+    Locale defaultLocale;
+
     protected boolean isShortcut;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         hasNotificationLed = getResources().getBoolean(R.bool.has_notification_led);
+        defaultLocale = Locale.getDefault();
+        Log.i(TAG, "defualt locale: " + defaultLocale.getDisplayName());
+        setLocale();
 
         mInLocalHeaderSwitch = true;
         super.onCreate(savedInstanceState);
         mInLocalHeaderSwitch = false;
+
         if (!onIsHidingHeaders() && onIsMultiPane()) {
             highlightHeader();
             // Force the title so that it doesn't get overridden by a direct
@@ -66,8 +73,8 @@ public class CustomizedActivity extends PreferenceActivity implements ButtonBarH
             setTitle(R.string.app_name);
         }
 
-        if ("com.thinkingbridge.customized.START_NEW_FRAGMENT".equals(getIntent().getAction())) {
-            String className = getIntent().getStringExtra("thinkingbridge_fragment_name").toString();
+        if ("com.aokp.romcontrol.START_NEW_FRAGMENT".equals(getIntent().getAction())) {
+            String className = getIntent().getStringExtra("aokp_fragment_name").toString();
             Class<?> cls = null;
             try {
                 cls = Class.forName(className);
@@ -77,7 +84,7 @@ public class CustomizedActivity extends PreferenceActivity implements ButtonBarH
             }
 
             try {
-                cls.asSubclass(CustomizedActivity.class);
+                cls.asSubclass(ROMControlActivity.class);
                 return;
             } catch (ClassCastException e) {
                 // fall through
@@ -114,6 +121,65 @@ public class CustomizedActivity extends PreferenceActivity implements ButtonBarH
             finish();
         } else {
             super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_activity, menu);
+
+        MenuItem locale = menu.findItem(R.id.change_locale);
+
+        if (Locale.getDefault().getLanguage().equals(Locale.ENGLISH.getLanguage())) {
+            menu.removeItem(R.id.change_locale);
+        } else {
+            Configuration config = getBaseContext().getResources().getConfiguration();
+            locale.setTitle("Locale (" + config.locale.getDisplayLanguage() + ")");
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
+        switch (item.getItemId()) {
+            case R.id.change_locale:
+                Log.e(TAG, "change_locale clicked");
+                SharedPreferences p = getPreferences(MODE_PRIVATE);
+                boolean useEnglishLocale = p.getBoolean(KEY_USE_ENGLISH_LOCALE, false);
+                p.edit().putBoolean(KEY_USE_ENGLISH_LOCALE, !useEnglishLocale).apply();
+                recreate();
+                return true;
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:
+                return super.onContextItemSelected(item);
+        }
+    }
+
+    private void setLocale() {
+        SharedPreferences p = getPreferences(MODE_PRIVATE);
+        boolean useEnglishLocale = p.getBoolean(KEY_USE_ENGLISH_LOCALE, false);
+
+        if (useEnglishLocale) {
+            Locale locale = null;
+            Configuration config = null;
+            config = getBaseContext().getResources().getConfiguration();
+            locale = Locale.ENGLISH;
+            config.locale = locale;
+            getBaseContext().getResources().updateConfiguration(config,
+                    getBaseContext().getResources().getDisplayMetrics());
+        } else {
+            Locale locale = null;
+            Configuration config = null;
+            config = getBaseContext().getResources().getConfiguration();
+            locale = defaultLocale;
+            config.locale = locale;
+            getBaseContext().getResources().updateConfiguration(config,
+                    getBaseContext().getResources().getDisplayMetrics());
+
         }
     }
 
@@ -198,6 +264,18 @@ public class CustomizedActivity extends PreferenceActivity implements ButtonBarH
                 mHeaderIndexMap.put(id, i);
                 i++;
             }
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        setLocale();
+
+        ListAdapter listAdapter = getListAdapter();
+        if (listAdapter instanceof HeaderAdapter) {
+            ((HeaderAdapter) listAdapter).resume();
         }
     }
 

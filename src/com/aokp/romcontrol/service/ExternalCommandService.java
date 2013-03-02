@@ -1,8 +1,8 @@
 
-package com.thinkingbridge.customized.service;
+package com.aokp.romcontrol.service;
 
-import com.thinkingbridge.customized.util.CMDProcessor;
-import com.thinkingbridge.customized.util.Executable;
+import com.aokp.romcontrol.util.CMDProcessor;
+import com.aokp.romcontrol.util.Executable;
 
 import android.app.IntentService;
 import android.content.Intent;

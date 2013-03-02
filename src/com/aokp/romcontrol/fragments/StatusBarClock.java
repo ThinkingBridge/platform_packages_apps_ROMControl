@@ -1,5 +1,5 @@
 
-package com.thinkingbridge.customized.fragments;
+package com.aokp.romcontrol.fragments;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,12 +12,12 @@ import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.util.Log;
 
-import com.thinkingbridge.customized.SettingsPreferenceFragment;
-import com.thinkingbridge.customized.R;
-import com.thinkingbridge.customized.util.ShortcutPickerHelper;
+import com.aokp.romcontrol.AOKPPreferenceFragment;
+import com.aokp.romcontrol.R;
+import com.aokp.romcontrol.util.ShortcutPickerHelper;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class StatusBarClock extends SettingsPreferenceFragment implements
+public class StatusBarClock extends AOKPPreferenceFragment implements
                 ShortcutPickerHelper.OnPickListener, OnPreferenceChangeListener {
 
     private static final String PREF_ENABLE = "clock_style";

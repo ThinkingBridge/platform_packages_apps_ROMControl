@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.thinkingbridge.customized.fragments;
+package com.aokp.romcontrol.fragments;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -51,9 +51,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.thinkingbridge.customized.R;
-import com.thinkingbridge.customized.ApplicationsDialogPreference;
-import com.thinkingbridge.customized.SettingsPreferenceFragment;
+import com.aokp.romcontrol.R;
+import com.aokp.romcontrol.ApplicationsDialogPreference;
+import com.aokp.romcontrol.AOKPPreferenceFragment;
 
 import java.io.File;
 import java.io.IOException;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.thinkingbridge.customized.fragments;
+package com.aokp.romcontrol.fragments;
 
 import java.io.File;
 import java.io.IOException;
@@ -64,12 +64,12 @@ import android.widget.Toast;
 
 import com.android.internal.widget.multiwaveview.GlowPadView;
 import com.android.internal.widget.multiwaveview.TargetDrawable;
-import com.thinkingbridge.customized.R;
-import com.thinkingbridge.customized.SettingsPreferenceFragment;
-import com.thinkingbridge.customized.Utils;
-import com.thinkingbridge.customized.fragments.IconPicker.OnIconPickListener;
+import com.aokp.romcontrol.R;
+import com.aokp.romcontrol.AOKPPreferenceFragment;
+import com.aokp.romcontrol.Utils;
+import com.aokp.romcontrol.fragments.IconPicker.OnIconPickListener;
 
-public class LockscreenTargets extends SettingsPreferenceFragment implements ShortcutPickHelper.OnPickListener,
+public class LockscreenTargets extends AOKPPreferenceFragment implements ShortcutPickHelper.OnPickListener,
     GlowPadView.OnTriggerListener, OnIconPickListener {
 
     private GlowPadView mWaveView;

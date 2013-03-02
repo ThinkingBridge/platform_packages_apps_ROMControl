@@ -1,5 +1,5 @@
 
-package com.thinkingbridge.customized.fragments;
+package com.aokp.romcontrol.fragments;
 
 import android.app.Activity;
 import android.app.DialogFragment;
@@ -27,7 +27,7 @@ import android.widget.TextView;
 import android.widget.LinearLayout.LayoutParams;
 
 
-import com.thinkingbridge.customized.R;
+import com.aokp.romcontrol.R;
 
 import java.util.ArrayList;
 

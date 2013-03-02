@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.thinkingbridge.customized.fragments;
+package com.aokp.romcontrol.fragments;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -40,8 +40,8 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
-import com.thinkingbridge.customized.R;
-import com.thinkingbridge.customized.fragments.ShortcutPickHelper.AppExpandableAdapter.GroupInfo;
+import com.aokp.romcontrol.R;
+import com.aokp.romcontrol.fragments.ShortcutPickHelper.AppExpandableAdapter.GroupInfo;
 
 public class ShortcutPickHelper {
 

@@ -1,5 +1,5 @@
 
-package com.thinkingbridge.customized.fragments;
+package com.aokp.romcontrol.fragments;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -52,18 +52,18 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.thinkingbridge.customized.SettingsPreferenceFragment;
-import com.thinkingbridge.customized.R;
-import com.thinkingbridge.customized.util.Helpers;
-import com.thinkingbridge.customized.CustomizedActivity;
-import com.thinkingbridge.customized.util.ShortcutPickerHelper;
-import com.thinkingbridge.customized.widgets.NavBarItemPreference;
-import com.thinkingbridge.customized.widgets.SeekBarPreference;
-import com.thinkingbridge.customized.fragments.NavRingTargets;
+import com.aokp.romcontrol.AOKPPreferenceFragment;
+import com.aokp.romcontrol.R;
+import com.aokp.romcontrol.util.Helpers;
+import com.aokp.romcontrol.ROMControlActivity;
+import com.aokp.romcontrol.util.ShortcutPickerHelper;
+import com.aokp.romcontrol.widgets.NavBarItemPreference;
+import com.aokp.romcontrol.widgets.SeekBarPreference;
+import com.aokp.romcontrol.fragments.NavRingTargets;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class Navbar extends SettingsPreferenceFragment implements
+public class Navbar extends AOKPPreferenceFragment implements
         OnPreferenceChangeListener, ShortcutPickerHelper.OnPickListener {
 
     // move these later

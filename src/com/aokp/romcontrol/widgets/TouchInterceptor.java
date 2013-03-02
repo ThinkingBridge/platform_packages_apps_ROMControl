@@ -1,5 +1,5 @@
 
-package com.thinkingbridge.customized.widgets;
+package com.aokp.romcontrol.widgets;
 
 /*
  * Copyright (C) 2008 The Android Open Source Project
@@ -33,7 +33,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-import com.thinkingbridge.customized.R;
+import com.aokp.romcontrol.R;
 
 public class TouchInterceptor extends ListView {
 
@@ -85,14 +85,11 @@ public class TouchInterceptor extends ListView {
                     dragger.getDrawingRect(r);
                     // The dragger icon itself is quite small, so pretend the touch area is bigger
                     if (x < r.right * 2) {
-                    	// Fix x position while dragging
-                    	int[] itemPos = new int[2];
-                    	item.getLocationOnScreen(itemPos);
                         item.setDrawingCacheEnabled(true);
                         // Create a copy of the drawing cache so that it does not get recycled
                         // by the framework when the list tries to clean up memory
                         Bitmap bitmap = Bitmap.createBitmap(item.getDrawingCache());
-                        startDragging(bitmap, itemPos[0], y);
+                        startDragging(bitmap, y);
                         mDragPos = itemnum;
                         mFirstDragPos = mDragPos;
                         mHeight = getHeight();
@@ -184,7 +181,6 @@ public class TouchInterceptor extends ListView {
             params.height = mItemHeightNormal;
             v.setLayoutParams(params);
             v.setVisibility(View.VISIBLE);
-            v.setDrawingCacheEnabled(false);
         }
     }
 
@@ -291,12 +287,12 @@ public class TouchInterceptor extends ListView {
         return super.onTouchEvent(ev);
     }
 
-    private void startDragging(Bitmap bm, int x, int y) {
+    private void startDragging(Bitmap bm, int y) {
         stopDragging();
 
         mWindowParams = new WindowManager.LayoutParams();
-        mWindowParams.gravity = Gravity.TOP | Gravity.LEFT;
-        mWindowParams.x = x;
+        mWindowParams.gravity = Gravity.TOP;
+        mWindowParams.x = 0;
         mWindowParams.y = y - mDragPoint + mCoordOffset;
 
         mWindowParams.height = WindowManager.LayoutParams.WRAP_CONTENT;

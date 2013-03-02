@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.thinkingbridge.customized.fragments;
+package com.aokp.romcontrol.fragments;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -31,13 +31,13 @@ import android.preference.Preference.OnPreferenceClickListener;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 
-import com.thinkingbridge.customized.R;
-import com.thinkingbridge.customized.SettingsPreferenceFragment;
-import com.thinkingbridge.customized.Utils;
-import com.thinkingbridge.customized.util.Helpers;
+import com.aokp.romcontrol.R;
+import com.aokp.romcontrol.AOKPPreferenceFragment;
+import com.aokp.romcontrol.Utils;
+import com.aokp.romcontrol.util.Helpers;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class Pie extends SettingsPreferenceFragment
+public class Pie extends AOKPPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String PIE_CONTROLS = "pie_controls";

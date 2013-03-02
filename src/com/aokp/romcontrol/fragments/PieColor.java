@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.thinkingbridge.customized.fragments;
+package com.aokp.romcontrol.fragments;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -32,14 +32,14 @@ import android.util.Log;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
-import com.thinkingbridge.customized.R;
-import com.thinkingbridge.customized.SettingsPreferenceFragment;
-import com.thinkingbridge.customized.Utils;
-import com.thinkingbridge.customized.util.Helpers;
+import com.aokp.romcontrol.R;
+import com.aokp.romcontrol.AOKPPreferenceFragment;
+import com.aokp.romcontrol.Utils;
+import com.aokp.romcontrol.util.Helpers;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class PieColor extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+public class PieColor extends AOKPPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String PIE_ENABLE_COLOR = "pie_enable_color";
     private static final String PIE_JUICE = "pie_juice";

@@ -1,5 +1,5 @@
 
-package com.thinkingbridge.customized.fragments;
+package com.aokp.romcontrol.fragments;
 
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -11,11 +11,11 @@ import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 
-import com.thinkingbridge.customized.SettingsPreferenceFragment;
-import com.thinkingbridge.customized.R;
-import com.thinkingbridge.customized.R.xml;
+import com.aokp.romcontrol.AOKPPreferenceFragment;
+import com.aokp.romcontrol.R;
+import com.aokp.romcontrol.R.xml;
 
-public class PowerMenu extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+public class PowerMenu extends AOKPPreferenceFragment implements OnPreferenceChangeListener {
 
     //private static final String PREF_POWER_SAVER = "show_power_saver";
     //private static final String PREF_SCREENSHOT = "show_screenshot";
@@ -180,7 +180,27 @@ public class PowerMenu extends SettingsPreferenceFragment implements OnPreferenc
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
+
+    private void updateExpandedDesktopSummary(int value) {
+        Resources res = getResources();
+
+        if (value == 0) {
+            // Expanded desktop deactivated
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 0);
+            mExpandedDesktopPref.setSummary(res.getString(R.string.expanded_desktop_disabled));
+        } else if (value == 1) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 1);
+            mExpandedDesktopPref.setSummary(res.getString(R.string.expanded_desktop_status_bar));
+        } else if (value == 2) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 1);
+            mExpandedDesktopPref.setSummary(res.getString(R.string.expanded_desktop_no_status_bar));
+        }
+    }
     
+    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mScreenshotDelay) {
             int screenshotDelay = Integer.valueOf((String) newValue);
@@ -200,24 +220,5 @@ public class PowerMenu extends SettingsPreferenceFragment implements OnPreferenc
             return true;
         }
         return false;
-    }
-
-    private void updateExpandedDesktopSummary(int value) {
-        Resources res = getResources();
-
-        if (value == 0) {
-            // Expanded desktop deactivated
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 0);
-            mExpandedDesktopPref.setSummary(res.getString(R.string.expanded_desktop_disabled));
-        } else if (value == 1) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 1);
-            mExpandedDesktopPref.setSummary(res.getString(R.string.expanded_desktop_status_bar));
-        } else if (value == 2) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 1);
-            mExpandedDesktopPref.setSummary(res.getString(R.string.expanded_desktop_no_status_bar));
-        }
     }
 }

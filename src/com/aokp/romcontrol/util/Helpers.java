@@ -1,5 +1,5 @@
 
-package com.thinkingbridge.customized.util;
+package com.aokp.romcontrol.util;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -309,7 +309,7 @@ public class Helpers {
         new CMDProcessor().su.fireAndForget(new Executable(String.format("setprop %s %s", prop, val)));
     }
 
-    // TODO method is only used by com.thinkingbridge.customized.fragments.LEDControl; move there
+    // TODO method is only used by com.aokp.romcontrol.fragments.LEDControl; move there
     @SuppressWarnings("StaticMethodOnlyUsedInOneClass")
     public static String getSystemProp(String prop, String def) {
         String result = getSystemProp(prop);

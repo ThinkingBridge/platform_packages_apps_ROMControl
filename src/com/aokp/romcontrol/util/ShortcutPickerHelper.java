@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.thinkingbridge.customized.util;
+package com.aokp.romcontrol.util;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 
@@ -31,7 +31,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
 
-import com.thinkingbridge.customized.R;
+import com.aokp.romcontrol.R;
 public class ShortcutPickerHelper {
 
     private Fragment mParent;

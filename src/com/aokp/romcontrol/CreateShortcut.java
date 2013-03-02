@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.thinkingbridge.customized;
+package com.aokp.romcontrol;
 
 import android.app.LauncherActivity;
 import android.content.Intent;
@@ -26,7 +26,7 @@ public class CreateShortcut extends LauncherActivity {
     @Override
     protected Intent getTargetIntent() {
         Intent targetIntent = new Intent(Intent.ACTION_MAIN, null);
-        targetIntent.addCategory("com.thinkingbridge.customized.SHORTCUT");
+        targetIntent.addCategory("com.aokp.romcontrol.SHORTCUT");
         targetIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         return targetIntent;
     }
@@ -38,9 +38,9 @@ public class CreateShortcut extends LauncherActivity {
         String intentClass = shortcutIntent.getComponent().getClassName();
 
         shortcutIntent = new Intent();
-        shortcutIntent.setClass(getApplicationContext(), CustomizedActivity.class);
-        shortcutIntent.setAction("com.thinkingbridge.customized.START_NEW_FRAGMENT");
-        shortcutIntent.putExtra("thinkingbridge_fragment_name", intentClass);
+        shortcutIntent.setClass(getApplicationContext(), ROMControlActivity.class);
+        shortcutIntent.setAction("com.aokp.romcontrol.START_NEW_FRAGMENT");
+        shortcutIntent.putExtra("aokp_fragment_name", intentClass);
         shortcutIntent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         shortcutIntent.setFlags(Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
 
@@ -56,20 +56,26 @@ public class CreateShortcut extends LauncherActivity {
     private int getProperShortcutIcon(String className) {
         String c = className.substring(className.lastIndexOf(".") + 1);
 
-        if (c.equals("Sound"))
-            return R.drawable.ic_thinkingbridge_sound;
+        if (c.equals("LEDControl"))
+            return R.drawable.ic_rom_control_led;
+        else if (c.equals("Lockscreens"))
+            return R.drawable.ic_rom_control_lockscreens;
+        else if (c.equals("Sound"))
+            return R.drawable.ic_rom_control_sound;
         else if (c.equals("Navbar"))
-            return R.drawable.ic_thinkingbridge_navigation_bar;
+            return R.drawable.ic_rom_control_navigation_bar;
         else if (c.equals("StatusBarBattery"))
-            return R.drawable.ic_thinkingbridge_battery;
+            return R.drawable.ic_rom_control_battery;
         else if (c.equals("StatusBarClock"))
-            return R.drawable.ic_thinkingbridge_clock;
+            return R.drawable.ic_rom_control_clock;
         else if (c.equals("StatusBarGeneral"))
-            return R.drawable.ic_thinkingbridge_general;
+            return R.drawable.ic_rom_control_general;
         else if (c.equals("StatusBarToggles"))
-            return R.drawable.ic_thinkingbridge_toggles;
+            return R.drawable.ic_rom_control_toggles;
         else if (c.equals("UserInterface"))
-            return R.drawable.ic_thinkingbridge_general_ui;
+            return R.drawable.ic_rom_control_general_ui;
+        else if (c.equals("Weather"))
+            return R.drawable.ic_rom_control_weather;
         else
             return R.mipmap.ic_launcher;
     }

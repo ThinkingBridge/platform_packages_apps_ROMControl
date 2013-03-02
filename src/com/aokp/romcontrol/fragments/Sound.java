@@ -1,4 +1,4 @@
-package com.thinkingbridge.customized.fragments;
+package com.aokp.romcontrol.fragments;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -16,12 +16,12 @@ import android.preference.PreferenceScreen;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 
-import com.thinkingbridge.customized.SettingsPreferenceFragment;
-import com.thinkingbridge.customized.R;
-import com.thinkingbridge.customized.service.FlipService;
-import com.thinkingbridge.customized.service.HeadphoneService;
+import com.aokp.romcontrol.AOKPPreferenceFragment;
+import com.aokp.romcontrol.R;
+import com.aokp.romcontrol.service.FlipService;
+import com.aokp.romcontrol.service.HeadphoneService;
 
-public class Sound extends SettingsPreferenceFragment
+public class Sound extends AOKPPreferenceFragment
         implements OnPreferenceChangeListener {
 
     private static final String PREF_ENABLE_VOLUME_OPTIONS = "enable_volume_options";
@@ -76,7 +76,7 @@ public class Sound extends SettingsPreferenceFragment
         mPhoneSilent.setValue((prefs.getString(PREF_PHONE_RING_SILENCE, "0")));
         mPhoneSilent.setOnPreferenceChangeListener(this);
 
-        if (isTablet(mContext)) {
+        if (!hasPhoneAbility(mContext)) {
             getPreferenceScreen().removePreference(mPhoneSilent);
         }
 

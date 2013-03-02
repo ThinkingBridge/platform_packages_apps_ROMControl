@@ -1,5 +1,5 @@
 
-package com.thinkingbridge.customized.widgets;
+package com.aokp.romcontrol.widgets;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
-import com.thinkingbridge.customized.R;
+import com.aokp.romcontrol.R;
 
 public class AlphaSeekBar extends LinearLayout implements OnSeekBarChangeListener {
 

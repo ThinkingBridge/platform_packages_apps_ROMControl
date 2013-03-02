@@ -1,4 +1,4 @@
-package com.thinkingbridge.customized.fragments;
+package com.aokp.romcontrol.fragments;
 
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
@@ -8,13 +8,12 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 
-import com.thinkingbridge.customized.SettingsPreferenceFragment;
-import com.thinkingbridge.customized.R;
-import com.thinkingbridge.customized.preferences.ImageListPreference;
+import com.aokp.romcontrol.AOKPPreferenceFragment;
+import com.aokp.romcontrol.R;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class StatusBarBattery extends SettingsPreferenceFragment implements
+public class StatusBarBattery extends AOKPPreferenceFragment implements
         OnPreferenceChangeListener {
 
     private static final String PREF_BATT_ICON = "battery_icon_list";

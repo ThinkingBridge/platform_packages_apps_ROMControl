@@ -1,5 +1,5 @@
 
-package com.thinkingbridge.customized.objects;
+package com.aokp.romcontrol.objects;
 
 import android.util.Pair;
 

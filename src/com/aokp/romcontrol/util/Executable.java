@@ -1,4 +1,4 @@
-package com.thinkingbridge.customized.util;
+package com.aokp.romcontrol.util;
 
 import android.os.Parcel;
 import android.os.Parcelable;

@@ -1,5 +1,5 @@
 
-package com.thinkingbridge.customized.fragments;
+package com.aokp.romcontrol.fragments;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import android.os.Bundle;
@@ -11,10 +11,10 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 import android.util.Log;
 
-import com.thinkingbridge.customized.R;
-import com.thinkingbridge.customized.SettingsPreferenceFragment;
+import com.aokp.romcontrol.R;
+import com.aokp.romcontrol.AOKPPreferenceFragment;
 
-public class StatusBarSignal extends SettingsPreferenceFragment implements
+public class StatusBarSignal extends AOKPPreferenceFragment implements
         OnPreferenceChangeListener {
 
     ListPreference mDbmStyletyle;
