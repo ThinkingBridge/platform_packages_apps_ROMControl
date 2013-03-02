@@ -1,5 +1,5 @@
 
-package com.thinkingbridge.customized.fragments;
+package com.aokp.romcontrol.fragments;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -46,12 +46,12 @@ import android.widget.NumberPicker.OnValueChangeListener;
 import android.widget.Spinner;
 import android.widget.Switch;
 
-import com.thinkingbridge.customized.R;
+import com.aokp.romcontrol.R;
 
 import net.margaritov.preference.colorpicker.ColorPickerDialog;
 
-import com.thinkingbridge.customized.util.Helpers;
-import com.thinkingbridge.customized.util.ShortcutPickerHelper;
+import com.aokp.romcontrol.util.Helpers;
+import com.aokp.romcontrol.util.ShortcutPickerHelper;
 
 import java.net.URISyntaxException;
 import java.text.DecimalFormat;

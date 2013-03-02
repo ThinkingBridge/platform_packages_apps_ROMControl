@@ -1,9 +1,5 @@
-package com.thinkingbridge.customized.fragments;
 
-import com.thinkingbridge.customized.SettingsPreferenceFragment;
-import com.thinkingbridge.customized.R;
-
-import net.margaritov.preference.colorpicker.ColorPickerPreference;
+package com.aokp.romcontrol.fragments;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -57,11 +53,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-import com.thinkingbridge.customized.SettingsPreferenceFragment;
-import com.thinkingbridge.customized.R;
-import com.thinkingbridge.customized.CustomizedActivity;
+import com.aokp.romcontrol.AOKPPreferenceFragment;
+import com.aokp.romcontrol.R;
+import com.aokp.romcontrol.ROMControlActivity;
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class Lockscreens extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+public class Lockscreens extends AOKPPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String TAG = "Lockscreens";
     private static final boolean DEBUG = true;

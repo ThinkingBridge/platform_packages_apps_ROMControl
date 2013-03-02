@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.thinkingbridge.customized.fragments;
+package com.aokp.romcontrol.fragments;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -44,14 +44,14 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.thinkingbridge.customized.R;
+import com.aokp.romcontrol.R;
 
 public class IconPicker {
 
     private Activity mParent;
     private Resources mResources;
     private OnIconPickListener mIconListener;
-    private static final String ICON_ACTION = "com.thinkingbridge.customized.ACTION_PICK_ICON";
+    private static final String ICON_ACTION = "com.aokp.romcontrol.ACTION_PICK_ICON";
     public static final String RESOURCE_NAME = "resource_name";
     public static final String PACKAGE_NAME = "package_name";
     public static final int REQUEST_PICK_SYSTEM = 0;

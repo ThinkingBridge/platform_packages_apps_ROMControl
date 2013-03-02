@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.thinkingbridge.customized.fragments;
+package com.aokp.romcontrol.fragments;
 
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
@@ -26,10 +26,10 @@ import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.widget.Toast;
 
-import com.thinkingbridge.customized.R;
-import com.thinkingbridge.customized.SettingsPreferenceFragment;
+import com.aokp.romcontrol.R;
+import com.aokp.romcontrol.AOKPPreferenceFragment;
 
-public class HardwareKeys extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+public class HardwareKeys extends AOKPPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String HARDWARE_KEYS_CATEGORY_BINDINGS = "hardware_keys_bindings";
     private static final String HARDWARE_KEYS_ENABLE_CUSTOM = "hardware_keys_enable_custom";
