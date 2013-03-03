@@ -1,5 +1,5 @@
 
-package com.thinkingbridge.customized.preferences;
+package com.aokp.romcontrol.preferences;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckedTextView;
 import android.widget.ImageView;
 
-import com.thinkingbridge.customized.R;
+import com.aokp.romcontrol.R;
 
 /**
  * The ImageArrayAdapter is the array adapter used for displaying an additional

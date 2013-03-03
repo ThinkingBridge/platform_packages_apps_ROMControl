@@ -1,5 +1,5 @@
 
-package com.thinkingbridge.customized.preferences;
+package com.aokp.romcontrol.preferences;
 
 import android.app.AlertDialog.Builder;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 
-import com.thinkingbridge.customized.R;
+import com.aokp.romcontrol.R;
 
 public class ImageListPreference extends ListPreference {
     private int[] resourceIds = null;
