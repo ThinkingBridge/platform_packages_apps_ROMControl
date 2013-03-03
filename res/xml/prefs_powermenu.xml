@@ -36,8 +36,8 @@
             android:dialogTitle="@string/screenshot_delay_title"
             android:title="@string/screenshot_delay_title"
             android:summary="@string/screenshot_delay_summary"
-            android:entries="@array/screenshot_delay_entries"
-            android:entryValues="@array/screenshot_delay_values"
+            android:entries="@array/pref_screenshot_delay_entries"
+            android:entryValues="@array/pref_screenshot_delay_values"
             android:defaultValue="1000" />
 
     </PreferenceCategory>
@@ -57,8 +57,8 @@
     <ListPreference 
         android:key="power_menu_expanded_desktop"
         android:title="@string/power_menu_expanded_desktop"
-        android:entries="@array/pref_expanded_desktop_entries"
-        android:entryValues="@array/pref_expanded_desktop_values"
+        android:entries="@array/expanded_desktop_entries"
+        android:entryValues="@array/expanded_desktop_values"
         android:persistent="false" />
 
 </PreferenceScreen>

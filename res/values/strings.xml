@@ -26,6 +26,7 @@
     <string name="weather">Weather</string>
     <string name="tools">Tools</string>
     <string name="header_lockscreen">LockScreen</string>
+    <string name="menu_main_activity_change_locale">Blank</string>
 
     <!-- Activity titles defined in AndroidManifest.xml -->
     <string name="title_ui">General User Interface</string>
