@@ -1,5 +1,5 @@
 
-package com.thinkingbridge.customized.fragments;
+package com.aokp.romcontrol.fragments;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -49,14 +49,14 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.thinkingbridge.customized.SettingsPreferenceFragment;
-import com.thinkingbridge.customized.R;
-import com.thinkingbridge.customized.service.CodeReceiver;
-import com.thinkingbridge.customized.util.AbstractAsyncSuCMDProcessor;
-import com.thinkingbridge.customized.util.CMDProcessor;
-import com.thinkingbridge.customized.util.Executable;
-import com.thinkingbridge.customized.util.Helpers;
-import com.thinkingbridge.customized.widgets.AlphaSeekBar;
+import com.aokp.romcontrol.AOKPPreferenceFragment;
+import com.aokp.romcontrol.R;
+import com.aokp.romcontrol.service.CodeReceiver;
+import com.aokp.romcontrol.util.AbstractAsyncSuCMDProcessor;
+import com.aokp.romcontrol.util.CMDProcessor;
+import com.aokp.romcontrol.util.Executable;
+import com.aokp.romcontrol.util.Helpers;
+import com.aokp.romcontrol.widgets.AlphaSeekBar;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -75,7 +75,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 @SuppressWarnings("InstanceVariableMayNotBeInitialized")
-public class UserInterface extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+public class UserInterface extends AOKPPreferenceFragment implements OnPreferenceChangeListener {
     public final String TAG = getClass().getSimpleName();
     private static final boolean DEBUG = false;
 
@@ -194,9 +194,6 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
         mVibrateOnExpand = (CheckBoxPreference) findPreference(PREF_VIBRATE_NOTIF_EXPAND);
         mVibrateOnExpand.setChecked(Settings.System.getBoolean(mContentResolver,
                 Settings.System.VIBRATE_NOTIF_EXPAND, true));
-        if (!hasVibration) {
-            ((PreferenceGroup)findPreference(PREF_NOTIFICATION_VIBRATE)).removePreference(mVibrateOnExpand);
-        }
 
         mHideExtras = (CheckBoxPreference) findPreference(PREF_HIDE_EXTRAS);
         mHideExtras.setChecked(Settings.System.getBoolean(mContentResolver,
@@ -416,7 +413,7 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
                             Settings.System.CUSTOM_CARRIER_LABEL, value);
                     updateCustomLabelTextSummary();
                     Intent i = new Intent();
-                    i.setAction("com.thinkingbridge.customized.LABEL_CHANGED");
+                    i.setAction("com.aokp.romcontrol.LABEL_CHANGED");
                     mContext.sendBroadcast(i);
                 }
             });

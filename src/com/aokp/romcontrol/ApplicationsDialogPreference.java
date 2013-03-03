@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.thinkingbridge.customized;
+package com.aokp.romcontrol;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -41,14 +41,14 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.thinkingbridge.customized.R;
-import com.thinkingbridge.customized.SettingsPreferenceFragment;
+import com.aokp.romcontrol.R;
+import com.aokp.romcontrol.AOKPPreferenceFragment;
 
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ApplicationsDialogPreference extends SettingsPreferenceFragment {
+public class ApplicationsDialogPreference extends AOKPPreferenceFragment {
 
     public PackageManager mPackageManager;
     public List<ResolveInfo> mInstalledApps;

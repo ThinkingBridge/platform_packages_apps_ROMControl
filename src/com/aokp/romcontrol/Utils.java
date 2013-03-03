@@ -14,7 +14,7 @@
  * under the License.
  */
 
-package com.thinkingbridge.customized;
+package com.aokp.romcontrol;
 
 import android.app.ActivityManager;
 import android.content.Context;

@@ -228,6 +228,7 @@
     <string name="toggle_favcontact_summary">Choose your favorite contact</string>
     <string name="toggle_enable_fasttoggle_title">Enable fast toggle</string>
     <string name="toggle_enable_fasttoggle_summary">Overrides default behavior</string>
+    <string name="toggles_display_dialog">Choose which toggles to use</string>
     <string name="toggle_choose_fasttoggle_side_title">Choose fast toggle side</string>
     <string name="toggle_choose_fasttoggle_side_summary">Choose which side the fast toggle area shall be</string>
     <string name="toggle_dialog_arrange_title">Toggle setup</string>

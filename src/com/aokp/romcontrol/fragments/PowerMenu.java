@@ -200,17 +200,6 @@ public class PowerMenu extends AOKPPreferenceFragment implements OnPreferenceCha
         }
     }
     
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mScreenshotDelay) {
-            int screenshotDelay = Integer.valueOf((String) newValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.SCREENSHOT_DELAY, screenshotDelay);
-            return true;
-        }
-        return false;
-    }
-    
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mExpandedDesktopPref) {
             int expandedDesktopValue = Integer.valueOf((String) newValue);
@@ -218,7 +207,13 @@ public class PowerMenu extends AOKPPreferenceFragment implements OnPreferenceCha
                     Settings.System.EXPANDED_DESKTOP_STATE, expandedDesktopValue);
             updateExpandedDesktopSummary(expandedDesktopValue);
             return true;
+        } else if (preference == mScreenshotDelay) {
+            int screenshotDelay = Integer.valueOf((String) newValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.SCREENSHOT_DELAY, screenshotDelay);
+            return true;
         }
+
         return false;
     }
 }

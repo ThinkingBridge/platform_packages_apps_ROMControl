@@ -1,11 +1,11 @@
 
-package com.thinkingbridge.customized;
+package com.aokp.romcontrol;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class MainActivity extends Activity {
+public class AOKPActivity extends Activity {
 
     protected boolean mStartedFromShortcut;
 
