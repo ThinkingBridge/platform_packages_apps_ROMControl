@@ -10,6 +10,7 @@ import android.provider.Settings;
 
 import com.aokp.romcontrol.AOKPPreferenceFragment;
 import com.aokp.romcontrol.R;
+import com.aokp.romcontrol.preferences.ImageListPreference;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
