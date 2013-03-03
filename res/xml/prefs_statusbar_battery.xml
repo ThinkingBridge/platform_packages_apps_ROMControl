@@ -8,7 +8,7 @@
         android:title="@string/battery_icon"
         android:entries="@array/battery_icon_entries"
         android:entryValues="@array/battery_icon_values"
-        thinkingbridge:entryImages="@array/battery_icon_images" />
+        aokp:entryImages="@array/battery_icon_images" />
 
     <PreferenceCategory
         android:key="battery_bar_cat"
