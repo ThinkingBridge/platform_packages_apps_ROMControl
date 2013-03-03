@@ -189,6 +189,7 @@ public class ROMControlActivity extends PreferenceActivity implements ButtonBarH
     @Override
     public void onBuildHeaders(List<Header> target) {
         loadHeadersFromResource(R.xml.preference_headers, target);
+        ArrayList<Header> toRemove = new ArrayList<Header>();
         for (int i=0; i<target.size(); i++) {
             Header header = target.get(i);
             final int deviceKeys = getResources().getInteger(
@@ -197,11 +198,14 @@ public class ROMControlActivity extends PreferenceActivity implements ButtonBarH
                     R.bool.has_hardware_buttons);
             if (header.id == R.id.hardware_keys) {
                 if (deviceKeys == 0 || hasHardwareKeys == false) {
-                    target.remove(i);
+                    toRemove.add(header);
                 } else {
                     target.get(i);
                 }
             }
+        }
+        for (int i=0; i<toRemove.size(); i++) {
+        	target.remove(toRemove.get(i));
         }
         updateHeaderList(target);
         mHeaders = target;
