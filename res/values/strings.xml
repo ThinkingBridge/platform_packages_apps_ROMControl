@@ -59,8 +59,6 @@
     <string name="header_summary_spen">@null</string>
     <string name="header_summary_sound">@null</string>
     <string name="header_summary_lockscreens">@null</string>
-    <string name="lockscreen_target_summary">@null</string>
-    <string name="lock_screen_shortcuts_summary">@null</string>
     <string name="header_lock_clock_summary">@null</string>
     <string name="header_summary_weather">@null</string>
     <string name="header_summary_hardware_keys">@null</string>
@@ -610,7 +608,7 @@
     <string name="lockscreen_weather_type_title">Lockscreen Weather style</string>
     <string name="lockscreen_weather_type_summary">Whether to show graphical or text weather information.</string>
     <string name="lockscreen_calendar_title">Enable</string>
-    <string name="lockscreen_calendar_summary">Show upcoming events from your calendar on the lockscreen.</string>
+    <string name="lockscreen_calendar_summary">Show upcoming event(s) from your calendar on the lockscreen.</string>
     <string name="lockscreen_calendar_sources_title">Calendar sources</string>
     <string name="lockscreen_calendar_sources_summary">Select the calendars you want to see.</string>
     <string name="lockscreen_calendar_dialog">Choose which calendars to use</string>
@@ -959,22 +957,6 @@
     <string name="hardware_keys_action_voice_search">Voice search</string>
     <string name="hardware_keys_action_in_app_search">In-app search</string>
     <string name="hardware_keys_additional_options_title">Additional options</string>
-    
-    <!-- Paranoid Lockscreen -->
-    <string name="icon_picker_type">Select icon type:</string>
-    <string name="icon_default">Default</string>
-    <string name="icon_presets">Presets</string>
-    <string name="icon_custom">Custom</string>
-    <string name="lock_screen_shortcuts_title">Custom targets</string>
-    <string name="lock_screen_shortcuts_reset_message">Reset lock screen shortcuts?</string>
-    <string name="lock_screen_shortcuts_add">Add</string>
-    <string name="lock_screen_shortcuts_reset">Reset</string>
-    <string name="lock_screen_shortcuts_limit">Only 6 shorcuts are allowed!</string>
-
-    <!-- Lock screen shortcuts -->
-    <string name="choose_app">Choose application</string>
-    <string name="dialog_delete_title">Delete</string>
-    <string name="dialog_delete_message">Remove selected item?</string>
     
     <!-- Pie controls -->
     <string name="pie_controls_title">Pie controls</string>

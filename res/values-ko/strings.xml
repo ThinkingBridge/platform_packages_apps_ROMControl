@@ -54,8 +54,6 @@
     <string name="header_summary_led">@null</string>
     <string name="header_summary_sound">@null</string>
     <string name="header_summary_lockscreens">@null</string>
-    <string name="lockscreen_target_summary">@null</string>
-    <string name="lock_screen_shortcuts_summary">@null</string>
     <string name="header_lock_clock_summary">@null</string>
     <string name="header_summary_weather">@null</string>
     <string name="header_summary_hardware_keys">@null</string>
@@ -465,6 +463,7 @@
     <string name="lockscreen_music_cat">음악</string>
     <string name="lockscreen_weather_cat">날씨</string>
     <string name="lockscreen_calendar_cat">일정</string>
+    
     <string name="lockscreen_menu_unlock_title">메뉴 잠금해제</string>
     <string name="lockscreen_menu_unlock_summary">화면 잠금해제하려면 메뉴 키를 사용합니다.</string>
     <string name="lockscreen_auto_rotate_title">잠금화면 회전 허용</string>
@@ -518,48 +517,29 @@
     <string name="circles_lock_halo_alpha_title">후광 설정</string>
     <string name="circles_lock_wave_color_title">웨이브 색상</string>
     <string name="circles_lock_wave_alpha_title">웨이브 설정</string>
-
-    <!-- Lockscreen Shortcuts -->
-    <string name="lockscreen_target_info">대상으로 단축키를 지정하려면 슬라이더를 드래그</string>
-    <string name="lockscreen_target_title">잠금화면 바로가기</string>
-    <string name="lockscreen_target_reset">화면 잠금 단축키 기본값으로 재설정</string>
-    <string name="lockscreen_target_save">잠금 화면 바로 가기 저장</string>
-    <string name="lockscreen_target_reset_title">리셋</string>
-    <string name="lockscreen_target_reset_message">기본값으로 복원 하기겠습니까?</string>
-    <string name="lockscreen_target_empty">비어있음</string>
-    <string name="lockscreen_target_edit_title">편집 단축기 및 아이콘</string>
     
-    <!-- Lockscreen shortcuts strings for IconPicker -->
-    <string name="wifi_save">저장</string>
-    <string name="profile_applist_title">애플리케이션</string>
-    <string name="profile_reset_title">초기화</string>
-    <string name="picker_activities">액티비티</string>
-    <string name="icon_picker_choose_icon_title">아이콘 선택</string>
-    <string name="icon_picker_title">아이콘 원본을 선택</string>
-    <string name="icon_picker_system_icons_title">시스템 아이콘</string>
-    <string name="icon_picker_gallery_title">갤러리</string>
-    <string name="icon_picker_pack_title">아이콘 팩</string>
-    
-    <!-- string for System Icon -->
-    <string name="icon_picker_alarm">알람</string>
-    <string name="icon_picker_browser">브라우져</string>
-    <string name="icon_picker_calendar">달력</string>
-    <string name="icon_picker_camera">카메라</string>
-    <string name="icon_picker_chrome">Chrome</string>
-    <string name="icon_picker_email">이메일</string>
-    <string name="icon_picker_email2">이메일 Holo</string>
-    <string name="icon_picker_facebook">Facebook</string>
-    <string name="icon_picker_gallery">앨범</string>
-    <string name="icon_picker_maps">지도</string>
-    <string name="icon_picker_movie">영화</string>
-    <string name="icon_picker_music">음악</string>
-    <string name="icon_picker_nav_normal">네비게이션</string>
-    <string name="icon_picker_phone">휴대전화</string>
-    <string name="icon_picker_podcast">팟캐스트</string>
-    <string name="icon_picker_rss">Rss</string>
-    <string name="icon_picker_search">검색</string>
-    <string name="icon_picker_sms">메시지</string>
-    <string name="icon_picker_twitter">Twitter</string>
+    <!-- Lockscreen Targets-->
+    <string name="lockscreen_targets_title">잠금화면 타겟</string>
+    <string name="lockscreen_targets_summary">Lockscreen targets summary</string>
+    <string name="lockscreen_target_longpress_text">Longpress status</string>
+    <string name="lockscreen_camera">Camera</string>
+    <string name="lockscreen_unlock">Unlock</string>
+    <string name="save_error">Could not save targets! You must have at least one unlock target!</string>
+    <string name="icon_picker_pack_title">Icon pack</string>
+    <string name="lockscreen_target_empty">Empty</string>
+    <string name="profile_reset_title">Reset</string>
+    <string name="wifi_save">Save</string>
+    <string name="lockscreen_target_info">Drag the unlock icon to targets to assign targets</string>
+    <string name="lockscreen_options_info">Touch text to get summary of each option</string>
+    <string name="lockscreen_target_reset">Lockscreen shortcuts reset to default</string>
+    <string name="lockscreen_target_save">Lockscreen targets saved</string>
+    <string name="lockscreen_target_save_error_title">Error saving targets</string>
+    <string name="lockscreen_target_save_error_msg">You must have at least one target that unlocks the screen!</string>
+    <string name="lockscreen_target_reset_title">Reset</string>
+    <string name="lockscreen_target_reset_message">Delete all user created lockscreen target and restore to default?</string>
+    <string name="lockscreen_target_edit_title">Edit target and icon</string>
+    <string name="lockscreen_target_edit_msg">Select or change the desired application or activity and the associated icon</string>
+    <string name="lockscreen_target_longpress_summary">Enables long press options for lock screen targets</string>
 
     <!-- Share to clipboard -->
     <string name="clipboard_notification">클립보드에 복사</string>
@@ -687,17 +667,6 @@
     <string name="hardware_keys_action_voice_search">음성 검색</string>
     <string name="hardware_keys_action_in_app_search">인앱 검색</string>
     <string name="hardware_keys_additional_options_title">추가 옵션</string>
-    
-    <!-- Paranoid Lockscreen -->
-    <string name="icon_picker_type">아이콘 스타일 선택:</string>
-    <string name="icon_default">기본</string>
-    <string name="icon_presets">프리셋</string>
-    <string name="icon_custom">커스텀</string>
-    <string name="lock_screen_shortcuts_title">잠금화면 타겟</string>
-    <string name="lock_screen_shortcuts_reset_message">잠금화면 바로 가기를 재설정 하시겠습니까?</string>
-    <string name="lock_screen_shortcuts_add">추가</string>
-    <string name="lock_screen_shortcuts_reset">초기화</string>
-    <string name="lock_screen_shortcuts_limit">6개의 바로가기만 허용되어있습니다.!</string>
     
     <!-- Pie controls -->
     <string name="pie_controls_title">파이 컨트롤</string>

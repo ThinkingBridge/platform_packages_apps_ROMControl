@@ -126,12 +126,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".fragments.Shortcuts">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".fragments.HardwareKeys">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
