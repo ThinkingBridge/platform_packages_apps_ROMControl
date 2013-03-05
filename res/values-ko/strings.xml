@@ -717,9 +717,10 @@
     <string name="appshortcut">최근 앱 보기 바로가기</string>
     
     <!-- Screenshot settings -->
-    <string name="screenshot_sound_title">Screenshot sound</string>
-    <string name="screenshot_sound_summary">Plays sound effect when screenshot is taken</string>
-    <string name="screenshot_delay_title">Screenshot delay</string>
-    <string name="screenshot_delay_summary">Delays shot by number of seconds specified</string>
+    <string name="screenshot_options">스크린샷 옵션</string>
+    <string name="screenshot_sound_title">스크린샷 사운드</string>
+    <string name="screenshot_sound_summary">스크린샷을 찍을 때 사운드 재생</string>
+    <string name="screenshot_delay_title">스크린샷 딜레이</string>
+    <string name="screenshot_delay_summary">지정한 시간동안 스크린샷이 딜레이됩니다.</string>
     
 </resources>
