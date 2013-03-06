@@ -26,6 +26,7 @@
     <string name="weather">날씨</string>
     <string name="tools">도구</string>
     <string name="header_lockscreen">잠금화면</string>
+    <string name="menu_main_activity_change_locale">없음</string>
 
     <!-- Activity titles defined in AndroidManifest.xml -->
     <string name="title_ui">일반 유저 인터페이스</string>
@@ -33,7 +34,7 @@
     <string name="title_statusbar_toggles">상태바 토글</string>
     <string name="title_statusbar_battery">상태바 배터리</string>
     <string name="title_navbar">네비게이션 바</string>
-    <string name="title_navring">네비바 링</string>
+    <string name="title_navring">네비게이션 링</string>
     <string name="title_power_menu">전원 메뉴</string>
     <string name="title_led">LED 제어</string>
     <string name="title_lockscreens">잠금화면 옵션</string>
@@ -203,8 +204,8 @@
     <string name="toggles_layout_title">토글 레이아웃</string>
     <string name="toggles_per_row_title">토글 행/열</string>
     <string name="toggles_per_row_summary">토글 행과 열을 설정합니다.</string>
-    <string name="toggles_style_title">Toggles style</string>
-    <string name="toggles_style_summary">Notification (traditional) or tiles</string>
+    <string name="toggles_style_title">토글 스타일</string>
+    <string name="toggles_style_summary">예전 방식의 토글 또는 타일</string>
     <string name="toggles_display_close">닫기</string>
     <string name="toggles_order_title">토글 순서</string>
     <string name="toggles_order_summary">토글의 순서를 표시합니다.</string>
@@ -221,18 +222,19 @@
     <string name="toggle_btn_disabled_color_title">비활성화된 인디케이터 색상</string>
     <string name="toggle_btn_background_title">토글 배경 투명도</string>
     <string name="toggle_text_color_title">토글 텍스트 색상</string>
+    <string name="toggle_favcontact_title">즐겨찾는 주소록</string>
     <string name="toggle_favcontact_summary">즐겨찾기 할 연락처 선택</string>
-    <string name="toggle_enable_fasttoggle_title">빠른 토글 설정</string>
+    <string name="toggle_enable_fasttoggle_title">빠른 토글 활성화</string>
     <string name="toggle_enable_fasttoggle_summary">기본 설정 무시</string>
-    <string name="toggle_choose_fasttoggle_side_title">토글 위치 선정</string>
-    <string name="toggle_choose_fasttoggle_side_summary">토글 설정 위치를 선정합니다.</string>
-    <string name="toggle_dialog_arrange_title">Toggle setup</string>
-    <string name="toggle_dialog_add_toggles">Select toggles to add</string>
-    <string name="toggle_style_tile">Tiles</string>
-    <string name="toggle_style_traditional">Traditional</string>
-    <string name="toggle_swap_handle_side">Drag handle on right</string>
-    <string name="add_toggles">Add toggles</string>
-    <string name="toggle_favcontact_title">즐겨찾기 할 주소록</string>
+    <string name="toggles_display_dialog">사용하는 토글 선택하세요.</string>
+    <string name="toggle_choose_fasttoggle_side_title">빠른 토글 측면을 선택</string>
+    <string name="toggle_choose_fasttoggle_side_summary">Choose which side the fast toggle area shall be</string>
+    <string name="toggle_dialog_arrange_title">토글 설정</string>
+    <string name="toggle_dialog_add_toggles">토글을 선택하세요.</string>
+    <string name="toggle_style_tile">타일</string>
+    <string name="toggle_style_traditional">예전 방식</string>
+    <string name="toggle_swap_handle_side">오른쪽으로 드래그</string>
+    <string name="add_toggles">토글 변경</string>
 
     <!-- Statusbar | Clock -->
     <string name="clock_title_enable">시계 스타일</string>
@@ -316,7 +318,7 @@
 
     <!-- Navigation Bar -->
     <string name="navigation_bar">네비게이션 바</string>
-    <string name="navbar_hide">네비바 숨김 설정</string>
+    <string name="navbar_hide">네비바 숨김 옵션</string>
     <string name="navbar_button_cat">네비게이션 바 버튼</string>
     <string name="title_pref_menu_display">메뉴 위치</string>
     <string name="summary_pref_menu_display">큰 메뉴버튼을 사용중이라면 메뉴버튼을 삭제해주세요.</string>
@@ -543,8 +545,9 @@
     <string name="left">왼쪽</string>
     <string name="both">양쪽</string>
     <string name="default_jb_behavior">기본 JB 동작</string>
-    <string name="always_show_invincible_icons">항상 보이지 않는 아이콘 표시</string>
+    <string name="always_show_invincible_icons">보이지 않는 아이콘 표시</string>
     <string name="always_show">항상표시</string>
+    <string name="default_jb_with_invincible_icons_when_hidden">Default JB with invisible icons when hidden</string>
     <string name="home">홈</string>
     <string name="back">뒤로</string>
     <string name="recents">최근 앱</string>
@@ -555,38 +558,38 @@
     <string name="open_ime_switcher">입력 방법 선택</string>
     <string name="kill_app">앱 종료</string>
     <string name="lastapp">마지막 앱</string>
-    <string name="power">종료</string>
-    <string name="notifications">노플리케이션</string>
-    <string name="recents_gb">최근 앱 (진저 스타일)</string>
-    <string name="custom_app">사용자 앱</string>
-    <string name="menu_power">종료 메뉴</string>
-    <string name="blank">검정색</string>
+    <string name="power">전원</string>
+    <string name="notifications">알림</string>
+    <string name="recents_gb">최근 앱 (GB 스타일)</string>
+    <string name="custom_app">커스텀 앱</string>
+    <string name="menu_power">파워 메뉴</string>
+    <string name="blank">비었음</string>
     <string name="none">없음</string>
     <string name="take_screenshot">화면 캡쳐</string>
     <string name="ring_vib">소리/진동</string>
     <string name="ring_silent">소리/무음</string>
     <string name="ring_vib_silent">소리/진동/무음</string>
-    <string name="screen_off">화면 꺼짐</string>
+    <string name="screen_off">화면 끄기</string>
     <string name="google_now">Google Now</string>
-    <string name="select_application">선택할 앱</string>
-    <string name="one_target">타겟 1</string>
-    <string name="two_targets">타겟 2</string>
-    <string name="three_targets">타겟 3</string>
-    <string name="four_targets">타겟 4</string>
-    <string name="five_targets">타겟 5</string>
-    <string name="size_42_dp_default">42 dp (기본값)</string>
+    <string name="select_application">애플리케이션 선택</string>
+    <string name="one_target">1 타겟</string>
+    <string name="two_targets">2 타겟</string>
+    <string name="three_targets">3 타겟</string>
+    <string name="four_targets">4 타겟</string>
+    <string name="five_targets">5 타겟</string>
+    <string name="size_42_dp_default">42 dp (기본)</string>
     <string name="size_36_dp">36 dp</string>
     <string name="size_30_dp">30 dp</string>
     <string name="size_24_dp">24 dp</string>
-    <string name="size_48_dp_default">48 dp (기본값)</string>
+    <string name="size_48_dp_default">48 dp (기본)</string>
     <string name="size_44_dp">44 dp</string>
     <string name="size_40_dp">40 dp</string>
     <string name="size_42_dp">42 dp</string>
     <string name="statusbar">상단바</string>
-    <string name="top_of_navbar">메뉴 바의 위에</string>
-    <string name="bottom_of_navbar">네비바 맨 아래</string>
-    <string name="regular">일반</string>
-    <string name="center_mirrored">Center-mirrored</string>
+    <string name="top_of_navbar">네비바 위</string>
+    <string name="bottom_of_navbar">네비바 아래</string>
+    <string name="regular">보통</string>
+    <string name="center_mirrored">센터 - 미러</string>
     <string name="size_0_dp">0 dp (off)</string>
     <string name="size_1_dp">1 dp</string>
     <string name="size_2_dp">2 dp</string>
