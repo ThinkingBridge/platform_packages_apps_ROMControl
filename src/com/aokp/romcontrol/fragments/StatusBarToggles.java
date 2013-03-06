@@ -83,13 +83,12 @@ public class StatusBarToggles extends AOKPPreferenceFragment implements
 
         mTogglesPerRow = (ListPreference) findPreference(PREF_TOGGLES_PER_ROW);
         mTogglesPerRow.setOnPreferenceChangeListener(this);
-        mTogglesPerRow.setValue(Settings.System.getInt(getActivity().getContentResolver(),
+        mTogglesPerRow.setValue(Settings.System.getInt(mContentRes,
                 Settings.System.QUICK_TOGGLES_PER_ROW, 3) + "");
 
         mTogglesStyle = (ListPreference) findPreference(PREF_TOGGLES_STYLE);
         mTogglesStyle.setOnPreferenceChangeListener(this);
-        mTogglesStyle.setValue(String.valueOf(Settings.System.getInt(getActivity()
-                .getContentResolver(),
+        mTogglesStyle.setValue(String.valueOf(Settings.System.getInt(mContentRes,
                 Settings.System.TOGGLES_STYLE, 0)));
 
         mLayout = findPreference("toggles");
@@ -101,7 +100,7 @@ public class StatusBarToggles extends AOKPPreferenceFragment implements
 
         mChooseFastToggleSide = (ListPreference) findPreference(PREF_CHOOSE_FASTTOGGLE_SIDE);
         mChooseFastToggleSide.setOnPreferenceChangeListener(this);
-        mChooseFastToggleSide.setValue(Settings.System.getInt(getActivity().getContentResolver(),
+        mChooseFastToggleSide.setValue(Settings.System.getInt(mContentRes,
                 Settings.System.CHOOSE_FASTTOGGLE_SIDE, 1) + "");
         
         mScreenTimeout = (ListPreference) findPreference(PREF_SCREENSHOT_TIMEOUT);
@@ -162,20 +161,19 @@ public class StatusBarToggles extends AOKPPreferenceFragment implements
     	
         if (preference == mTogglesPerRow) {
             int val = Integer.parseInt((String) newValue);
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(mContentRes,
                     Settings.System.QUICK_TOGGLES_PER_ROW, val);
         } else if (preference == mTogglesStyle) {
             int val = Integer.parseInt((String) newValue);
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(mContentRes,
                     Settings.System.TOGGLES_STYLE, val);
             mTogglesStyle.setValue((String) newValue);
             Helpers.restartSystemUI();
         } else if (preference == mFastToggle) {
             boolean val = (Boolean) newValue;
-            Settings.System.putBoolean(getActivity().getContentResolver(),
+            Settings.System.putBoolean(mContentRes,
                     Settings.System.FAST_TOGGLE, val);
-            getActivity().getBaseContext().getContentResolver()
-                    .notifyChange(Settings.System.getUriFor(Settings.System.FAST_TOGGLE), null);
+            mContentRes.notifyChange(Settings.System.getUriFor(Settings.System.FAST_TOGGLE), null);
             return true;
         } else if (preference == mScreenTimeout) {
         	int val = Integer.parseInt((String) newValue);
@@ -184,17 +182,12 @@ public class StatusBarToggles extends AOKPPreferenceFragment implements
         	return true;
         } else if (preference == mChooseFastToggleSide) {
             int val = Integer.parseInt((String) newValue);
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(mContentRes,
                     Settings.System.CHOOSE_FASTTOGGLE_SIDE, val);
-            getActivity()
-                    .getBaseContext()
-                    .getContentResolver()
-                    .notifyChange(
+            mContentRes.notifyChange(
                             Settings.System.getUriFor(Settings.System.CHOOSE_FASTTOGGLE_SIDE), null);
-            mChooseFastToggleSide.setValue(Settings.System.getInt(getActivity()
-                    .getContentResolver(),
-                    Settings.System.CHOOSE_FASTTOGGLE_SIDE, 1)
-                    + "");
+            mChooseFastToggleSide.setValue(Settings.System.getInt(mContentRes,
+                    Settings.System.CHOOSE_FASTTOGGLE_SIDE, 1) + "");
         }
         return true;
     }
@@ -233,7 +226,7 @@ public class StatusBarToggles extends AOKPPreferenceFragment implements
             }
             if (!anyChecked) {
                 // no toggles are checked, wipe the setting to be sure
-                Settings.System.putString(getContentResolver(), Settings.System.QUICK_TOGGLES, "");
+                Settings.System.putString(mContentRes, Settings.System.QUICK_TOGGLES, "");
             }
 
             builder.setTitle(R.string.toggles_display_dialog);
@@ -298,7 +291,7 @@ public class StatusBarToggles extends AOKPPreferenceFragment implements
                         if (cursor.moveToFirst()) {
                             String lookup_key = cursor.getString(cursor
                                     .getColumnIndex(ContactsContract.Contacts.LOOKUP_KEY));
-                            Settings.System.putString(getActivity().getContentResolver(),
+                            Settings.System.putString(mContentRes,
                                     Settings.System.QUICK_TOGGLE_FAV_CONTACT, lookup_key);
                         }
                     } finally {
