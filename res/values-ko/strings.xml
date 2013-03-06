@@ -136,7 +136,7 @@
     <string name="tablet_ui">강제 태블릿UI</string>
     <string name="tablet_ui_summary">태블릿UI로 전환됩니다. (다시부팅 필요)</string>
     <string name="hide_extras">부가 기능 숨김</string>
-    <string name="hide_extras_summary">Hide some systembar stuff i.e. the compat. mode button(시스템 UI 재시작)</string>
+    <string name="hide_extras_summary">일부 시스템바 항목을 숨깁니다.컴팩트 모드 적용시에만 적용(시스템 UI 재시작)</string>
     <string name="bootanimation_preview">부팅애니메이션 미리보기</string>
     <string name="apply">적용</string>
     <string name="clear_custom_bootanimation">부트애니메이션 삭제</string>
@@ -228,7 +228,7 @@
     <string name="toggle_enable_fasttoggle_summary">기본 설정 무시</string>
     <string name="toggles_display_dialog">사용하는 토글 선택하세요.</string>
     <string name="toggle_choose_fasttoggle_side_title">빠른 토글 측면을 선택</string>
-    <string name="toggle_choose_fasttoggle_side_summary">Choose which side the fast toggle area shall be</string>
+    <string name="toggle_choose_fasttoggle_side_summary">빠른 토글 영역을 선택합니다.</string>
     <string name="toggle_dialog_arrange_title">토글 설정</string>
     <string name="toggle_dialog_add_toggles">토글을 선택하세요.</string>
     <string name="toggle_style_tile">타일</string>
@@ -387,25 +387,25 @@
     <string name="summary_navbar_timeout">숨긴 네비바 시간 제한 설정</string>
 
     <!-- Nav Ring Targets -->
-    <string name="navbar_ring_cat">Navigation Ring Targets</string>
-    <string name="navbar_ring">Custom Ring Targets</string>
-    <string name="navring_enable_long">Enable Longpress for navigation ring</string>
-    <string name="navring_target_save">Navigation rings saved</string>
-    <string name="navring_target_reset_message">Do you want to reset the navigation ring?</string>
-    <string name="navring_target_reset">Navigation ring targets reset.</string>
-    <string name="choose_action_title">Choose action</string>
-    <string name="choose_action_short_title">Choose short action</string>
-    <string name="choose_action_long_title">Choose long action</string>
+    <string name="navbar_ring_cat">네비바링 타겟</string>
+    <string name="navbar_ring">사용자링 타겟</string>
+    <string name="navring_enable_long">네비바링 길게 눌러서 사용</string>
+    <string name="navring_target_save">네비바링은 저장</string>
+    <string name="navring_target_reset_message">당신은 네비바링을 재설정 하시겠습니까?</string>
+    <string name="navring_target_reset">네비바링 타겟 재설정.</string>
+    <string name="choose_action_title">작업 선택</string>
+    <string name="choose_action_short_title">짧게 눌렀을때 작업 선택</string>
+    <string name="choose_action_long_title">길게 눌렀을때 작업 선택</string>
     <string name="action_long_save"> set as long action</string>
-    <string name="title_navring_amount">Number of navigation ring targets</string>
-    <string name="summary_navring_amount">Choose number of targets in the navigation ring</string>
-    <string name="interface_navring_settings_title">Navigation Ring</string>
+    <string name="title_navring_amount">네비바링 타겟 수</string>
+    <string name="summary_navring_amount">네비바링 타겟의 갯수를 설정합니다</string>
+    <string name="interface_navring_settings_title">네비게이션바 링</string>
     <string name="interface_navring_settings_summary">@null</string>
-    <string name="navring_target_info">Drag your finger to targets to assign actions</string>
-    <string name="navring_short">Short action</string>
-    <string name="navring_long">Long action</string>
-    <string name="navring_icon">Custom icon</string>
-    <string name="navring_target_amount_text">Current number of targets</string>
+    <string name="navring_target_info">작업을 지정하려면 목표에 손가락을 드래그</string>
+    <string name="navring_short">짧게 눌렀을때 작업</string>
+    <string name="navring_long">길게 눌렀을때 작업</string>
+    <string name="navring_icon">사용자 아이콘 선택</string>
+    <string name="navring_target_amount_text">대상의 현재 갯수</string>
     <string name="navring_target_longpress_text">Longpress status</string>
 
     <!-- Sound -->
