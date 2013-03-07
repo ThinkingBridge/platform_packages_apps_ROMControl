@@ -1069,5 +1069,19 @@
         <item>1</item>
         <item>2</item>
     </string-array>
+    
+    <!-- Screenshot Timeout (Toggle) -->
+    <string-array name="toggle_screenshot_timeout_entries">
+        <item>@string/timeout_fast</item>
+        <item>@string/timeout_normal</item>
+        <item>@string/timeout_slow</item>
+        <item>@string/timeout_eslow</item>
+    </string-array>
+    <string-array name="toggle_screenshot_timeout_values" translatable="false">
+        <item>18000</item>
+        <item>25000</item>
+        <item>30000</item>
+        <item>35000</item>
+    </string-array>
 
 </resources>

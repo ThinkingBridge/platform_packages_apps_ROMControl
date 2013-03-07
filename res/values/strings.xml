@@ -957,4 +957,12 @@
     <string name="screenshot_delay_title">Screenshot delay</string>
     <string name="screenshot_delay_summary">Delays shot by number of seconds specified</string>
     
+    <!-- ScreenShot Timeout -->
+    <string name="toggle_screenshot_timeout_title">Screenshot Timeout</string>
+    <string name="toggle_screenshot_timeout_summary">Choose how fast the toggle will snap your screen after collapsing the notification.(Recommended - Slow)</string>
+    <string name="timeout_fast">Fast</string>
+    <string name="timeout_normal">Normal</string>
+    <string name="timeout_slow">Slow</string>
+    <string name="timeout_eslow">Extremely Slow</string>
+    
 </resources>
