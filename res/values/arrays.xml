@@ -29,17 +29,69 @@
         <item>1</item>
         <item>0</item>
     </string-array>
-    <string-array name="clock_weekday_entries" translatable="false">
-        <item>@string/dont_show</item>
-        <item>@string/small_weekday</item>
-        <item>@string/regular_weekday</item>
+    <string-array name="clock_date_display_entries">
+        <item>@string/dont_show_default</item>
+        <item>@string/small_date</item>
+        <item>@string/regular_date</item>
     </string-array>
-    <string-array name="clock_weekday_values" translatable="false">
+    <string-array name="clock_date_display_values" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
     </string-array>
+    <string-array name="clock_date_style_entries">
+        <item>@string/normal</item>
+        <item>@string/lowercase</item>
+        <item>@string/uppercase</item>
+    </string-array>
 
+    <string-array name="clock_date_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="clock_date_format_entries">
+        <item>dd/MM/yy</item>
+        <item>MM/dd/yy</item>
+        <item>yyyy-MM-dd</item>
+        <item>yyyy-dd-MM</item>
+        <item>dd-MM-yyyy</item>
+        <item>MM-dd-yyyy</item>
+        <item>MMM dd</item>
+        <item>MMM dd, yyyy</item>
+        <item>MMMM dd, yyyy</item>
+        <item>EEE</item>
+        <item>EEE dd</item>
+        <item>EEE dd/MM</item>
+        <item>EEE MM/dd</item>
+        <item>EEE dd MMM</item>
+        <item>EEE MMM dd</item>
+        <item>EEE MMMM dd</item>
+        <item>EEEE dd/MM</item>
+        <item>EEEE MM/dd</item>
+        <item>Custom java format</item>
+    </string-array>
+    <string-array name="clock_date_format_values">
+        <item>dd/MM/yy</item>
+        <item>MM/dd/yy</item>
+        <item>yyyy-MM-dd</item>
+        <item>yyyy-dd-MM</item>
+        <item>dd-MM-yyyy</item>
+        <item>MM-dd-yyyy</item>
+        <item>MMM dd</item>
+        <item>MMM dd, yyyy</item>
+        <item>MMMM dd, yyyy</item>
+        <item>EEE</item>
+        <item>EEE dd</item>
+        <item>EEE dd/MM</item>
+        <item>EEE MM/dd</item>
+        <item>EEE dd MMM</item>
+        <item>EEE MMM dd</item>
+        <item>EEE MMMM dd</item>
+        <item>EEEE dd/MM</item>
+        <item>EEEE MM/dd</item>
+        <item>@string/custom_java_format</item>
+    </string-array>
     <!-- toggle style -->
     <string-array name="toggle_style_entries" translatable="false">
         <item>@string/icon_only</item>
