@@ -11,12 +11,12 @@ import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 
-import com.aokp.romcontrol.AOKPPreferenceFragment;
 import com.aokp.romcontrol.R;
 import com.aokp.romcontrol.R.xml;
+import com.aokp.romcontrol.AOKPPreferenceFragment;
 
 public class PowerMenu extends AOKPPreferenceFragment implements OnPreferenceChangeListener {
-
+	
     //private static final String PREF_POWER_SAVER = "show_power_saver";
     //private static final String PREF_SCREENSHOT = "show_screenshot";
     //private static final String PREF_TORCH_TOGGLE = "show_torch_toggle";
@@ -180,6 +180,23 @@ public class PowerMenu extends AOKPPreferenceFragment implements OnPreferenceCha
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
+    
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mExpandedDesktopPref) {
+            int expandedDesktopValue = Integer.valueOf((String) newValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.EXPANDED_DESKTOP_STYLE, expandedDesktopValue);
+            updateExpandedDesktopSummary(expandedDesktopValue);
+            return true;
+        } else if (preference == mScreenshotDelay) {
+            int screenshotDelay = Integer.valueOf((String) newValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.SCREENSHOT_DELAY, screenshotDelay);
+            return true;
+        }
+
+        return false;
+    }
 
     private void updateExpandedDesktopSummary(int value) {
         Resources res = getResources();
@@ -198,22 +215,5 @@ public class PowerMenu extends AOKPPreferenceFragment implements OnPreferenceCha
                     Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 1);
             mExpandedDesktopPref.setSummary(res.getString(R.string.expanded_desktop_no_status_bar));
         }
-    }
-    
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mExpandedDesktopPref) {
-            int expandedDesktopValue = Integer.valueOf((String) newValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.EXPANDED_DESKTOP_STYLE, expandedDesktopValue);
-            updateExpandedDesktopSummary(expandedDesktopValue);
-            return true;
-        } else if (preference == mScreenshotDelay) {
-            int screenshotDelay = Integer.valueOf((String) newValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.SCREENSHOT_DELAY, screenshotDelay);
-            return true;
-        }
-
-        return false;
     }
 }
