@@ -50,10 +50,10 @@ public class StatusBarToggles extends AOKPPreferenceFragment implements
     Preference mLayout;
     ListPreference mTogglesPerRow;
     ListPreference mTogglesStyle;
-    Preference mFavContact;
-    CheckBoxPreference mFastToggle;
     ListPreference mChooseFastToggleSide;
     ListPreference mScreenTimeout;
+    Preference mFavContact;
+    CheckBoxPreference mFastToggle;
 
     BroadcastReceiver mReceiver;
     ArrayList<String> mToggles;
@@ -99,13 +99,13 @@ public class StatusBarToggles extends AOKPPreferenceFragment implements
         mFastToggle = (CheckBoxPreference) findPreference(PREF_ENABLE_FASTTOGGLE);
         mFastToggle.setOnPreferenceChangeListener(this);
 
-        mScreenTimeout = (ListPreference) findPreference(PREF_SCREENSHOT_TIMEOUT);
-        mScreenTimeout.setOnPreferenceChangeListener(this);
-
         mChooseFastToggleSide = (ListPreference) findPreference(PREF_CHOOSE_FASTTOGGLE_SIDE);
         mChooseFastToggleSide.setOnPreferenceChangeListener(this);
         mChooseFastToggleSide.setValue(Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.CHOOSE_FASTTOGGLE_SIDE, 1) + "");
+        
+        mScreenTimeout = (ListPreference) findPreference(PREF_SCREENSHOT_TIMEOUT);
+        mScreenTimeout.setOnPreferenceChangeListener(this);
 
         if (isSW600DPScreen(mContext) || isTablet(mContext)) {
             getPreferenceScreen().removePreference(mFastToggle);
@@ -158,6 +158,8 @@ public class StatusBarToggles extends AOKPPreferenceFragment implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+    	boolean result = false;
+    	
         if (preference == mTogglesPerRow) {
             int val = Integer.parseInt((String) newValue);
             Settings.System.putInt(getActivity().getContentResolver(),
@@ -168,11 +170,6 @@ public class StatusBarToggles extends AOKPPreferenceFragment implements
                     Settings.System.TOGGLES_STYLE, val);
             mTogglesStyle.setValue((String) newValue);
             Helpers.restartSystemUI();
-        } else if (preference == mScreenTimeout) {
-        	int val = Integer.parseInt((String) newValue);
-        	Settings.System.putInt(getActivity().getContentResolver(),
-        			Settings.System.SCREENSHOT_TIMEOUT, val);
-        	return true;
         } else if (preference == mFastToggle) {
             boolean val = (Boolean) newValue;
             Settings.System.putBoolean(getActivity().getContentResolver(),
@@ -180,6 +177,11 @@ public class StatusBarToggles extends AOKPPreferenceFragment implements
             getActivity().getBaseContext().getContentResolver()
                     .notifyChange(Settings.System.getUriFor(Settings.System.FAST_TOGGLE), null);
             return true;
+        } else if (preference == mScreenTimeout) {
+        	int val = Integer.parseInt((String) newValue);
+        	Settings.System.putInt(getActivity().getContentResolver(),
+        			Settings.System.SCREENSHOT_TIMEOUT, val);
+        	return true;
         } else if (preference == mChooseFastToggleSide) {
             int val = Integer.parseInt((String) newValue);
             Settings.System.putInt(getActivity().getContentResolver(),
