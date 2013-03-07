@@ -24,6 +24,13 @@
         android:key="toggle_fav_contact"
         android:summary="@string/toggle_favcontact_summary"
         android:title="@string/toggle_favcontact_title" />
+    
+    <ListPreference
+        android:key="toggle_screenshot_timeout"
+        android:title="@string/toggle_screenshot_timeout_title"
+        android:summary="@string/toggle_screenshot_timeout_summary"
+        android:entries="@array/toggle_screenshot_timeout_entries"
+        android:entryValues="@array/toggle_screenshot_timeout_values" />
 
     <CheckBoxPreference
         android:key="enable_fast_toggle"
