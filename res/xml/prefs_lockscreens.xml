@@ -15,6 +15,10 @@
     <PreferenceCategory
         android:key="layout"
         android:title="@string/lockscreen_layout_cat">
+        
+        <CheckBoxPreference
+            android:key="pref_lockscreen_transparent"
+            android:title="@string/pref_lockscreen_transparent"/>
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="lockscreen_text_color"

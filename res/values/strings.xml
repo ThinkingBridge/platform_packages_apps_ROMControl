@@ -965,4 +965,6 @@
     <string name="timeout_slow">Slow</string>
     <string name="timeout_eslow">Extremely Slow</string>
     
+    <!-- LockScreen Layout -->
+    <string name="pref_lockscreen_transparent">Enable transparent lockscreen</string>
 </resources>
