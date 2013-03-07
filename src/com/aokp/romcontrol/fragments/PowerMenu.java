@@ -29,6 +29,7 @@ public class PowerMenu extends AOKPPreferenceFragment implements OnPreferenceCha
     private static final String KEY_SILENT = "power_menu_silent";
     private static final String PREF_SCREENSHOT_SOUND = "pref_screenshot_sound";
     private static final String PREF_SCREENSHOT_DELAY = "pref_screenshot_delay";
+    private static final String PIE_RESTART = "pie_restart_launcher";
 
     //CheckBoxPreference mShowPowerSaver;
     //CheckBoxPreference mShowScreenShot;
@@ -42,6 +43,7 @@ public class PowerMenu extends AOKPPreferenceFragment implements OnPreferenceCha
     CheckBoxPreference mScreenshotSound;
     ListPreference mExpandedDesktopPref;
     ListPreference mScreenshotDelay;
+    private CheckBoxPreference mPieRestart;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -112,12 +114,17 @@ public class PowerMenu extends AOKPPreferenceFragment implements OnPreferenceCha
         mScreenshotSound = (CheckBoxPreference) findPreference(PREF_SCREENSHOT_SOUND);
         mScreenshotSound.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.SCREENSHOT_SOUND, 1) == 1));
+        
+        mPieRestart = (CheckBoxPreference) prefSet.findPreference(PIE_RESTART);
+        mPieRestart.setChecked(Settings.System.getInt(mContext.getContentResolver(),
+        		Settings.System.EXPANDED_DESKTOP_RESTART_LAUNCHER, 1) == 1);
 
         mScreenshotDelay = (ListPreference) findPreference(PREF_SCREENSHOT_DELAY);
         int screenshotDelay = Settings.System.getInt(getContentResolver(),
                 Settings.System.SCREENSHOT_DELAY, 1000);
         mScreenshotDelay.setValue(String.valueOf(screenshotDelay));
         mScreenshotDelay.setOnPreferenceChangeListener(this);
+        
     }
 
     @Override
@@ -176,6 +183,11 @@ public class PowerMenu extends AOKPPreferenceFragment implements OnPreferenceCha
         	Settings.System.putInt(getContentResolver(),
         			Settings.System.SCREENSHOT_SOUND, value ? 1 : 0);
         	return true;
+        } else if (preference == mPieRestart) {
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.EXPANDED_DESKTOP_RESTART_LAUNCHER, 
+                    ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
+            return true;
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);

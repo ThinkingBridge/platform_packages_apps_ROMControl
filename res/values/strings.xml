@@ -911,6 +911,10 @@
     <string name="pie_size_default">@string/pie_mode_default</string>
     <string name="pie_size_large">Large</string>
     <string name="pie_size_gigantic">Gigantic</string>
+    <string name="pie_restart_launcher_title">Restart Launcher</string>
+    <string name="pie_restart_launcher_summary">Changing screensize can have adverse effects. This option allows your launcher to regain sanity, the cost is a slight blackout (recommended)</string>
+
+    <!-- Pie Color Settings -->
     <string name="pie_color_title">Pie color settings</string>
     <string name="pie_color_style_title">Pie color style</string>
     <string name="pie_background_title">Background color</string>
