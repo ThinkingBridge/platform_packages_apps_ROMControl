@@ -216,6 +216,7 @@
         <item>@string/icon_xoom</item>
         <item>@string/cm_circle_wo_percent</item>
         <item>@string/cm_circle_with_percent</item>
+        <item>@string/cm_circle_dotted</item>
         <item>@string/dont_show</item>
     </string-array>
     
@@ -229,6 +230,7 @@
         <item>6</item>
         <item>7</item>
         <item>8</item>
+        <item>9</item>
     </string-array>
     
     <array name="battery_icon_images">
@@ -240,6 +242,7 @@
         <item>@drawable/battery_xoom_mod</item>
         <item>@drawable/battery_cm_circle_wo_percent</item>
         <item>@drawable/battery_cm_circle_percent</item>
+        <item>@drawable/battery_cm_circle_dotted</item>
         <item>@drawable/battery_hide</item>
     </array>
 

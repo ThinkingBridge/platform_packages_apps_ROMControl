@@ -126,6 +126,7 @@
         <item>Xoom 원형아이콘</item>
         <item>CM 원형아이콘</item>
         <item>CM 퍼센트 원형아이콘</item>
+        <item>CM 점이찍힌 원형아이콘</item>
         <item>숨김</item>
     </string-array>
     <string-array name="battery_icon_values">
@@ -138,6 +139,7 @@
         <item>6</item>
         <item>7</item>
         <item>8</item>
+        <item>9</item>
     </string-array>
     <string-array name="pref_navigation_menu_entries">
         <item>오른쪽</item>

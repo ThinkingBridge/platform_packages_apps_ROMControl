@@ -708,6 +708,7 @@
     <string name="icon_xoom">Xoom Circle mod</string>
     <string name="cm_circle_wo_percent">CM Circle</string>
     <string name="cm_circle_with_percent">CM Circle with percentage</string>
+    <string name="cm_circle_dotted">Dotted Circle with percentage</string>
 
     <!-- NavBar -->
     <string name="right">Right</string>
