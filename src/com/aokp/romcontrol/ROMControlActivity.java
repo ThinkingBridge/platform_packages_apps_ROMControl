@@ -199,8 +199,6 @@ public class ROMControlActivity extends PreferenceActivity implements ButtonBarH
             if (header.id == R.id.hardware_keys) {
                 if (deviceKeys == 0 || hasHardwareKeys == false) {
                     toRemove.add(header);
-                } else {
-                    target.get(i);
                 }
             }
         }
