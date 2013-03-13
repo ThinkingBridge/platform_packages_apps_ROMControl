@@ -30,6 +30,26 @@
             android:title="@string/lockscreen_battery_title"
             android:summary="@string/lockscreen_battery_summary" />
 
+        <CheckBoxPreference
+            android:key="lockscreen_hide_initial_page_hints"
+            android:title="@string/lockscreen_hide_initial_page_hints_title"
+            android:summary="@string/lockscreen_hide_initial_page_hints_summary" />
+
+        <CheckBoxPreference
+            android:key="lockscreen_minimize_challenge"
+            android:title="@string/lockscreen_minimize_challenge_title"
+            android:summary="@string/lockscreen_minimize_challenge_summary" />
+
+        <CheckBoxPreference
+            android:key="lockscreen_longpress_challenge"
+            android:title="@string/lockscreen_longpress_challenge_title"
+            android:summary="@string/lockscreen_longpress_challenge_summary" />
+
+        <CheckBoxPreference
+            android:key="lockscreen_use_widget_container_carousel"
+            android:title="@string/lockscreen_use_widget_container_carousel_title"
+            android:summary="@string/lockscreen_use_widget_container_carousel_summary" />
+
     </PreferenceCategory>
     <PreferenceCategory
         android:key="music"
@@ -47,7 +67,8 @@
             android:summary="@string/volume_music_controls_summary" />
 
     </PreferenceCategory>
-    <!-- <PreferenceCategory
+
+    <PreferenceCategory
             android:key="misc"
             android:title="@string/misc_short">
 
@@ -56,7 +77,7 @@
                 android:title="@string/lockscreen_auto_rotate_title"
                 android:summary="@string/lockscreen_auto_rotate_summary" />
 
-    </PreferenceCategory> -->
+    </PreferenceCategory>
 
     <PreferenceCategory
             android:key="lock_widgets"
