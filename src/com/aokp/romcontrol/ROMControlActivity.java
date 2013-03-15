@@ -193,12 +193,8 @@ public class ROMControlActivity extends PreferenceActivity implements ButtonBarH
         ArrayList<Header> toRemove = new ArrayList<Header>();
         for (int i=0; i<target.size(); i++) {
             Header header = target.get(i);
-            final int deviceKeys = getResources().getInteger(
-                    com.android.internal.R.integer.config_deviceHardwareKeys);
-            final boolean hasHardwareKeys = getResources().getBoolean(
-                    R.bool.has_hardware_buttons);
-            if (header.id == R.id.hardware_keys) {
-                if (deviceKeys == 0 || hasHardwareKeys == false) {
+            if (header.id == R.id.spen) {
+                if (!hasSPen) {
                     toRemove.add(header);
                 }
             }
