@@ -127,6 +127,13 @@
     <string name="ime_switcher_summary">키보드를 사용할때 상단바에 표시 (다시 부팅이필요)</string>
     <string name="wakeup_when_plugged_unplugged_title">충전 연결및 분리시 화면 설정</string>
     <string name="wakeup_when_plugged_unplugged_summary">충전기 연결및 분리시 화면 켜짐 설정</string>
+    <string name="system_power_crt_screen_off_title">CRT 화면 끄기</string>
+    <string name="system_power_crt_screen_off_summary">화면을 끄면 TV 꺼지듯이 설정 됩니다</string>
+    <string name="system_power_crt_mode_title">CRT 애니메이션 모드</string>
+    <string name="system_power_crt_mode_dialog_title">CRT 애니메이션 종류</string>
+    <string name="system_power_crt_mode_horizontal">Portrait horizontal</string>
+    <string name="system_power_crt_mode_vertical">Portrait vertical</string>
+    <string name="system_power_crt_mode_both">Orientation dependent</string>
     <string name="lefty_mode_title">왼손 모드</string>
     <string name="lefty_mode_summary">네비바 위치 전환(시스템 UI 재시작)</string>
     <string name="rotate_180_title">180° 회전 활성화</string>
@@ -333,7 +340,6 @@
     <string name="navbar_action_home">홈</string>
     <string name="navbar_action_back">뒤로</string>
     <string name="navbar_action_recents">최근 앱 보기</string>
-    <string name="navbar_action_recents_gb">최근 앱 보기 (진저 스타일)</string>
     <string name="navbar_action_search">검색</string>
     <string name="navbar_action_screenshot">캡쳐</string>
     <string name="navbar_action_menu">메뉴</string>
@@ -406,7 +412,7 @@
     <string name="navring_long">길게 눌렀을때 작업</string>
     <string name="navring_icon">사용자 아이콘 선택</string>
     <string name="navring_target_amount_text">대상의 현재 갯수</string>
-    <string name="navring_target_longpress_text">Longpress status</string>
+    <string name="navring_target_longpress_text">길게 눌렀을때 작업 활성화</string>
 
     <!-- Sound -->
     <string name="less_notification_sounds_title">알림소리 주기</string>
@@ -450,6 +456,14 @@
     <string name="lockscreen_unlimited_widgets_summary">*경고* 너무 많은 위젯을 추가하면 잠금화면 지연되는 문제가 발생할 수 있습니다</string>
     <string name="lockscreen_battery_title">잠금화면 배터리 퍼센트</string>
     <string name="lockscreen_battery_summary">잠금화면에 항상 배터리 퍼센트가 보이게 설정</string>
+    <string name="lockscreen_hide_initial_page_hints_title">초기 잠금화면 페이지 힌트를 숨기기</string>
+    <string name="lockscreen_hide_initial_page_hints_summary">화면이 켜져있을 때 왼쪽과 오른쪽 위젯에 대한 표시된 여부를 설정합니다.</string>
+    <string name="lockscreen_minimize_challenge_title">잠금화면 최소화</string>
+    <string name="lockscreen_minimize_challenge_summary">잠금화면 화면이 켜져있을 때 (기본잠금, 패턴, PIN)이 최소화 여부를 설정합니다.</string>
+    <string name="lockscreen_longpress_challenge_title">자물쇠 아이콘을 길게 눌러 잠금해제</string>
+    <string name="lockscreen_longpress_challenge_summary">잠금화면 위젯설정에서 자물쇠 아이콘을 길게 눌러 잠금을 해제 할 수 있습니다.</string>
+    <string name="lockscreen_use_widget_container_carousel_title">잠금화면 위젯 전환시 애니메이션</string>
+    <string name="lockscreen_use_widget_container_carousel_summary">잠금화면 위젯 사이를 전환 할 때 애니메이션을 사용합니다.</string>
     <string name="volume_rocker_wake_title">볼륨키로 깨어나기</string>
     <string name="volume_rocker_wake_summary">화면이 꺼진 상태에서 볼륨키를 눌러서 화면을 켤수 있습니다.</string>
     <string name="volume_music_controls_title">볼륨키로 음악 컨트롤</string>
@@ -715,6 +729,8 @@
     <string name="pie_search_summary">파이를 통해 Google Now 를 실행</string>
     <string name="pie_lastapp_title">최근 앱 보기</string>
     <string name="pie_lastapp_summary">파이에서 최근 앱 보기 사용</string>
+    <string name="pie_restart_launcher_title">런처 재시작</string>
+    <string name="pie_restart_launcher_summary">screensize를 변경하면 악영향을 미칠 수 있습니다. 이 옵션을 선택하면 시작시 안정화 할 수 있도록 약간의 딜레이가 일어날수 있습니다</string>
     <string name="all_color">사용자 설정 색상</string>
     <string name="stock_color">기본 색상</string>
     <string name="appshortcut">최근 앱 보기 바로가기</string>
@@ -725,5 +741,49 @@
     <string name="screenshot_sound_summary">스크린샷을 찍을 때 사운드 재생</string>
     <string name="screenshot_delay_title">스크린샷 딜레이</string>
     <string name="screenshot_delay_summary">지정한 시간동안 스크린샷이 딜레이됩니다.</string>
+
+    <!-- ScreenShot Timeout -->
+    <string name="toggle_screenshot_timeout_title">스크린 샷 시간 제한</string>
+    <string name="toggle_screenshot_timeout_summary">스크린 샷 토글 캡쳐 속도를 선택합니다.(권장 설정 - 느린)</string>
+    <string name="timeout_fast">빠르게</string>
+    <string name="timeout_normal">보통</string>
+    <string name="timeout_slow">느린</string>
+    <string name="timeout_eslow">매우 느린 </string>
+
+    <!-- LockScreen Layout -->
+    <string name="pref_lockscreen_transparent">Enable transparent lockscreen</string>
+
+    <!-- Clock | Date -->
+    <string name="clock_date_display">Date</string>
+    <string name="clock_date_display_summary">Display custom date before the clock</string>
+    <string name="clock_date_style">Date style</string>
+    <string name="clock_date_format">Date format</string>
+    <string name="clock_date_string_edittext_title">Must be in DateFormat eg. MM/dd/yy</string>
+    <string name="clock_date_string_edittext_summary">Enter string</string>
+    <string name="dont_show_default">Don\'t show (default)</string>
+    <string name="normal">Normal</string>
+    <string name="small_date">Small date</string>
+    <string name="regular_date">Regular date</string>
+    <string name="lowercase">Lowercase</string>
+    <string name="uppercase">Uppercase</string>
+    <string name="custom_java_format">Custom Java Format</string>
+
+    <!-- LockScreen Layout -->
+    <string name="pref_lockscreen_transparent">투명 잠금화 사용</string>
+
+    <!-- Clock | Date -->
+    <string name="clock_date_display">날짜</string>
+    <string name="clock_date_display_summary">사용자 정의 날짜를 표시</string>
+    <string name="clock_date_style">날짜 스타일</string>
+    <string name="clock_date_format">날짜 형식</string>
+    <string name="clock_date_string_edittext_title">데이터 형식 예에 작성하여야 합니다. MM / dd / yy</string>
+    <string name="clock_date_string_edittext_summary">문자열 입력</string>
+    <string name="dont_show_default">표시하지 않음 (기본값)</string>
+    <string name="normal">보통</string>
+    <string name="small_date">작은 글씨 날짜 </string>
+    <string name="regular_date">큰 글씨 날짜</string>
+    <string name="lowercase">소문자</string>
+    <string name="uppercase">대문자</string>
+    <string name="custom_java_format">사용자 지정 형식</string>
     
 </resources>
