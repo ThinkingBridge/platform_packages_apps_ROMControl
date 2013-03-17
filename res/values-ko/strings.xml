@@ -241,7 +241,7 @@
     <string name="toggle_style_tile">타일</string>
     <string name="toggle_style_traditional">예전 방식</string>
     <string name="toggle_swap_handle_side">오른쪽으로 드래그</string>
-    <string name="add_toggles">토글 변경</string>
+    <string name="add_toggles">토글 추가</string>
 
     <!-- Statusbar | Clock -->
     <string name="clock_title_enable">시계 스타일</string>
