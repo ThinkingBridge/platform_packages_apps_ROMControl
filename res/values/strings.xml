@@ -10,7 +10,7 @@
     <string name="save">Save</string>
     <string name="header_statusbar">Statusbar</string>
     <string name="header_navbar">Navigation Bar</string>
-    <string name="toggles_layout">Toggles</string>
+    <string name="toggles_layout">Quick Toggles</string>
     <string name="general_ui">General UI</string>
     <string name="clock">Clock</string>
     <string name="battery">Battery</string>
@@ -32,7 +32,7 @@
     <!-- Activity titles defined in AndroidManifest.xml -->
     <string name="title_ui">General User Interface</string>
     <string name="title_statusbar_clock">Statusbar Clock</string>
-    <string name="title_statusbar_toggles">Statusbar Toggles</string>
+    <string name="title_statusbar_toggles">Quick Toggles</string>
     <string name="title_statusbar_battery">Statusbar Battery</string>
     <string name="title_navbar">Navigation Bar</string>
     <string name="title_navring">Navigation Ring</string>

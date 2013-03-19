@@ -10,7 +10,7 @@
     <string name="save">저장</string>
     <string name="header_statusbar">상단바</string>
     <string name="header_navbar">네비게이션 바</string>
-    <string name="toggles_layout">토글</string>
+    <string name="toggles_layout">퀵 토글</string>
     <string name="general_ui">일반 인터페이스</string>
     <string name="clock">시계</string>
     <string name="battery">배터리</string>
@@ -69,7 +69,6 @@
     <!-- General Strings -->
     <string name="advanced_settings">고급설정</string>
     <string name="misc_short">기타</string>
-    <string name="custom_app_icon_successfully">"'s icon set successfully!"</string>
     <string name="text_on">On</string>
     <string name="text_off">Off</string>
 
@@ -729,8 +728,6 @@
     <string name="pie_search_summary">파이를 통해 Google Now 를 실행</string>
     <string name="pie_lastapp_title">최근 앱 보기</string>
     <string name="pie_lastapp_summary">파이에서 최근 앱 보기 사용</string>
-    <string name="pie_restart_launcher_title">런처 재시작</string>
-    <string name="pie_restart_launcher_summary">screensize를 변경하면 악영향을 미칠 수 있습니다. 이 옵션을 선택하면 시작시 안정화 할 수 있도록 약간의 딜레이가 일어날수 있습니다</string>
     <string name="all_color">사용자 설정 색상</string>
     <string name="stock_color">기본 색상</string>
     <string name="appshortcut">최근 앱 보기 바로가기</string>
