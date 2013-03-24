@@ -47,66 +47,6 @@
         <item>0</item>
         <item>1</item>
     </string-array>
-    <string-array name="available_toggles_entries">
-        <item>USER</item>
-        <item>FAVCONTACT</item>
-        <item>BRIGHTNESS</item>
-        <item>SETTINGS</item>
-        <item>WIFI</item>
-        <item>SIGNAL</item>
-        <item>ROTATE</item>
-        <item>CLOCK</item>
-        <item>GPS</item>
-        <item>IME</item>
-        <item>BATTERY</item>
-        <item>AIRPLANE_MODE</item>
-        <item>BLUETOOTH</item>
-        <item>VIBRATE</item>
-        <item>SILENT</item>
-        <item>SOUNDSTATE</item>
-        <item>SYNC</item>
-        <item>FCHARGE</item>
-        <item>NFC</item>
-        <item>WIFITETHER</item>
-        <item>USBTETHER</item>
-        <item>TORCH</item>
-        <item>2G</item>
-        <item>LTE</item>
-        <item>QUIETHOURS</item>
-        <item>NAVBARHIDE</item>
-        <item>QUICKRECORD</item>
-        <item>MEMORY</item>
-    </string-array>
-    <array name="available_toggles_values">
-        <item>@string/toggle_user</item>
-        <item>@string/toggle_favorite_contact</item>
-        <item>@string/toggle_brightness</item>
-        <item>@string/toggle_settings</item>
-        <item>@string/toggle_wifi</item>
-        <item>@string/toggle_signal</item>
-        <item>@string/toggle_auto_rotate</item>
-        <item>@string/toggle_clock</item>
-        <item>@string/toggle_gps</item>
-        <item>@string/toggle_ime</item>
-        <item>@string/toggle_battery</item>
-        <item>@string/toggle_airplane_mode</item>
-        <item>@string/toggle_bluetooth</item>
-        <item>@string/toggle_vibrate</item>
-        <item>@string/toggle_silent</item>
-        <item>@string/toggle_sound_state</item>
-        <item>@string/toggle_sync</item>
-        <item>@string/toggle_fcharge</item>
-        <item>@string/toggle_nfc</item>
-        <item>@string/toggle_wifi_tether</item>
-        <item>@string/toggle_usb_tether</item>
-        <item>@string/toggle_torch</item>
-        <item>@string/toggle_2g</item>
-        <item>@string/toggle_lte</item>
-        <item>@string/toggle_quiethours</item>
-        <item>@string/toggle_navbar_hide</item>
-        <item>@string/toggle_quickrecord</item>
-        <item>@string/toggle_memory</item>
-    </array>
     <string-array name="brightness_location_entries">
         <item>위로</item>
         <item>아래로</item>
@@ -164,38 +104,6 @@
         <item>1</item>
         <item>2</item>
         <item>3</item>
-    </string-array>
-    <string-array name="navigation_bar_qty_entries">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-    </string-array>
-    <string-array name="navigation_bar_qty_values">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-    </string-array>
-    <string-array name="navbar_button_entries">
-        <item>홈</item>
-        <item>뒤로</item>
-        <item>최근 앱보기</item>
-        <item>최근 앱보기(GB Style)</item>
-        <item>검색</item>
-        <item>메뉴</item>
-        <item>위젯으로 전환</item>
-        <item>앱 종료</item>
-        <item>전원</item>
-        <item>알림바</item>
-        <item>커스텀 앱</item>
-        <item>비워둠</item>
     </string-array>
     <string-array name="navigation_bar_width_entries">
         <item>42 dp (default)</item>
