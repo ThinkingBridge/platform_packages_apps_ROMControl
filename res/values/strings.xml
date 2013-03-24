@@ -156,9 +156,8 @@
     <string name="lefty_mode_title">Lefty Mode</string>
     <string name="lefty_mode_summary">Swap NavBar location (requires UI restart)</string>
     <string name="rotate_180_title">Allow 180 degree rotation</string>
-    <string name="rotate_180_summary">Allow your device to rotate upside down!</string>
-    <string name="kill_app_longpress_back">Hold back to kill</string>
-    <string name="kill_app_longpress_back_summary">Holding back will kill the current activity</string>
+    <string name="rotate_270_title">Allow 270 degree rotation</string>
+    <string name="rotate_270_summary">Allow your device to rotate to right side!</string>
     <string name="tablet_ui">Force Tablet UI</string>
     <string name="tablet_ui_summary">This will switch to Tablet UI (requires reboot)</string>
     <string name="hide_extras">Hide Extras</string>
