@@ -123,6 +123,8 @@
     <string name="navbar_cat">NavBar</string>
     <string name="bootani_cat">Boot Animation</string>
     <string name="notification_cat">Notification</string>
+    <string name="display_cat">Display</string>
+    <string name="recents_cat">Recents</string>
     <string name="tabletUI_cat">Tablet UI</string>
     <string name="enable_volume_options">Enable Volume Panel</string>
     <string name="status_bar_notif_count_title">Show notification count</string>
@@ -260,7 +262,7 @@
     <string name="toggle_style_scrollable">Scrollable</string>
     <string name="toggle_swap_handle_side">Drag handle on right</string>
     <string name="add_toggles">Add toggles</string>
-
+    
     <!-- Statusbar | Clock -->
     <string name="clock_title_enable">Clock style</string>
     <string name="title_clock_ampm_entries">AM/PM style</string>
@@ -324,11 +326,11 @@
 
     <!-- Statusbar | Signal -->
     <string name="signal_style">Signal indicator style</string>
-    <string name="signal_color_title">Signal indicator color</string>
+    <string name="signal_color_title">Signal text color</string>
     <string name="hide_signal_title">Hide signal bars</string>
     <string name="hide_signal_summary">Checking this hides the signal bar indicator (updates when signal strength changes)</string>
     <string name="wifi_signal_style">WiFi signal indicator style</string>
-    <string name="wifi_signal_color_title">WiFi signal indicator color</string>
+    <string name="wifi_signal_color_title">WiFi signal text color</string>
     <string name="alt_signal_title">Alt signal indicator layout</string>
     <string name="alt_signal_summary">Use alternate (GB style) signal cluster</string>
 

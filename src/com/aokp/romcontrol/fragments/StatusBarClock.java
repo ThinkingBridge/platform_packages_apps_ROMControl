@@ -114,7 +114,6 @@ public class StatusBarClock extends AOKPPreferenceFragment implements
         mClockDoubleClick.setOnPreferenceChangeListener(this);
         mClockDoubleClick.setSummary(getProperSummary(mClockDoubleClick));
 
-
         boolean mClockDateToggle = Settings.System.getInt(mContentRes,
                     Settings.System.STATUSBAR_CLOCK_DATE_DISPLAY, 0) != 0;
         if (!mClockDateToggle) {
@@ -142,7 +141,6 @@ public class StatusBarClock extends AOKPPreferenceFragment implements
             int val = Integer.parseInt((String) newValue);
             result = Settings.System.putInt(mContentRes,
                     Settings.System.STATUSBAR_CLOCK_STYLE, val);
-
         } else if (preference == mColorPicker) {
             String hex = ColorPickerPreference.convertToARGB(Integer.valueOf(String
                     .valueOf(newValue)));
@@ -248,6 +246,7 @@ public class StatusBarClock extends AOKPPreferenceFragment implements
           mPreference.setSummary(friendlyName);
           Settings.System.putString(mContentRes, mString, (String) uri);
     }
+
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == Activity.RESULT_OK) {
             if (requestCode == ShortcutPickerHelper.REQUEST_PICK_SHORTCUT

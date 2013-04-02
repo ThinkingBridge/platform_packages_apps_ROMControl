@@ -2,6 +2,10 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+   <Preference
+        android:key="transparency_dialog"
+        android:title="@string/transparency_dialog_title" />
+
 
     <PreferenceCategory
         android:key="bootani"
@@ -51,10 +55,6 @@
             android:title="@string/brightness_slider_title"
             android:summary="@string/brightness_slider_summary" />
 
-        <Preference
-            android:key="transparency_dialog"
-            android:title="@string/transparency_dialog_title" />
-
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -83,8 +83,8 @@
      </PreferenceCategory>
 
      <PreferenceCategory
-            android:key="misc"
-            android:title="@string/misc_short">
+        android:key="display"
+        android:title="@string/display_cat">
 
          <CheckBoxPreference
             android:key="rotate_180"
