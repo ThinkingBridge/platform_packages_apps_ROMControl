@@ -1095,6 +1095,7 @@
         <item>25000</item>
         <item>30000</item>
         <item>35000</item>
+     </string-array>
     <string-array name="spen_entries" translatable="false">
         <item>@string/home</item>
         <item>@string/back</item>
