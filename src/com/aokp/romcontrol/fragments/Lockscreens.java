@@ -313,6 +313,13 @@ public class Lockscreens extends Fragment implements
                     }
                 });
 
+        if (isTablet(mContext) || isPhablet(mContext)) {
+            Settings.System.putBoolean(cr,
+                Settings.System.LOCKSCREEN_MINIMIZE_LOCKSCREEN_CHALLENGE, false);
+            mLockMinimizeChallangeText.setVisibility(View.GONE);
+            mLockMinimizeChallangeSwitch.setVisibility(View.GONE);
+        }
+
         mLockCarouselText = ((TextView) getActivity().findViewById(R.id.lockscreen_carousel_id));
         mLockCarouselText.setOnClickListener(mLockCarouselTextListener);
         mLockCarouselSwitch = (Switch) getActivity().findViewById(R.id.lockscreen_carousel_switch);
