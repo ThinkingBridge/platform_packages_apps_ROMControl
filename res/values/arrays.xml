@@ -300,6 +300,7 @@
         <item>**app**</item>
     </string-array>
     <string-array name="navring_long_dialog_entries" translatable="false">
+        <item>@string/navring_clear</item>
         <item>@string/navring_short</item>
         <item>@string/navring_long</item>
         <item>@string/navring_icon</item>
@@ -310,6 +311,7 @@
         <item>**icon**</item>
     </string-array>
     <string-array name="navring_short_dialog_entries" translatable="false">
+        <item>@string/navring_clear</item>
         <item>@string/navring_short</item>
         <item>@string/navring_icon</item>
     </string-array>
@@ -1047,27 +1049,24 @@
         <item>2</item>
     </string-array>
     
-    <!-- Screenshot Settings -->
-    <string-array name="pref_screenshot_delay_entries">
-        <item>1 second (default)</item>
+    <!-- Screenshot delay -->
+    <string-array name="screenshot_delay_entries" translatable="false">
         <item>2 seconds</item>
+        <item>3 seconds</item>
         <item>4 seconds</item>
+        <item>5 seconds</item>
         <item>6 seconds</item>
+        <item>7 seconds</item>
         <item>8 seconds</item>
-        <item>10 seconds</item>
-        <item>12 seconds</item>
-        <item>15 seconds</item>
     </string-array>
-
-    <string-array name="pref_screenshot_delay_values">
-        <item>1000</item>
+    <string-array name="screenshot_delay_values" translatable="false">
         <item>2000</item>
+        <item>3000</item>
         <item>4000</item>
+        <item>5000</item>
         <item>6000</item>
+        <item>7000</item>
         <item>8000</item>
-        <item>10000</item>
-        <item>12000</item>
-        <item>15000</item>
     </string-array>
 
     <!-- CRT off animation mode -->

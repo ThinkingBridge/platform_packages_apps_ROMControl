@@ -435,6 +435,7 @@
     <string name="interface_navring_settings_title">Navigation Ring</string>
     <string name="interface_navring_settings_summary">@null</string>
     <string name="navring_target_info">Drag your finger to targets to assign actions</string>
+    <string name="navring_clear">Clear action</string>
     <string name="navring_short">Short action</string>
     <string name="navring_long">Long action</string>
     <string name="navring_icon">Custom icon</string>
