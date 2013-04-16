@@ -239,7 +239,6 @@ public class UserInterface extends AOKPPreferenceFragment implements OnPreferenc
 
         if (isTablet(mContext)) {
             mStatusbarSliderPreference.setEnabled(false);
-            mStatusBarHide.setEnabled(false);
         } else {
             mHideExtras.setEnabled(false);
         }
@@ -883,7 +882,6 @@ public class UserInterface extends AOKPPreferenceFragment implements OnPreferenc
             Settings.System.putInt(mContentResolver,
                     Settings.System.USER_UI_MODE, val);
             mStatusbarSliderPreference.setEnabled(val == 1 ? false : true);
-            mStatusBarHide.setEnabled(val == 1 ? false : true);
             mHideExtras.setEnabled(val == 1 ? true : false);
             Helpers.restartSystemUI();
             return true;
