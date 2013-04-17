@@ -82,6 +82,13 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+         <activity
+            android:name=".fragments.PieControl"
+            android:label="@string/title_navbar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
         <activity
             android:name=".fragments.LEDControl"
             android:label="@string/title_led">
@@ -173,7 +180,6 @@
                 <action android:name="aokp.romcontrol.notificationshortcuts.NOTIFICATION_SHORTCUTS" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.VOICE_LAUNCH" />
-                <category android:name="com.aokp.romcontrol.SHORTCUT" />
             </intent-filter>
             <meta-data android:name="com.aokp.romcontrol.FRAGMENT_CLASS"
                 android:value="com.aokp.romcontrol.fragments.NotificationShortcuts" />
