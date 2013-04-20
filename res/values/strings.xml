@@ -362,6 +362,10 @@
     <string name="wifi_signal_color_title">WiFi signal text color</string>
     <string name="alt_signal_title">Alt signal indicator layout</string>
     <string name="alt_signal_summary">Use alternate (GB style) signal cluster</string>
+    <!-- show network speed -->
+    <string name="show_network_speed_title">Network speed</string>
+    <string name="show_network_speed_summary">Show network speed in statusbar</string>
+    <string name="status_bar_traffic_color_title">Network speed Custom Color</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
