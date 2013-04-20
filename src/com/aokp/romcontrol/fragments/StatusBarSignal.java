@@ -37,6 +37,10 @@ public class StatusBarSignal extends AOKPPreferenceFragment implements
         // Load the preferences from an XML resource
         addPreferencesFromResource(R.xml.prefs_statusbar_signal);
 
+        int defaultColor;
+        int intColor;
+        String hexColor;
+
         mDbmStyletyle = (ListPreference) findPreference("signal_style");
         mDbmStyletyle.setOnPreferenceChangeListener(this);
         mDbmStyletyle.setValue(Integer.toString(Settings.System.getInt(mContentRes,
@@ -44,6 +48,13 @@ public class StatusBarSignal extends AOKPPreferenceFragment implements
 
         mColorPicker = (ColorPickerPreference) findPreference("signal_color");
         mColorPicker.setOnPreferenceChangeListener(this);
+        defaultColor = getResources().getColor(
+                com.android.internal.R.color.holo_blue_light);
+        intColor = Settings.System.getInt(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_SIGNAL_TEXT_COLOR, defaultColor);
+        hexColor = String.format("#%08x", (0xffffffff & intColor));
+        mColorPicker.setSummary(hexColor);
+        mColorPicker.setNewPreviewColor(intColor);
 
         mWifiStyle = (ListPreference) findPreference("wifi_signal_style");
         mWifiStyle.setOnPreferenceChangeListener(this);
@@ -52,6 +63,13 @@ public class StatusBarSignal extends AOKPPreferenceFragment implements
 
         mWifiColorPicker = (ColorPickerPreference) findPreference("wifi_signal_color");
         mWifiColorPicker.setOnPreferenceChangeListener(this);
+        defaultColor = getResources().getColor(
+                com.android.internal.R.color.holo_blue_light);
+        intColor = Settings.System.getInt(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_WIFI_SIGNAL_TEXT_COLOR, defaultColor);
+        hexColor = String.format("#%08x", (0xffffffff & intColor));
+        mWifiColorPicker.setSummary(hexColor);
+        mWifiColorPicker.setNewPreviewColor(intColor);
 
         mHideSignal = (CheckBoxPreference) findPreference("hide_signal");
         mHideSignal.setChecked(Settings.System.getBoolean(mContentRes,
