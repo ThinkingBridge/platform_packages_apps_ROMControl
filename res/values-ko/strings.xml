@@ -26,7 +26,6 @@
     <string name="weather">날씨</string>
     <string name="tools">도구</string>
     <string name="header_lockscreen">잠금화면</string>
-    <string name="menu_main_activity_change_locale">없음</string>
 
     <!-- Activity titles defined in AndroidManifest.xml -->
     <string name="title_ui">인터페이스</string>
@@ -88,11 +87,11 @@
     <string name="enable_stylus_pointer_title">S펜 포인터 활성화</string>
     <string name="enable_stylus_pointer_summary">S펜을 사용할 때 마우스 아이콘을 활성화합니다.</string>
 
+    <!-- Shortcut picker -->
     <string name="use_custom_app_title">사용자 지정 앱 사용</string>
     <string name="select_custom_activity_title">사용자 지정 활동 사용</string>
     <string name="use_custom_app_summary">최근 앱 보기 대신에 사용자 지정 앱을 사용합니다.</string>
-    <string name="group_applications">앱</string>
-    <string name="select_application">앱을 선택합니다.</string>
+    <string name="group_applications">애플리케이션</string>
 
     <!-- Power Menu -->
     <string name="title_show_power_saver">배터리 절약</string>
@@ -116,12 +115,6 @@
 
     <string name="title_pref_powersaving_data_screen_off_delay">데이터 활동 딜레이</string>
     <string name="summary_pref_powersaving_data_screen_off_delay">데이터 활동을 적용하기전에 얼마나 기다리겠습니까?</string>
-
-    <!-- Shortcut picker -->
-    <string name="use_custom_app_title">사용자 지정 앱 사용</string>
-    <string name="select_custom_activity_title">사용자 지정 활동 사용</string>
-    <string name="use_custom_app_summary">최근 앱 보기 대신에 사용자 지정 앱을 사용합니다.</string>
-    <string name="group_applications">애플리케이션</string>
     
     <!-- General UI -->
     <string name="navbar_cat">네비바</string>
@@ -332,6 +325,11 @@
     <string name="wifi_signal_color_title">Wi-Fi 신호 텍스트 색상</string>
     <string name="alt_signal_title">대안 신호 레이아웃</string>
     <string name="alt_signal_summary">진저브레드 스타일의 신호 레이아웃을 사용합니다.</string>
+    
+    <!-- show network speed -->
+    <string name="show_network_speed_title">네트워크 속도</string>
+    <string name="show_network_speed_summary">상태바에 네트워크 속도 표시</string>
+    <string name="status_bar_traffic_color_title">네트워크 속도 사용자 색상</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">색상 선택</string>
@@ -540,7 +538,6 @@
     <string name="profile_applist_title">애플리케이션</string>
     <string name="profile_reset_title">초기화</string>
     <string name="picker_activities">액티비티</string>
-    <string name="select_custom_activity_title">사용자 작업 선택</string>
     <string name="icon_picker_choose_icon_title">아이콘 선택</string>
     <string name="icon_picker_title">아이콘 원본을 선택</string>
     <string name="icon_picker_system_icons_title">시스템 아이콘</string>
