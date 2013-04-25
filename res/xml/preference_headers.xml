@@ -99,13 +99,6 @@
         android:summary="@string/header_summary_lockscreens" />
      
      <header
-        android:id="@+id/lockscreen_targets"
-        android:fragment="com.aokp.romcontrol.fragments.LockscreenTargets"
-        android:summary="@string/lockscreen_target_summary"
-        android:icon="@drawable/ic_thinkingbridge_lockscreen_targets"
-        android:title="@string/lockscreen_target_title" />
-     
-     <header
         android:id="@+id/lockscreen_shortcuts"
         android:fragment="com.aokp.romcontrol.fragments.Shortcuts"
         android:summary="@string/lock_screen_shortcuts_summary"
