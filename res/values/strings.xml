@@ -24,7 +24,7 @@
     <string name="sound">Sound</string>
     <string name="lockscreen_options">Lockscreen</string>
     <string name="header_lock_clock_title">Lock Clock Widget</string>
-    <string name="title_ribbon">Ribbon Options</string>
+    <string name="title_ribbon">Ribbon</string>
     <string name="weather">Weather</string>
     <string name="tools">Tools</string>
     <string name="header_lockscreen">LockScreen</string>
@@ -45,7 +45,7 @@
     <string name="title_sound">Sound Settings</string>
     <string name="title_weather">Weather Settings</string>
     <string name="title_clipboard_share">Share to Clipboard</string>
-    <string name="ribbon_settings_title">Ribbon options</string>
+    <string name="ribbon_settings_title">Ribbon</string>
 
     <!-- Header Summaries -->
     <string name="header_summary_clock">@null</string>

@@ -126,12 +126,12 @@
         android:id="@+id/system"
         android:title="@string/header_system" />
 
-    <!--<header
+    <header
         android:id="@+id/led"
         android:fragment="com.aokp.romcontrol.fragments.LEDControl"
         android:title="@string/led_options"
         android:icon="@drawable/ic_thinkingbridge_led"
-        android:summary="@string/header_summary_led" />-->
+        android:summary="@string/header_summary_led" />
 
     <header
         android:id="@+id/spen"

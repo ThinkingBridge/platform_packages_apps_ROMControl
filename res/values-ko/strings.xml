@@ -465,8 +465,6 @@
     <string name="lockscreen_music_cat">음악</string>
     <string name="lockscreen_weather_cat">날씨</string>
     <string name="lockscreen_calendar_cat">일정</string>
-    <string name="lockscreen_quick_unlock_control_title">빠른 pin 잠금해제</string>
-    <string name="lockscreen_quick_unlock_control_summary">엔터 버튼을 누르지 않고 pin/비밀번호 잠금해제를 수행합니다.</string>
     <string name="lockscreen_menu_unlock_title">메뉴 잠금해제</string>
     <string name="lockscreen_menu_unlock_summary">화면 잠금해제하려면 메뉴 키를 사용합니다.</string>
     <string name="lockscreen_auto_rotate_title">잠금화면 회전 허용</string>
@@ -481,8 +479,6 @@
     <string name="lockscreen_hide_initial_page_hints_summary">화면이 켜져있을 때 왼쪽과 오른쪽 위젯에 대한 표시된 여부를 설정합니다.</string>
     <string name="lockscreen_minimize_challenge_title">잠금화면 최소화</string>
     <string name="lockscreen_minimize_challenge_summary">잠금화면 화면이 켜져있을 때 (기본잠금, 패턴, PIN)이 최소화 여부를 설정합니다.</string>
-    <string name="lockscreen_longpress_challenge_title">자물쇠 아이콘을 길게 눌러 잠금해제</string>
-    <string name="lockscreen_longpress_challenge_summary">잠금화면 위젯설정에서 자물쇠 아이콘을 길게 눌러 잠금을 해제 할 수 있습니다.</string>
     <string name="lockscreen_use_widget_container_carousel_title">잠금화면 위젯 전환시 애니메이션</string>
     <string name="lockscreen_use_widget_container_carousel_summary">잠금화면 위젯 사이를 전환 할 때 애니메이션을 사용합니다.</string>
     <string name="volume_rocker_wake_title">볼륨키로 깨어나기</string>
@@ -702,11 +698,6 @@
     <string name="lock_screen_shortcuts_add">추가</string>
     <string name="lock_screen_shortcuts_reset">초기화</string>
     <string name="lock_screen_shortcuts_limit">6개의 바로가기만 허용되어있습니다.!</string>
-
-    <!-- Lock screen shortcuts -->
-    <string name="choose_app">애플리케이션 선택</string>
-    <string name="dialog_delete_title">삭제</string>
-    <string name="dialog_delete_message">이 아이템을 삭제하시겠습니까?</string>
     
     <!-- Pie controls -->
     <string name="pie_controls_title">파이 컨트롤</string>

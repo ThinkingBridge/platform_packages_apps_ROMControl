@@ -193,14 +193,18 @@ public class ROMControlActivity extends PreferenceActivity implements ButtonBarH
         ArrayList<Header> toRemove = new ArrayList<Header>();
         for (int i=0; i<target.size(); i++) {
             Header header = target.get(i);
-            if (header.id == R.id.spen) {
+            if (header.id == R.id.led) {
+                if (!hasNotificationLed) {
+                    toRemove.add(header);
+                }
+            } else if (header.id == R.id.spen) {
                 if (!hasSPen) {
                     toRemove.add(header);
                 }
             }
         }
         for (int i=0; i<toRemove.size(); i++) {
-        	target.remove(toRemove.get(i));
+            target.remove(toRemove.get(i));
         }
         updateHeaderList(target);
         mHeaders = target;
