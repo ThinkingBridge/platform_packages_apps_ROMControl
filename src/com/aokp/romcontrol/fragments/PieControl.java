@@ -34,6 +34,8 @@ public class PieControl extends AOKPPreferenceFragment
 
     private static final String PIE_CONTROL = "pie_control";
     private static final String PIE_BUTTON = "pie_button";
+    private static final String PIE_SECOND_LAYER = "pie_second_layer";
+    private static final String PIE_BUTTON_SECOND_LAYER = "pie_button_second_layer";
     private static final String PIE_SHOW_SNAP = "pie_show_snap";
     private static final String PIE_SHOW_TEXT = "pie_show_text";
     private static final String PIE_SHOW_BACKGROUND = "pie_show_background";
@@ -47,10 +49,12 @@ public class PieControl extends AOKPPreferenceFragment
     private CheckBoxPreference mShowText;
     private CheckBoxPreference mShowBackground;
     private CheckBoxPreference mDisableStatusBarInfo;
+    private CheckBoxPreference mSecondLayer;
     private PreferenceScreen mStyle;
     private PreferenceScreen mButtonStyle;
     private PreferenceScreen mTrigger;
     private PreferenceScreen mButton;
+    private PreferenceScreen mButtonSecondLayer;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,6 +64,8 @@ public class PieControl extends AOKPPreferenceFragment
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
+        mSecondLayer = (CheckBoxPreference) prefSet.findPreference(PIE_SECOND_LAYER);
+        mSecondLayer.setOnPreferenceChangeListener(this);
         mShowSnap = (CheckBoxPreference) prefSet.findPreference(PIE_SHOW_SNAP);
         mShowSnap.setOnPreferenceChangeListener(this);
         mShowText = (CheckBoxPreference) prefSet.findPreference(PIE_SHOW_TEXT);
@@ -71,6 +77,7 @@ public class PieControl extends AOKPPreferenceFragment
         mStyle = (PreferenceScreen) prefSet.findPreference(PIE_STYLE);
         mButtonStyle = (PreferenceScreen) prefSet.findPreference(PIE_BUTTON_STYLE);
         mTrigger = (PreferenceScreen) prefSet.findPreference(PIE_TRIGGER);
+        mButtonSecondLayer = (PreferenceScreen) prefSet.findPreference(PIE_BUTTON_SECOND_LAYER);
         mButton = (PreferenceScreen) prefSet.findPreference(PIE_BUTTON);
         mPieControl = (ListPreference) prefSet.findPreference(PIE_CONTROL);
         mPieControl.setOnPreferenceChangeListener(this);
@@ -95,6 +102,9 @@ public class PieControl extends AOKPPreferenceFragment
                 mDisableStatusBarInfo.setChecked(false);
             }
             propagatePieControl(value != 0);
+        } else if (preference == mSecondLayer) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.PIE_SECOND_LAYER_ACTIVE, (Boolean) newValue ? 1 : 0);
         } else if (preference == mShowSnap) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.PIE_SHOW_SNAP, (Boolean) newValue ? 1 : 0);
@@ -125,7 +135,8 @@ public class PieControl extends AOKPPreferenceFragment
         mPieControl.setValue(String.valueOf(pieControl));
         mPieControl.setSummary(mPieControl.getEntry());
         propagatePieControl(pieControl != 0);
-
+        mSecondLayer.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.PIE_SECOND_LAYER_ACTIVE, 0) == 1);
         mShowSnap.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.PIE_SHOW_SNAP, 1) == 1);
         mShowText.setChecked(Settings.System.getInt(getContentResolver(),
@@ -142,12 +153,14 @@ public class PieControl extends AOKPPreferenceFragment
     }
 
     private void propagatePieControl(boolean value) {
+        mSecondLayer.setEnabled(value);
         mShowSnap.setEnabled(value);
         mShowText.setEnabled(value);
         mDisableStatusBarInfo.setEnabled(value);
         mShowBackground.setEnabled(value);
         mStyle.setEnabled(value);
         mButton.setEnabled(value);
+        mButtonSecondLayer.setEnabled(value);
         mButtonStyle.setEnabled(value);
         mTrigger.setEnabled(value);
     }

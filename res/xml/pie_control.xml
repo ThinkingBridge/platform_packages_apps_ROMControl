@@ -26,16 +26,6 @@
         android:dialogTitle="@string/pie_control_dialog_title" />
 
     <PreferenceScreen
-        android:key="pie_button"
-        android:fragment="com.aokp.romcontrol.fragments.PieButtonSettings"
-        android:title="@string/pie_button" />
-
-    <PreferenceScreen
-        android:key="pie_button_style"
-        android:fragment="com.aokp.romcontrol.fragments.PieButtonStyleSettings"
-        android:title="@string/pie_button_style" />
-
-    <PreferenceScreen
         android:key="pie_style"
         android:fragment="com.aokp.romcontrol.fragments.PieStyleSettings"
         android:title="@string/pie_style" />
@@ -44,6 +34,33 @@
         android:key="pie_trigger"
         android:fragment="com.aokp.romcontrol.fragments.PieTriggerSettings"
         android:title="@string/pie_trigger" />
+
+    <PreferenceCategory
+        android:title="@string/pie_buttons_options">
+
+        <PreferenceScreen
+            android:key="pie_button"
+            android:fragment="com.aokp.romcontrol.fragments.PieButtonSettings"
+            android:title="@string/pie_button" />
+
+        <CheckBoxPreference
+            android:key="pie_second_layer"
+            android:title="@string/pie_second_layer_title"
+            android:summary="@string/pie_second_layer_summary"
+            android:defaultValue="false" />
+
+        <PreferenceScreen
+            android:key="pie_button_second_layer"
+            android:fragment="com.aokp.romcontrol.fragments.PieButtonSecondLayerSettings"
+            android:title="@string/pie_button_second_layer"
+            android:dependency="pie_second_layer" />
+
+        <PreferenceScreen
+            android:key="pie_button_style"
+            android:fragment="com.aokp.romcontrol.fragments.PieButtonStyleSettings"
+            android:title="@string/pie_button_style" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/pie_additional_options">
