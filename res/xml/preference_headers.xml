@@ -95,7 +95,7 @@
         android:id="@+id/lockscreen"
         android:fragment="com.aokp.romcontrol.fragments.Lockscreens"
         android:title="@string/lockscreen_options"
-        android:icon="@drawable/ic_thinkingbridge_lockscreens"
+        android:icon="@drawable/ic_thinkingbridge_lockscreen_shortcuts"
         android:summary="@string/header_summary_lockscreens" />
         
     <header
