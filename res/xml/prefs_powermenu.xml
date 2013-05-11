@@ -38,11 +38,6 @@
         android:entryValues="@array/expanded_desktop_values"
         android:persistent="false" />
     
-    <CheckBoxPreference
-        android:key="pie_restart_launcher"
-        android:title="@string/pie_restart_launcher_title"
-        android:summary="@string/pie_restart_launcher_summary" />
-    
     <PreferenceCategory
         android:title="@string/screenshot_options">
 

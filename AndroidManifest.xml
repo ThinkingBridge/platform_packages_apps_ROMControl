@@ -44,21 +44,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".fragments.Pie"
-            android:label="@string/pie_controls_title">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".fragments.PieColor"
-            android:label="PieColorEMERGERD">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".fragments.TransparencyDialog"
             android:theme="@android:style/Theme.Dialog">
         </activity>
