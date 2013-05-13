@@ -82,6 +82,7 @@ public class StatusBarToggles extends AOKPPreferenceFragment implements
     private static final String PREF_TOGGLE_FAV_CONTACT = "toggle_fav_contact";
     private static final String PREF_ENABLE_FASTTOGGLE = "enable_fast_toggle";
     private static final String PREF_CHOOSE_FASTTOGGLE_SIDE = "choose_fast_toggle_side";
+    private static final String PREF_NOTIFICATION_SHOW_WIFI_SSID = "notification_show_wifi_ssid";
     private static final String PREF_SCREENSHOT_DELAY = "screenshot_delay";
     private static final String PREF_SET_BOOT_ACTION = "set_boot_action";
     private static final String PREF_MATCH_ICON_ACTION = "match_icon_action";
@@ -108,6 +109,7 @@ public class StatusBarToggles extends AOKPPreferenceFragment implements
     CheckBoxPreference mFastToggle;
     CheckBoxPreference mBootState;
     CheckBoxPreference mMatchAction;
+    CheckBoxPreference mShowWifiName;
     ListPreference mChooseFastToggleSide;
     ListPreference mScreenshotDelay;
     ListPreference mCollapseShade;
@@ -185,6 +187,10 @@ public class StatusBarToggles extends AOKPPreferenceFragment implements
         mChooseFastToggleSide.setOnPreferenceChangeListener(this);
         mChooseFastToggleSide.setValue(Settings.System.getInt(mContentRes,
                 Settings.System.CHOOSE_FASTTOGGLE_SIDE, 1) + "");
+        
+        mShowWifiName = (CheckBoxPreference) findPreference(PREF_NOTIFICATION_SHOW_WIFI_SSID);
+        mShowWifiName.setChecked(Settings.System.getInt(mContentRes,
+                Settings.System.NOTIFICATION_SHOW_WIFI_SSID, 0) == 1);
 
         mScreenshotDelay = (ListPreference) findPreference(PREF_SCREENSHOT_DELAY);
         mScreenshotDelay.setOnPreferenceChangeListener(this);
@@ -325,7 +331,12 @@ public class StatusBarToggles extends AOKPPreferenceFragment implements
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mEnabledToggles) {
+        if (preference == mShowWifiName) {
+            Settings.System.putInt(mContentRes,
+                    Settings.System.NOTIFICATION_SHOW_WIFI_SSID,
+                    mShowWifiName.isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mEnabledToggles) {
             if (mToggles == null || mToggles.isEmpty()) {
                 return false;
             }
