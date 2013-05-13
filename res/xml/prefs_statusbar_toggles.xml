@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aokp="http://schemas.android.com/apk/res/com.aokp.romcontrol">
+    
+    <PreferenceCategory
+        android:title="@string/notification_cat">
+
+    <CheckBoxPreference
+        android:key="notification_show_wifi_ssid"
+        android:title="@string/notification_show_wifi_ssid_title"
+        android:summary="@string/notification_show_wifi_ssid_summary"
+        android:defaultValue="false" />
+
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:title="@string/header_statusbar">
 
     <Preference
         android:key="toggles"
@@ -44,6 +58,8 @@
         android:key="screenshot_delay"
         android:summary="@string/screenshot_delay_summary"
         android:title="@string/screenshot_delay_title" />
+    
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="custom_toggle"
