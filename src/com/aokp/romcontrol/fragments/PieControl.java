@@ -85,6 +85,10 @@ public class PieControl extends AOKPPreferenceFragment
                     Settings.System.PIE_CONTROLS,
                     value);
             mPieControl.setSummary(mPieControl.getEntries()[index]);
+            if (value == 2) {
+                Settings.System.putBoolean(mContext.getContentResolver(),
+                        Settings.System.NAV_HIDE_ENABLE, true);
+            }
             if (value == 0) {
                 Settings.System.putInt(getContentResolver(),
                         Settings.System.PIE_DISABLE_STATUSBAR_INFO, 0);
