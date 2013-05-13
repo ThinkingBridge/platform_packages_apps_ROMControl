@@ -196,12 +196,13 @@
     <string name="transparency_dialog_match_keyguard_alpha">Match lockscreen alpha</string>
     <string name="transparency_dialog_transparency">Homescreen alpha</string>
     <string name="transparency_dialog_transparency_keyguard">Lockscreen alpha</string>
+    <string name="statusbar_behaviour">Statusbar Behaviour</string>
+    <string name="statusbar_visible">Show Statusbar</string>
     <string name="statusbar_hide_title">Hide Statusbar</string>
-    <string name="statusbar_hide_summary">Checking this completely hides the Statusbar</string>
-    <string name="auto_hide_statusbar">Auto Hide statusbar</string>
-    <string name="auto_hide_statusbar_summary">Statusbar hides itself when there are no notifications</string>
-    <string name="hidden_statusbar_pulldown_title">Hidden Statusbar Pulldown</string>
-    <string name="hidden_statusbar_pulldown_summary">Allows Statusbar to be pulled down when hidden</string>
+    <string name="statusbar_hide_summary">Choose from 3 different statusbar behaviour</string>
+    <string name="statusbar_notification">Notifications</string>
+    <string name="statusbar_pulldown">Pulldown Statusbar</string>
+    <string name="statusbar_pulldown_notification">Pulldown &amp; Notifications</string>
     <string name="hidden_statusbar_pulldown_timeout_title">Hidden Statusbar Pulldown Timeout</string>
     <string name="hidden_statusbar_pulldown_timeout_summary">Timeout for Hidden Statusbar window</string>
 

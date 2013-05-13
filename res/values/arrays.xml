@@ -1315,6 +1315,23 @@
         <item>80</item>
         <item>16</item>
         <item>48</item>
+    </string-array>
+
+    <!-- Hidden Statusbar -->
+    <string-array name="hidden_statusbar_entries" translatable="false">
+        <item>@string/statusbar_visible</item>
+        <item>@string/statusbar_hide_title</item>
+        <item>@string/statusbar_notification</item>
+        <item>@string/statusbar_pulldown</item>
+        <item>@string/statusbar_pulldown_notification</item>
+    </string-array>
+    <string-array name="hidden_statusbar_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
 
     <!-- Hidden Statusbar Pulldown Timeout -->
     <string-array name="hidden_statusbar_pulldown_timeout_entries" translatable="false">
