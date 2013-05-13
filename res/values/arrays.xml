@@ -1281,7 +1281,7 @@
         <item>@string/pie_action_power</item>
         <item>@string/pie_action_screenshot</item>
         <item>@string/pie_action_search</item>
-        <item>@string/pie_action_widgets</item>
+        <!-- <item>@string/pie_action_widgets</item> -->
         <item>@string/pie_action_none</item>
     </string-array>
 
@@ -1298,7 +1298,7 @@
         <item>**power**</item>
         <item>**screenshot**</item>
         <item>**search**</item>
-        <item>**widgets**</item>
+        <!-- <item>**widgets**</item> -->
         <item>**null**</item>
     </string-array>
 
