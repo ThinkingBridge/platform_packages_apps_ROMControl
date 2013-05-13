@@ -50,7 +50,7 @@
     <header
         android:key="pie_settings"
         android:fragment="com.aokp.romcontrol.fragments.PieControl"
-        android:icon="@drawable/ic_pie_control"
+        android:icon="@drawable/ic_thinkingbridge_pie"
         android:title="@string/pie_control_title" /> 
 
     <header
