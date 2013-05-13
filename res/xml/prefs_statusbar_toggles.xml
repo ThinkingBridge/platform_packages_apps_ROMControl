@@ -5,6 +5,13 @@
     <PreferenceCategory
         android:title="@string/notification_cat">
 
+    <PreferenceScreen
+            android:id="@+id/slim_notification_shortcuts"
+            android:fragment="com.aokp.romcontrol.fragments.NotificationShortcuts"
+            android:key="slim_shortcuts_settings"
+            android:title="@string/notification_shortcuts_settings_title"
+            android:summary="@string/notification_shortcuts_settings_summary" />
+
     <CheckBoxPreference
         android:key="notification_show_wifi_ssid"
         android:title="@string/notification_show_wifi_ssid_title"
