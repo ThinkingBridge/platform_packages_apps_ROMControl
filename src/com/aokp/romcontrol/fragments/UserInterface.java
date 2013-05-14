@@ -211,11 +211,6 @@ public class UserInterface extends AOKPPreferenceFragment implements OnPreferenc
         mHideExtras.setChecked(Settings.System.getBoolean(mContentResolver,
                         Settings.System.HIDE_EXTRAS_SYSTEM_BAR, false));
 
-        boolean isStatusBarHideChecked = Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.HIDE_STATUSBAR, 0) == 1;
-        mHideStatusBar = (CheckBoxPreference) findPreference(PREF_HIDE_STATUSBAR);
-        mHideStatusBar.setChecked(isStatusBarHideChecked);
-
         mHideStatusBar = (ListPreference) findPreference(PREF_HIDE_STATUSBAR);
         int mBarBehaviour = Settings.System.getInt(mContentResolver,
                 Settings.System.HIDE_STATUSBAR, 0);
@@ -909,7 +904,6 @@ public class UserInterface extends AOKPPreferenceFragment implements OnPreferenc
             Settings.System.putInt(mContentResolver,
                     Settings.System.USER_UI_MODE, val);
             mStatusbarSliderPreference.setEnabled(val == 1 ? false : true);
-            mStatusBarHide.setEnabled(val == 1 ? false : true);
             mHideExtras.setEnabled(val == 1 ? true : false);
             Helpers.restartSystemUI();
             return true;
