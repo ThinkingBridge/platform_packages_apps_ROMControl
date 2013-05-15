@@ -3,6 +3,7 @@ package com.aokp.romcontrol.fragments;
 
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.RemoteException;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -10,6 +11,8 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
+import android.util.Log;
+import android.view.WindowManagerGlobal;
 
 import com.aokp.romcontrol.R;
 import com.aokp.romcontrol.R.xml;
@@ -91,6 +94,15 @@ public class PowerMenu extends AOKPPreferenceFragment implements OnPreferenceCha
                         Settings.System.EXPANDED_DESKTOP_STYLE, 0);
         mExpandedDesktopPref.setValue(String.valueOf(expandedDesktopValue));
         mExpandedDesktopPref.setSummary(mExpandedDesktopPref.getEntries()[expandedDesktopValue]);
+        
+        try {
+            if (!WindowManagerGlobal.getWindowManagerService().hasNavigationBar()) {
+                mExpandedDesktopPref.setEntries(R.array.expanded_desktop_entries_no_navbar);
+                mExpandedDesktopPref.setEntryValues(R.array.expanded_desktop_values_no_navbar);
+            }
+        } catch (RemoteException e) {
+            Log.e(TAG, "Error getting navigation bar status");
+        }
                 
         mShowScreenShot = (CheckBoxPreference) findPreference(PREF_SCREENSHOT);
         mShowScreenShot.setChecked(Settings.System.getInt(getActivity()
