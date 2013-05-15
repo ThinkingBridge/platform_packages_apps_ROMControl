@@ -31,8 +31,6 @@ public class PowerMenu extends AOKPPreferenceFragment implements OnPreferenceCha
     private static final String PREF_AIRPLANE_TOGGLE = "show_airplane_toggle";
     private static final String KEY_REBOOT = "power_menu_reboot";
     private static final String KEY_SILENT = "power_menu_silent";
-    private static final String PREF_SCREENSHOT_SOUND = "pref_screenshot_sound";
-    private static final String PREF_SCREENSHOT_DELAY = "pref_screenshot_delay";
 
     //CheckBoxPreference mShowPowerSaver;
     //CheckBoxPreference mShowScreenShot;
@@ -43,9 +41,7 @@ public class PowerMenu extends AOKPPreferenceFragment implements OnPreferenceCha
     CheckBoxPreference mShowAirplaneToggle;
     CheckBoxPreference mRebootPref;
     CheckBoxPreference mSilentPref;
-    CheckBoxPreference mScreenshotSound;
     ListPreference mExpandedDesktopPref;
-    ListPreference mScreenshotDelay;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -124,16 +120,6 @@ public class PowerMenu extends AOKPPreferenceFragment implements OnPreferenceCha
         		.getContentResolver(), Settings.System.POWER_MENU_SILENT_ENABLED,
         		1) == 1);
         
-        mScreenshotSound = (CheckBoxPreference) findPreference(PREF_SCREENSHOT_SOUND);
-        mScreenshotSound.setChecked((Settings.System.getInt(getContentResolver(),
-                Settings.System.SCREENSHOT_SOUND, 1) == 1));
-
-        mScreenshotDelay = (ListPreference) findPreference(PREF_SCREENSHOT_DELAY);
-        int screenshotDelay = Settings.System.getInt(getContentResolver(),
-                Settings.System.SCREENSHOT_DELAY, 1000);
-        mScreenshotDelay.setValue(String.valueOf(screenshotDelay));
-        mScreenshotDelay.setOnPreferenceChangeListener(this);
-        
     }
 
     @Override
@@ -187,11 +173,6 @@ public class PowerMenu extends AOKPPreferenceFragment implements OnPreferenceCha
         			Settings.System.POWER_MENU_SILENT_ENABLED,
         			((CheckBoxPreference)preference).isChecked() ? 1 : 0);
         	return true;
-        } else if (preference == mScreenshotSound) {
-        	boolean value = mScreenshotSound.isChecked();
-        	Settings.System.putInt(getContentResolver(),
-        			Settings.System.SCREENSHOT_SOUND, value ? 1 : 0);
-        	return true;
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
@@ -218,3 +199,4 @@ public class PowerMenu extends AOKPPreferenceFragment implements OnPreferenceCha
         }
         return false;
     }
+}
