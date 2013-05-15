@@ -86,12 +86,17 @@
     <string name="title_show_torch_toggle">Torch toggle</string>
     <string name="title_show_airplane_toggle">Airplane toggle</string>
     <string name="title_show_navbar_hide">Navigation bar toggle</string>
-    <string name="power_menu_expanded_desktop">Expanded desktop</string>
     <string name="power_menu_reboot_title">Reboot menu</string>
     <string name="power_menu_silent_title">Sound panel</string>
-    <string name="expanded_desktop_disabled">Disabled</string>
-    <string name="expanded_desktop_status_bar">Status bar visible</string>
-    <string name="expanded_desktop_no_status_bar">Status bar hidden</string>
+    
+    <!-- Expanded desktop -->
+    <string name="power_menu_expanded_desktop">Expanded desktop</string>
+    <string name="summary_expanded_desktop">%1$s</string>
+    <string name="expanded_desktop_summary">Show or change expanded desktop mode</string>
+    <string name="expanded_desktop_disabled">Off</string>
+    <string name="expanded_desktop_only_nav_bar">Hide navigation bar</string>
+    <string name="expanded_desktop_only_status_bar">Hide status bar</string>
+    <string name="expanded_desktop_both_hidden">Hide navigation and status bar</string>
     
     <!-- S Pen -->
     <string name="spen_left_title">Action on swipe left</string>

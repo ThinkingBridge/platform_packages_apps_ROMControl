@@ -16,6 +16,7 @@ import com.aokp.romcontrol.R.xml;
 import com.aokp.romcontrol.AOKPPreferenceFragment;
 
 public class PowerMenu extends AOKPPreferenceFragment implements OnPreferenceChangeListener {
+	private static final String TAG = "PowerMenu";
 	
     //private static final String PREF_POWER_SAVER = "show_power_saver";
     //private static final String PREF_SCREENSHOT = "show_screenshot";
@@ -83,11 +84,13 @@ public class PowerMenu extends AOKPPreferenceFragment implements OnPreferenceCha
                 false));
         
         PreferenceScreen prefSet = getPreferenceScreen();
+        
         mExpandedDesktopPref = (ListPreference) prefSet.findPreference(PREF_EXPANDED_DESKTOP);
         mExpandedDesktopPref.setOnPreferenceChangeListener(this);
-        int expandedDesktopValue = Settings.System.getInt(getContentResolver(), Settings.System.EXPANDED_DESKTOP_STYLE, 0);
+        int expandedDesktopValue = Settings.System.getInt(getContentResolver(),
+                        Settings.System.EXPANDED_DESKTOP_STYLE, 0);
         mExpandedDesktopPref.setValue(String.valueOf(expandedDesktopValue));
-        updateExpandedDesktopSummary(expandedDesktopValue);
+        mExpandedDesktopPref.setSummary(mExpandedDesktopPref.getEntries()[expandedDesktopValue]);
                 
         mShowScreenShot = (CheckBoxPreference) findPreference(PREF_SCREENSHOT);
         mShowScreenShot.setChecked(Settings.System.getInt(getActivity()
@@ -185,36 +188,21 @@ public class PowerMenu extends AOKPPreferenceFragment implements OnPreferenceCha
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mExpandedDesktopPref) {
             int expandedDesktopValue = Integer.valueOf((String) newValue);
+            int index = mExpandedDesktopPref.findIndexOfValue((String) newValue);
+            if (expandedDesktopValue == 0) {
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 0);
+                // Disable expanded desktop if enabled
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.EXPANDED_DESKTOP_STATE, 0);
+            } else {
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 1);
+            }
             Settings.System.putInt(getContentResolver(),
                     Settings.System.EXPANDED_DESKTOP_STYLE, expandedDesktopValue);
-            updateExpandedDesktopSummary(expandedDesktopValue);
-            return true;
-        } else if (preference == mScreenshotDelay) {
-            int screenshotDelay = Integer.valueOf((String) newValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.SCREENSHOT_DELAY, screenshotDelay);
+            mExpandedDesktopPref.setSummary(mExpandedDesktopPref.getEntries()[index]);
             return true;
         }
-
         return false;
     }
-
-    private void updateExpandedDesktopSummary(int value) {
-        Resources res = getResources();
-
-        if (value == 0) {
-            // Expanded desktop deactivated
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 0);
-            mExpandedDesktopPref.setSummary(res.getString(R.string.expanded_desktop_disabled));
-        } else if (value == 1) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 1);
-            mExpandedDesktopPref.setSummary(res.getString(R.string.expanded_desktop_status_bar));
-        } else if (value == 2) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 1);
-            mExpandedDesktopPref.setSummary(res.getString(R.string.expanded_desktop_no_status_bar));
-        }
-    }
-}
