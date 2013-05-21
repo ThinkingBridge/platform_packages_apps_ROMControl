@@ -206,6 +206,9 @@
     <string name="transparency_dialog_match_keyguard_alpha">Match lockscreen alpha</string>
     <string name="transparency_dialog_transparency">Homescreen alpha</string>
     <string name="transparency_dialog_transparency_keyguard">Lockscreen alpha</string>
+    <string name="transparency_dialog_lockscreen">Lockscreen</string>
+    
+    <!-- Statusbar extras -->
     <string name="statusbar_behaviour">Statusbar Behaviour</string>
     <string name="statusbar_visible">Show Statusbar</string>
     <string name="statusbar_hide_title">Hide Statusbar</string>
