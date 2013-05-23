@@ -1,4 +1,4 @@
-package com.aokp.romcontol.hybrid;
+package com.aokp.romcontrol.hybrid;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,8 +23,8 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.util.ExtendedPropertiesUtils;
 
-import com.aokp.romcontol.R;
-import com.aokp.romcontol.AOKPPreferenceFragment;
+import com.aokp.romcontrol.R;
+import com.aokp.romcontrol.AOKPPreferenceFragment;
 
 public class PerAppLayout extends AOKPPreferenceFragment {
 

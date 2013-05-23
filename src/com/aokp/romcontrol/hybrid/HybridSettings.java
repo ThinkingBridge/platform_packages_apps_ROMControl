@@ -1,4 +1,4 @@
-package com.aokp.romcontol.hybrid;
+package com.aokp.romcontrol.hybrid;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -17,8 +17,8 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
-import com.aokp.romcontol.R;
-import com.aokp.romcontol.AOKPPreferenceFragment;
+import com.aokp.romcontrol.R;
+import com.aokp.romcontrol.AOKPPreferenceFragment;
 
 public class HybridSettings extends AOKPPreferenceFragment implements
         Preference.OnPreferenceChangeListener {

@@ -1,4 +1,4 @@
-package com.aokp.romcontol.hybrid;
+package com.aokp.romcontrol.hybrid;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,7 +12,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.aokp.romcontol.R;
+import com.aokp.romcontrol.R;
 
 public class CustomDpiGroupPreference extends SeekBarDialogPreference implements SeekBar.OnSeekBarChangeListener {
 

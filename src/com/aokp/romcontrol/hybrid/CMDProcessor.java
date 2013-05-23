@@ -1,4 +1,4 @@
-package com.aokp.romcontol.hybrid;
+package com.aokp.romcontrol.hybrid;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

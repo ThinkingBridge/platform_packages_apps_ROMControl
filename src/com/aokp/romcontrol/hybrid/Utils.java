@@ -1,4 +1,4 @@
-package com.aokp.romcontol.hybrid;
+package com.aokp.romcontrol.hybrid;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -19,7 +19,7 @@ import android.content.DialogInterface;
 import android.os.PowerManager;
 import android.provider.Settings;
 
-import com.aokp.romcontol.R;
+import com.aokp.romcontrol.R;
 
 public class Utils {
 

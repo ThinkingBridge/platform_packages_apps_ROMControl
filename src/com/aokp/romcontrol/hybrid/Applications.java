@@ -1,4 +1,4 @@
-package com.aokp.romcontol.hybrid;
+package com.aokp.romcontrol.hybrid;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -20,7 +20,7 @@ import android.os.UserHandle;
 import android.util.ExtendedPropertiesUtils;
 import android.widget.Toast;
 
-import com.aokp.romcontol.R;
+import com.aokp.romcontrol.R;
 
 public class Applications {
 

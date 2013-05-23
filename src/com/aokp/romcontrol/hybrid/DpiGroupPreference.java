@@ -1,4 +1,4 @@
-package com.aokp.romcontol.hybrid;
+package com.aokp.romcontrol.hybrid;
 
 import android.app.AlertDialog;
 import android.app.FragmentTransaction;
@@ -11,7 +11,7 @@ import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
 
-import com.aokp.romcontol.R;
+import com.aokp.romcontrol.R;
 
 public class DpiGroupPreference extends Preference {
 
