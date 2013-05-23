@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="expanded_title"
+        android:title="@string/expanded_title">
+
+        <PreferenceScreen
+            android:key="add_expand"
+            android:fragment="com.aokp.romcontrol.hybrid.ExpandListPreference"
+            android:title="@string/add_expand" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="expand_list"
+        android:title="@string/expand_list">
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

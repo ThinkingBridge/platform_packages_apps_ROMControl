@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="expand_list"
+        android:title="@string/expand_add_title">
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
