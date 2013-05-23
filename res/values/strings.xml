@@ -1238,5 +1238,85 @@
     <string name="pie_action_notifications">Notifications</string>
     <string name="pie_action_none">None</string>
     <string name="color_default">Default</string>
+    
+    <!-- Hybrid -->
+    <string name="hybrid_settings_title">Hybrid settings</string>
+
+    <string name="hybridmode_title">Hybrid Mode</string>
+    <string name="hybridmode_on">On</string>
+    <string name="hybridmode_off">Off</string>
+
+    <string name="uimode_title">UI Mode</string>
+    <string name="uimode_phone">Phone (360dp)</string>
+    <string name="uimode_phablet">Phablet (600dp)</string>
+    <string name="uimode_tablet">Tablet (720/1000dp)</string>
+
+    <string name="dpi_settings_title">System Density</string>
+    <string name="system_dpi_title">System Density</string>
+    <string name="system_dpi_summary">Current system density:</string>
+    <string name="system_dpi_standar_title">Standard density</string>
+    <string name="system_dpi_standar_summary">Select the density from a list</string>
+    <string name="system_dpi_custom_title">Specify custom density</string>
+    <string name="system_dpi_custom_hint">120 to 480</string>
+    <string name="system_dpi_custom_summary">Select a custom density from 120 to 480</string>
+
+    <string name="appsuimode_title">Apps UI Mode</string>
+
+    <string name="apps_dpi_title">Apps Density</string>
+    <string name="apps_dpi_summary">Current apps density:</string>
+    <string name="apps_dpi_custom_title">Specify density</string>
+    <string name="apps_dpi_custom_hint">120 to 480</string>
+    <string name="apps_dpi_custom_summary">Select a density from 120 to 480</string>
+
+    <string name="dpi_groups_title">DPI Groups</string>
+    <string name="dpi_groups_summary">Define which apps should be in each DPI group</string>
+    <string name="dpi_group_title">DPI Group</string>
+    <string name="dpi_groups_apps">applications</string>
+    <string name="dpi_group_add_app">Add application</string>
+    <string name="dpi_group_app_list">Applications list</string>
+    <string name="dpi_group_alert_add_app_title">Choose an application</string>
+    <string name="dpi_groups_alert_remove_app">Remove application</string>
+    <string name="dpi_groups_remove_app">Remove %s from group?</string>
+    <string name="dpi_groups_backuprestore_title">Backup and restore</string>
+    <string name="dpi_groups_auto_backup">Auto Backup</string>
+    <string name="dpi_groups_auto_backup_summary">Save your configuration with every change</string>
+    <string name="dpi_groups_backup_title">Backup</string>
+    <string name="dpi_groups_backup_summary">Backup your configuration</string>
+    <string name="dpi_groups_restore_title">Restore</string>
+    <string name="dpi_groups_restore_summary">Restore your configuration</string>
+    <string name="dpi_groups_backup_done">Backup of configuration file done</string>
+    <string name="dpi_groups_restore_done">Configuration file restored</string>
+    <string name="dpi_groups_restore_default_title">Restore default groups</string>
+    <string name="dpi_groups_restore_default_summary">Remove custom DPI groups and leave the default groups</string>
+    <string name="dpi_groups_delete_title">Delete DPI group</string>
+    <string name="dpi_groups_delete_summary">Do you want to delete this DPI group?</string>
+    <string name="customdpigroup">Add group</string>
+    <string name="customdpigroup_summary">Add a custom dpi group</string>
+    <string name="custom_dpi">Current dpi:</string>
+    <string name="customdpigroup_group_exists">The selected custom dpi group already exists.</string>
+    <string name="per_app_layout_title">Per App Layout</string>
+    <string name="per_app_layout_summary">Define layout for each app</string>
+    <string name="per_app_layout_list_title">Application list</string>
+    <string name="per_app_layout_alert_title">Select a layout</string>
+    <string name="widgets_title">Widgets</string>
+    <string name="widgets_summary">Define the list of widgets</string>
+    <string name="add_widget">Add widget</string>
+    <string name="widget_list">Widgets list</string>
+    <string name="widget_alert_remove_widget">Remove widget</string>
+    <string name="widget_remove_widget">Remove %s widget from list?</string>
+    <string name="widget_add_title">Choose an application</string>
+    <string name="expanded_title">Per App Expand</string>
+    <string name="expanded_summary">Define to expand desktop for each app</string>
+    <string name="add_expand">Add application</string>
+    <string name="expand_list">Application List</string>
+    <string name="expand_add_title">Choose an application</string>
+    <string name="expand_alert_remove_application">Remove Application</string>
+    <string name="expand_remove_application">Remove %s from expanding automatically?</string>
+
+
+    <string name="navbar_height_title">Navigation Bar Height</string>
+
+    <string name="alert_reboot">A reboot is needed</string>
+    <string name="alert_reboot_message">This change needs a reboot in order to take effect, do you want to reboot now?</string>
 
 </resources>

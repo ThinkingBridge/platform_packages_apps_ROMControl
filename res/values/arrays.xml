@@ -1333,4 +1333,22 @@
         <item>7500</item>
         <item>10000</item>
     </string-array>
+    
+    <!-- Default DPI Groups -->
+    <string-array name="entries_dpi_system_window">
+        <item>120</item>
+        <item>160</item>
+        <item>213</item>
+        <item>240</item>
+        <item>320</item>
+        <item>480</item>
+    </string-array>
+    <string-array name="values_dpi_system_window" translatable="false">
+        <item>120</item>
+        <item>160</item>
+        <item>213</item>
+        <item>240</item>
+        <item>320</item>
+        <item>480</item>
+    </string-array>
 </resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="dpi_group_fragment_title">
+
+        <PreferenceScreen
+            android:key="add_app"
+            android:fragment="com.aokp.romcontrol.hybrid.AppListPreference"
+            android:title="@string/dpi_group_add_app" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="app_list"
+        android:title="@string/dpi_group_app_list">
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

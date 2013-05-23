@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <com.aokp.romcontrol.hybrid.CustomDpiGroupPreference
+            android:key="customdpigroup"
+            android:title="@string/customdpigroup"
+            android:summary="@string/customdpigroup_summary"
+            android:dialogTitle="@string/customdpigroup" />
+
+    <Preference
+        android:key="dpi_groups_restore_default"
+        android:title="@string/dpi_groups_restore_default_title"
+        android:summary="@string/dpi_groups_restore_default_summary" />
+
+    <PreferenceCategory
+        android:key="dpi_groups_category"
+        android:title="@string/dpi_groups_title">
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

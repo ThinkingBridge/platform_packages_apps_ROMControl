@@ -158,6 +158,13 @@
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".hybrid.HybridSettings"
+            android:label="@string/title_hybridsettings" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+              </intent-filter>
+        </activity>
 
         <activity
             android:name=".CreateShortcut"

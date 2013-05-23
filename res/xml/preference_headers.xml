@@ -110,6 +110,13 @@
     <header
         android:id="@+id/system"
         android:title="@string/header_system" />
+        
+    <header
+        android:id="@+id/hybrid"
+        android:fragment="com.aokp.romcontrol.hybrid.HybridSettings"
+        android:title="@string/title_hybridsettings"
+        android:icon="@drawable/ic_hybrid_settings"
+        android:summary="@string/header_summary_hybridsettings" />
 
     <header
         android:id="@+id/led"

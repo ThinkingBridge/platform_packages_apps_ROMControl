@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="dpi_group_app_list"
+        android:title="@string/dpi_group_alert_add_app_title">
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
