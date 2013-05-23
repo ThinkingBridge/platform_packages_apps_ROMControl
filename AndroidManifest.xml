@@ -160,7 +160,7 @@
         </activity>
         <activity
             android:name=".hybrid.HybridSettings"
-            android:label="@string/title_hybridsettings" >
+            android:label="@string/hybrid_settings_title" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
               </intent-filter>
