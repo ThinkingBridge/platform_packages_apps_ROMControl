@@ -90,6 +90,17 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".fragments.EdgeSwipeNavigation"
+            android:label="@string/vibrations">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="com.aokp.romcontrol.SHORTCUT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".fragments.EdgeSwipeNavigationBlacklist" />
+        <activity android:name=".fragments.QuadNumberPickerPreference" />
+        <activity
             android:name=".fragments.LEDControl"
             android:label="@string/title_led">
             <intent-filter>

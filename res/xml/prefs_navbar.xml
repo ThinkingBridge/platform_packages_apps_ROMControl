@@ -133,4 +133,5 @@
                 android:key="navigation_bar_widgets"
                 android:title="@string/navbar_widgets_title" />
         </PreferenceCategory>
+
 </PreferenceScreen>
