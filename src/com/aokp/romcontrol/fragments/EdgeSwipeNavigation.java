@@ -33,7 +33,7 @@ import android.provider.Settings.SettingNotFoundException;
 import com.aokp.romcontrol.R;
 import com.aokp.romcontrol.AOKPPreferenceFragment;
 import com.aokp.romcontrol.widgets.SeekBarPreference2;
-import com.aokp.romcontrol.fragments.Utils;
+import com.aokp.romcontrol.Utils;
 
 public class EdgeSwipeNavigation extends AOKPPreferenceFragment implements
         Preference.OnPreferenceChangeListener {

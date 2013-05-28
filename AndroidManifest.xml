@@ -91,11 +91,9 @@
         </activity>
         <activity
             android:name=".fragments.EdgeSwipeNavigation"
-            android:label="@string/vibrations">
+            android:label="@string/edge_swipe_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="com.aokp.romcontrol.SHORTCUT"/>
             </intent-filter>
         </activity>
         <activity android:name=".fragments.EdgeSwipeNavigationBlacklist" />
